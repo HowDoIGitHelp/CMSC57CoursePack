@@ -30,7 +30,7 @@ This whole definition will make much more sense with a visual example like the o
 $$
 13n + 2 \in O(2n^2+n)
 $$
-![BigOExample](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/BigOExample.svg)
+![BigOExample](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigOExample.svg)
 
 As shown in the plot, even though the function $13n+2$ starts bigger than $2n^2+n$, after some point, $2n^2+n$ overtakes the function $13n+2$ and leaves it behind so much that, $13n+2$ is only barely visible on the last plot. This shows that there exists an $n_0$, a threshold for $n$, where, we are sure that for any $n$ greater than $n_0$, the inequality $13n+2 \leq 2n^2+n$ is always true. In this example, the function $2n^2+n$ starts to overtake between $n=6$ and $n=7$. We don't even have to know the exact value of this turning point point, we can just show that $n_0$ exists and it's value is $n_0=7$ (you can also not be conservative and use a bigger number like $n_0=100$ or $n_0=10000$). After this point, we see that there will never be a value of $n$ greater than $n_0$ where $13n+2$ is greater than $2n^2+n$. 
 
@@ -40,11 +40,11 @@ Let's hammer it home with another example. One which forces us to explicitly cho
 $$
 11n+1 \in O(2n+4)
 $$
-![BigOExample2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/BigOExample2.svg)
+![BigOExample2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigOExample2.svg)
 
 From the plots above you can see that $2n+4$, starts bigger, but then $11n+1$ overtakes it around $n=0.4$. And beyond this point, $11n+1$ stays above $2n+4$, and based on the definition of Big-O this is evidence that $2n+4\in O(11n+1)$ (and this assertion is indeed true). This evidence does not show us that $11n+1 \in O(2n+4)$. But, if we choose a value for $c$, for example, $c = 10$, we get the following plot:
 
-![BigOExample3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/BigOExample3.svg)
+![BigOExample3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigOExample3.svg)
 
 This shows that for $c=10$, the function $10(2n+4)$, starts as bigger than $2n+4$ and is always bigger than $2n+4$ (you can check that this is true if you notice that the difference between their values only gets bigger as $n$ increases). Remember that if we just find at least one pair of positive numbers $n_0$ and $c$ (in this case $n_0=0, c=10$) that satisfy the inequality, we are able to conclude that $11n+1 \in O(2n+4)$. It might seem strange that both $11n+1 \in O(2n+4)$ (where $n_0=0,c=10$) and $2n+4\in O(11n+1)$ is true (where $n_0=0.4,c=1$) but this is a legitimate possibility. In fact two way relationships like this have a certain implication that will be discussed later.
 
@@ -75,7 +75,7 @@ $$
 $$
 The plot below demonstrates this assertion:
 
-![BigOmegaExample1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/BigOmegaExample.svg)
+![BigOmegaExample1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigOmegaExample.svg)
 
 Here using $c=1$ we see that around $n=3.4$ the $2n^3 + 10$ starts to become bigger than $4n^2 + 30$. After this point we are certain that $2n^3 + 10$ will never become smaller than $4n^2 + 30$, thus showing that $c$ and $n_0$ indeed exists in the form of $c=1,n_0=3.4$. Showing that the relationship, $2n^3+10 \in \Omega(4n^2+30)$ is true. Therefore we can say the following about the relationship between the functions $2n^3 + 10$ and $2n^3 + 10$:
 
@@ -105,7 +105,7 @@ c_1(2n^2 + n) \leq 4n^2 + 30 \leq c_2(2n^2 + n)
 $$
 Basically, we need to show that $2n^2 + n$ can be upper bound and lower bound $4n^2 + 30$. To do this we just need to select some appropriate coefficients, $c_1$ and $c_2$. For this example we have found that to be $c_1=1$ and $c_2=3$. This can be shown on the plot below: 
 
-![BigTheta](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/BigThetaExample.svg)
+![BigTheta](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigThetaExample.svg)
 
 After some threshold $n_0$ notice how the $4n^2 + 30$ stays in between $2n^2+n$. This is what it means for a function to be tightly bound to another. The value of $2n^2 + n$ can be either greater or lesser than $4n^2 + 30$, it depends on the coefficients. 
 
@@ -475,7 +475,7 @@ But as it turns out, the process of figuring out the exact mathematical function
 
 Here's my attempt to reveal the running times of the algorithms. I ended up running bubble sort and merge sort again and again across different input sizes:
 
-![Bubble Sort vs Merge Sort Mean Running times from size 0 to size 100](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/RunningTimeExperiment.png)
+![Bubble Sort vs Merge Sort Mean Running times from size 0 to size 100](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/RunningTimeExperiment.png)
 
 By comparing the plots of their running times, we can infer that, for smaller input sizes, both algorithm's have similar running times. As the input size becomes bigger and bigger, both algorithm's running times increase but bubble sort's running time increases noticeably faster. When it reaches sizes of around 100 elements, the difference between them is very obvious. Merge sort algorithm becomes the clear winner in terms of running time.
 
@@ -489,7 +489,7 @@ Another method of approximating the running time functions is by approximating t
 
 [^5]: Don't worry about the how I ended up with these functions. For now just accept that these are the running times I ended up with. You'll tackle this topic on CMSC 142
 
-![Bubble Sort vs Merge Sort Running Time Instruction Approximation Plot](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/asymptoticAnalysis/RunningTimeApproximate.png)
+![Bubble Sort vs Merge Sort Running Time Instruction Approximation Plot](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/RunningTimeApproximate.png)
 
 The running time functions that we ended up with also shows that for smaller input sizes both algorithms end up executing pretty much the same amount of instructions. For larger input sizes, it also shows that merge sort is clear winner, it ends up executing way fewer instructions compared to bubble sort.
 
