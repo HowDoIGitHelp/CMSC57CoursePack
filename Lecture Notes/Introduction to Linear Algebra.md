@@ -33,7 +33,7 @@ A=\begin{bmatrix}
 
 \end{bmatrix}
 $$
-![matrixImage](Media/linear algebra/matrixImage.png)
+![matrixImage](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/matrixImage.png)
 
 An element of a matrix is denoted by $a_{rc}$ which corresponds the element of matrix $a$ in the $r^{th}$ row and $c^{th}$ column. Using the examples above, The element,
 $$
@@ -336,7 +336,7 @@ Having three dimension vectors introduces $\hat{k}$
 
 ![Imgur](https://i.imgur.com/4K4u8Uj.png)
 
-![3dbasisVectors](Media/linear algebra/3dBasisVectors.gif)
+![3dbasisVectors](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/3dBasisVectors.gif)
 
 You can actually define your own set of basis vectors and generate different vectors while using the same values. For example, let the basis vectors be:
 $$
@@ -633,7 +633,7 @@ $$
 
 ![stretchx](https://i.imgur.com/wzkoUEB.png)
 
-![stretchx](Media/linear algebra/stretchx.gif)
+![stretchx](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/stretchx.gif)
 
 ##### Vertical Stretch
 
@@ -647,7 +647,7 @@ $$
 
 ![Imgur](stretchy.png)
 
-![stretchy](Media/linear algebra/stretchy.gif)
+![stretchy](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/stretchy.gif)
 
 ##### Horizontal Shear
 
@@ -660,7 +660,7 @@ $$
 
 ![shearx](https://i.imgur.com/sMJ3UVz.png)
 
-![shearx](Media/linear algebra/shearx.gif)
+![shearx](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/shearx.gif)
 
 ##### Vertical Shear
 
@@ -673,7 +673,7 @@ $$
 
 ![sheary](https://i.imgur.com/93vDE7u.png)
 
-![sheary](Media/linear algebra/sheary.gif)
+![sheary](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/sheary.gif)
 
 ##### flip with respect to x-axis
 
@@ -686,7 +686,7 @@ $$
 
 ![xflip](https://i.imgur.com/PAyGi6M.png)
 
-![flipx](Media/linear algebra/flip-x.gif)
+![flipx](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/flip-x.gif)
 
 Transformations also work similarly in 3 dimensions. The transformation below shows a shear on the yz direction.
 $$
@@ -798,13 +798,13 @@ This formula can be derived by calculating the area of the resulting yellow para
 
 The determinant of a 3 dimensional transformation is the factor of stretching/compression of the volume of the unit cube to the parallelepiped:
 
-![3dtransform](Media/linear algebra/transform3dDet.png)
+![3dtransform](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/transform3dDet.png)
 
-![3dtransform](Media/linear algebra/transform3dDet.gif)
+![3dtransform](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/transform3dDet.gif)
 
 The factor of stretching/shrinking in any linear transformation.
 
-![polyhedraTransform](Media/linear algebra/polyhedraTransform.gif)
+![polyhedraTransform](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/polyhedraTransform.gif)
 
 The determinant of a 3x3 matrix can be calculated using Laplace expansion:
 $$
@@ -1202,7 +1202,7 @@ T = \begin{bmatrix}
 $$
 
 
-![ProjectionXY](Media/linear algebra/ProjectionXY.png)
+![ProjectionXY](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/ProjectionXY.png)
 
 
 $$
@@ -1213,7 +1213,7 @@ T = \begin{bmatrix}
 $$
 
 
-![ProjectionXZ](Media/linear algebra/ProjectionXZ.png)
+![ProjectionXZ](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/ProjectionXZ.png)
 
 
 $$
@@ -1224,7 +1224,7 @@ T = \begin{bmatrix}
 $$
 
 
-![ProjectionTilted](Media/linear algebra/ProjectionTilted.png)
+![ProjectionTilted](Media/https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture Notes/Media/linear algebra/ProjectionTilted.png)
 
 You can also transform a 2 dimensional vector into a 3 dimensional vector, to do this you need a $3 \times 2$ transformation matrix.
 $$
