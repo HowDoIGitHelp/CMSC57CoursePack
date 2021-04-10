@@ -67,7 +67,7 @@ https://join.slack.com/t/cmsc57/shared_invite/zt-ep87ayds-xfv80hXP6giSFfbH8QDzUQ
 
 ### Asking Questions and Scheduling Remote Consultations
 
-I'll try to make myself available for questions most of the time but you'll have a better chance of reaching me during our weekly schedules. You can schedule consultation as a group. Use that time to ask questions about the lecture or ask for help in answering lab exercises.
+I'll try to make myself available for questions most of the time but you'll have a better chance of reaching me during our weekly schedules. You can schedule consultation as a group. Use that time to ask questions about the lecture or ask for help in answering seatworks.
 
 You can contact me through sms, email, slack dms, or through discord. You can find ways to reach me at the last section of this guide.
 
@@ -75,13 +75,13 @@ You can contact me through sms, email, slack dms, or through discord. You can fi
 
 All of the resources in this course can be found in the course pack. The course pack includes:
 
-- **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the mark down version of this file (use a markdown viewr to open the md files)
-- **Lecture Videos** - There's a link to the youtube playlist here. If you want the master copies 
-- **Seatworks** - Not really seatworks since you'll be doing it at home, You can find them on the textbook as well.
+- **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the markdown version of this file (use a markdown viewer to open the md files)
+- **Lecture Videos** - There's a link to the youtube playlist [here](https://www.youtube.com/playlist?list=PLWQOTeFPeCeu-hIGlswygQxs46M6f6M_e)
+- **Seatworks** - Not really seatworks since you'll be doing it at home, You can find them on the course pack as well.
 
 ## Study Schedule
 
-This class is asynchronous, but if you start too late, you might end up getting overwhelmed by the amount of work. Here's the recommended schedule for completing the resources and lab exercises.
+This class is asynchronous, but if you start too late, you might end up getting overwhelmed by the amount of work. Here's the recommended schedule for completing the resources and seatworks.
 
 | Week Number | Videos To Watch/Lecture Notes to Read                        | Seatworks                           |
 | ----------- | ------------------------------------------------------------ | ----------------------------------- |
@@ -103,7 +103,7 @@ This class is asynchronous, but if you start too late, you might end up getting 
 
 There will be no exams in this course, 100% of your grades will come from the seatworks. 
 
-### Lab Exercises
+### Seatworks
 
 1. Seatwork (Asymptotic Analysis)
 2. Seatwork (Introduction to Linear Algebra)
@@ -118,4 +118,4 @@ Don't share these info please
 
 - SMS +63 921 031 2455
 - email rrabella@up.edu.ph
-- discord ruberoni#5100
+- discord ruberoni#5100 
