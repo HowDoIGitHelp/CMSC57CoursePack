@@ -666,7 +666,7 @@ Here are the complexity classes in computer science, arranged from least complex
 | $\Theta(n)$                 | Linear           | finding the smallest number in an array |
 | $\Theta(n \log{n})$         | Quasilinear      | merge sort                              |
 | $\Theta(n^2)$               | Quadratic        | bubble sort                             |
-| $\Theta(n^c)$ where $c > 2$ | Polynomial       | naïve matrix multiplication             |
+| $\Theta(n^c)$ where $c > 1$ | Polynomial       | naïve matrix multiplication             |
 | $\Theta(c^n)$               | Exponential      | dynamic travelling salesman             |
 | $\Theta(n!)$                | Factorial        | brute force travelling salesman         |
 
