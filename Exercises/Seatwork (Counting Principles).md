@@ -11,5 +11,3 @@
    b) contain all four bases A, T, C, and G?
 
    c) contain exactly three of the four bases A, T, C, and G?
-
-3. A palindrome is a string whose reversal is identical to the string. How many bit strings of length n are palindromes?
