@@ -1,0 +1,14 @@
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  section.imgh h4 {
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+  }
+  section.imgh{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
