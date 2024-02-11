@@ -18,7 +18,7 @@ style: |
   }
 ---
 
- # Introduction to Linear Algebra 
+ # Introduction To Linear Algebra 
 
 ---
 
