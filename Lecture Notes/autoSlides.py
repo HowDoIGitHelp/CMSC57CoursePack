@@ -155,7 +155,10 @@ def main():
                             #outputString += f'{renderer.render(slideHeading(doc,i))}'
                             #print(renderer.render(slideHeading(doc,i)))
                             outputString += f"#### {renderer.render(slideHeading(doc,i)).replace('#','')}"
-                            outputString += f'![{imgOptions}]({child.children[0].src})\n'
+                            if child.children[0].src[-3:] == 'gif':
+                                outputString += f'![{imgOptions}]({child.children[0].src})\n'
+                            else:
+                                outputString += f'![{imgOptions}]({child.children[0].src})\n'
                             #outputString += renderer.render(child)
                             outputString += '\n'
 
