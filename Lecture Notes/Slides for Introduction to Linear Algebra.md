@@ -1545,20 +1545,31 @@ We call non-invertible matrices such as the transformation above, **singular**.
 
 ---
 
-##  Non-square matrices
+##  Matrices in the Perspective of Linear Algebra
+- The main thesis of this series of lectures should not just be on the definitions of **matrices and their concepts**
+- The focus of this lecture is the essence of these concepts both **numerically** and **visually**
+
+---
+
+##  Matrices in the Perspective of Linear Algebra
 - A **vector** - an arbitrary member of some vector space, presented as an arrow from origin to a corresponding point in some $n$-dimensional space.
 - An $n$-dimensional **square matrix** - defines some linear transformation, its values correspond to the new location of the basis vectors after the transformation.
 
 ----
 
-##  Non-square matrices
+##  Matrices in the Perspective of Linear Algebra
 - **matrix multiplication** - composition of linear transformations. The product summarizes the linear transformations into one.
 - **determinant** - the factor of scaling of the vector space during a transformation
 - **matrix inverse** - the functional inverse of a matrix, reverses the transformation
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+Let's talk about a class of matrices we haven't talked about before, a **non-square matrix**:
+
+---
+
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 2&2&-3 \\
@@ -1568,7 +1579,13 @@ $$
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+- But the closest related concept for these matrices are **linear transformations**
+- If these are indeed linear transformations, these matrices are meant to be **multiplied** to other vectors to apply some transformation.
+
+---
+
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 2&2&-3 \\
@@ -1579,7 +1596,13 @@ $$
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+- Since this is a $2 \times 3$ matrix, you can only multiply these with vectors of size **$3 \times 1$**
+- But the interesting thing about this transformation is that it produces a vector of size **$2 \times 1$**.
+
+---
+
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 2&2&-3 \\
@@ -1598,12 +1621,17 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://i.imgur.com/3YFU6iT.png)
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+It is also a linear transformation, but it is specifically a transformation that **changes** the number of dimensions of the vector space
+
+---
+
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 2& 2& -3 \\
@@ -1624,12 +1652,12 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://i.imgur.com/DcsmPGP.gif)
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 1\\
@@ -1640,7 +1668,7 @@ $$
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 1\\
@@ -1650,7 +1678,7 @@ $$
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 1\\
@@ -1664,7 +1692,12 @@ $$
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+The transformation of any $n$-dimensional vector to less than $n$-dimensional space, is similar to producing the **projection** or shadow of the vector
+
+---
+
+##  Non-square Matrices
 $$
 T = \begin{bmatrix}
 1&0&0 \\
@@ -1675,12 +1708,12 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/ProjectionXY.png)
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
 $$
 T = \begin{bmatrix}
 1 & 0 & 0 \\
@@ -1691,12 +1724,12 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/ProjectionXZ.png)
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
 $$
 T = \begin{bmatrix}
 1&0&0 \\
@@ -1707,12 +1740,17 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/ProjectionTilted.png)
 
 ---
 
-##  Non-square matrices
+##  Non-square Matrices
+You can also transform a **2-dimensional** vector into a **3-dimensional vector**, to do this you need a $3 \times 2$ transformation matrix.
+
+---
+
+##  Non-square Matrices
 $$
 \begin{bmatrix}
 3& 0\\
@@ -1732,8 +1770,19 @@ $$
 ---
 
 <!-- _class: imgh -->
-####  Non-square matrices
+####  Non-square Matrices
 ![bg contain](https://i.imgur.com/3kUmLrK.png)
+
+---
+
+##  Non-square Matrices
+- **the span that the basis vectors produce is still 2 dimensional**
+- This is because there is no way for the vectors to be transformed with **extra dimensionality**.
+
+---
+
+##  Non-square Matrices
+As a general rule, you can think of any $m \times n$ matrix as a transformation that transforms an **$n$-dimensional** vector into an **$m$-dimensional vector**.
 
 ---
 
@@ -1766,6 +1815,11 @@ $$
 ---
 
 ##  Scalar products
+It is the measure of **similarity** between two vectors, For example, given three vectors,
+
+---
+
+##  Scalar products
 $$
 \vec{a}=\begin{bmatrix}
 1\\
@@ -1783,6 +1837,11 @@ $$
 
 ---
 
+##  Scalar products
+Is $\vec{a}$ **more similar** to $\vec{b}$ or to $\vec{c}$?
+
+---
+
 <!-- _class: imgh -->
 ####  Scalar products
 ![bg contain](https://i.imgur.com/J3SIWyN.png)
@@ -1791,15 +1850,32 @@ $$
 
 ##  Scalar products
 $$
+\begin{aligned}
 \vec{a}\cdot{}\vec{b}=6\\
 \vec{a}\cdot{}\vec{c}=4
+\end{aligned}
 $$
+
+---
+
+##  Scalar products
+This means that two vectors perpendicular to each other will have a scalar product of **zero** and two vectors pointing in the opposite direction will have a **negative** scalar product:
 
 ---
 
 <!-- _class: imgh -->
 ####  Scalar products
 ![bg contain](https://i.imgur.com/LjyNd7V.png)
+
+---
+
+##  Scalar products
+How does the scalar product relate to **linear transformations**?
+
+---
+
+##  Scalar products
+And it turns out, a scalar product is merely a transformation of any vector to **one-dimensional space**:
 
 ---
 
@@ -1830,6 +1906,11 @@ $$
 
 ---
 
+##  Scalar products
+When looking at, the scalar product of two $n \times 1$ vectors, you can imagine that one vector is **reduced** into the **one dimensional vector space**
+
+---
+
 ##  Eigenvectors and Eigenvalues
 $$
 \begin{bmatrix}
@@ -1840,8 +1921,21 @@ $$
 
 ---
 
+<!-- _class: imgh -->
+####  Eigenvectors and Eigenvalues
+![bg contain](https://i.imgur.com/xsp3aHP.gif)
+
+---
+
+<!-- _class: imgh -->
+####  Eigenvectors and Eigenvalues
+![bg contain](https://i.imgur.com/AUH2KiH.png)
+
+---
+
 ##  Eigenvectors and Eigenvalues
 $$
+\begin{aligned}
 \begin{bmatrix}
 3& 1\\
 0&2
@@ -1849,7 +1943,7 @@ $$
 \begin{bmatrix}
 -1\\
 1
-\end{bmatrix} =
+\end{bmatrix} &=
 \begin{bmatrix}
 -2\\
 2
@@ -1864,7 +1958,7 @@ $$
 \begin{bmatrix}
 1.5\\
 0
-\end{bmatrix} =
+\end{bmatrix} &=
 \begin{bmatrix}
 4.5\\
 0
@@ -1873,12 +1967,43 @@ $$
 1.5\\
 0
 \end{bmatrix}
+\end{aligned}
 $$
 
 ---
 
 ##  Eigenvectors and Eigenvalues
-Since eigenvectors are vectors that are **only** scaled as a result of the transformation, we can solve for $\vec{e}$ in the following equality
+- These special vectors are called **eigenvectors**
+- Each eigenvector is always accompanied by special scalar values called **eigenvalues**, which correspond to the factor of scaling for the transformation.
+
+---
+
+##  Eigenvectors and Eigenvalues
+In fact **all** the vectors along the **span of the green vectors** are eigenvectors as well.
+
+---
+
+<!-- _class: imgh -->
+####  Eigenvectors and Eigenvalues
+![bg contain](https://i.imgur.com/5G2Bqa2.gif)
+
+---
+
+<!-- _class: imgh -->
+####  Eigenvectors and Eigenvalues
+![bg contain](https://i.imgur.com/rniMQb6.gif)
+
+---
+
+<!-- _class: imgh -->
+####  Eigenvectors and Eigenvalues
+![bg contain](https://i.imgur.com/5Cu3fyW.gif)
+
+---
+
+##  Eigenvectors and Eigenvalues
+- Since eigenvectors are vectors that are **only** scaled as a result of the transformation, we can solve for $\vec{e}$ in the following equality
+- The scalar value **$\lambda$** refers to the unknown eigenvalue.
 
 ---
 
@@ -1886,6 +2011,12 @@ Since eigenvectors are vectors that are **only** scaled as a result of the trans
 $$
 T\vec{e}=\lambda\vec{e}
 $$
+
+---
+
+##  Eigenvectors and Eigenvalues
+- Scalar times vector multiplication $\lambda \vec{e}$ can be written as a **linear transformation** instead
+- **multiplying $\lambda I$ to $\vec{e}$**
 
 ---
 
@@ -1903,6 +2034,11 @@ $$
 ---
 
 ##  Eigenvectors and Eigenvalues
+To solve for the unknowns, we can rewrite $T\vec{e}=\lambda\vec{e}$ into a s**olution from zero**:
+
+---
+
+##  Eigenvectors and Eigenvalues
 $$
 \begin{align*}
 T\vec{e}&=\lambda I\vec{e}\\
@@ -1910,6 +2046,12 @@ T\vec{e}-\lambda I\vec{e}&=\vec{0}\\
 (T-\lambda I)\vec{e}&=\vec{0}\\
 \end{align*}
 $$
+
+---
+
+##  Eigenvectors and Eigenvalues
+- If you recall, a non-zero vector can only be transformed to zero if and only if the whole vector space has been **squished to zero itself**
+- And this can only happen when the **determinant** of transformation is **zero**.
 
 ---
 
@@ -1926,19 +2068,26 @@ $$
 ---
 
 ##  Eigenvectors and Eigenvalues
+This means that we can find the eigenvalues of any transformation by finding the **lambdas** that reduces the determinant to **$0$**
+
+---
+
+##  Eigenvectors and Eigenvalues
 $$
+\begin{aligned}
 \det(\begin{bmatrix}
 a-\lambda& b\\
 c& d-\lambda
 \end{bmatrix})=0\\
 (a-\lambda)(d-\lambda)-bc=0
+\end{aligned}
 $$
 
 ---
 
 ##  Eigenvectors and Eigenvalues
 $$
-\begin{align*}
+\begin{aligned}
 \det(\begin{bmatrix}
 3-\lambda& 1\\
 0& 2-\lambda
@@ -1948,7 +2097,7 @@ $$
 \\
 \lambda &=2\\
 \lambda &=3
-\end{align*}
+\end{aligned}
 $$
 
 ---
@@ -1967,7 +2116,15 @@ $$
 0&2
 \end{bmatrix}
 \vec{e} &=
-3\vec{e}\\\\
+3\vec{e}
+\end{aligned}
+$$
+
+---
+
+##  Eigenvectors and Eigenvalues
+$$
+\begin{aligned}
 \text{Eigenvectors for } &\lambda=2\\
 3x +y &=2x\\
 2y &= 2y\\
@@ -1976,7 +2133,15 @@ x&=-y\\
 &\begin{bmatrix}
 u\\
 -u
-\end{bmatrix}\\\\
+\end{bmatrix}
+\end{aligned}
+$$
+
+---
+
+##  Eigenvectors and Eigenvalues
+$$
+\begin{aligned}
 \text{Eigenvectors for } &\lambda=3\\
 3x+y &=3x\\
 2y &= 3y\\
@@ -1987,5 +2152,10 @@ v\\
 \end{bmatrix}
 \end{aligned}
 $$
+
+---
+
+##  Eigenvectors and Eigenvalues
+As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$**.
 
 ---

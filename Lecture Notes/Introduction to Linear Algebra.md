@@ -1144,9 +1144,9 @@ Then the system has infinitely many solutions.
 
 We call non-invertible matrices such as the transformation above, **singular**.
 
-#### Non-square matrices
+#### Matrices in the Perspective of Linear Algebra
 
-The main thesis of this series of lectures should not just be on the definitions of matrices and their concepts. The focus of this lecture is the essence of these concepts both numerically and visually. That's when we talk about matrix concepts, we always relate it linear transformations. It is not a coincidence that a matrix, an arbitrary collection of numbers arranged in a particular way, is related to linear transformations. In fact that is what a matrix is, a linear transformation.
+The main thesis of this series of lectures should not just be on the definitions of **matrices and their concepts**. The focus of this lecture is the essence of these concepts both **numerically** and **visually**. That's when we talk about matrix concepts, we always relate it linear transformations. It is not a coincidence that a matrix, an arbitrary collection of numbers arranged in a particular way, is related to linear transformations. In fact that is what a matrix is, a linear transformation.
 
 Let's summarize what we know about vectors and matrices specifically in the perspective of linear transformations.
 
@@ -1156,7 +1156,9 @@ Let's summarize what we know about vectors and matrices specifically in the pers
 - **determinant** - the factor of scaling of the vector space during a transformation
 - **matrix inverse** - the functional inverse of a matrix, reverses the transformation
 
-Let's talk about a class of matrices we haven't talked about before, a non-square matrix:
+##### Non-square Matrices
+
+Let's talk about a class of matrices we haven't talked about before, a **non-square matrix**:
 
 $$
 \begin{bmatrix}
@@ -1165,9 +1167,7 @@ $$
 \end{bmatrix}
 $$
 
-Matrices that look like this doesn't appear to fall into any of the linear algebra concepts we have discussed so far. But the closest related concept for these matrices are linear transformations.
-
-If these are indeed linear transformations, these matrices are meant to be multiplied to other vectors to apply some transformation.
+Matrices that look like this doesn't appear to fall into any of the linear algebra concepts we have discussed so far. But the closest related concept for these matrices are **linear transformations**. If these are indeed linear transformations, these matrices are meant to be **multiplied** to other vectors to apply some transformation.
 
 $$
 \begin{bmatrix}
@@ -1177,7 +1177,7 @@ $$
 \vec{v} = \vec{v}'
 $$
 
-Since this is a $2 \times 3$ matrix, you can only multiply these with vectors of size $3 \times 1$. But the interesting thing about this transformation is that it produces a vector of size $2 \times 1$. 
+Since this is a $2 \times 3$ matrix, you can only multiply these with vectors of size **$3 \times 1$**. But the interesting thing about this transformation is that it produces a vector of size **$2 \times 1$**. 
 
 $$
 \begin{bmatrix}
@@ -1196,7 +1196,7 @@ $$
 
 ![nonsquare](https://i.imgur.com/3YFU6iT.png)
 
-From this we could gain an intuition about the special property of non-square matrices. It is also a linear transformation, but it is specifically a transformation that changes the number of dimensions of the vector space. There is some similarity between, transformation above and the transformation below:
+From this we could gain an intuition about the special property of non-square matrices. It is also a linear transformation, but it is specifically a transformation that **changes** the number of dimensions of the vector space. There is some similarity between, transformation above and the transformation below:
 
 $$
 \begin{bmatrix}
@@ -1249,9 +1249,7 @@ $$
 \end{bmatrix}
 $$
 
-The transformation of any $n$-dimensional vector to less than $n$-dimensional space, is similar to producing the projection or shadow of the vector.
-
-Here are some interesting examples:
+The transformation of any $n$-dimensional vector to less than $n$-dimensional space, is similar to producing the **projection** or shadow of the vector. Here are some interesting examples:
 
 $$
 T = \begin{bmatrix}
@@ -1283,7 +1281,7 @@ $$
 
 ![ProjectionTilted](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/ProjectionTilted.png)
 
-You can also transform a 2 dimensional vector into a 3 dimensional vector, to do this you need a $3 \times 2$ transformation matrix.
+You can also transform a **2-dimensional** vector into a **3-dimensional vector**, to do this you need a $3 \times 2$ transformation matrix.
 
 $$
 \begin{bmatrix}
@@ -1303,9 +1301,9 @@ $$
 
 ![nonquareexpand](https://i.imgur.com/3kUmLrK.png)
 
-As you can see above, even though the two dimensional vectors now reside in the three dimensional vector space, the span that the basis vectors produce is still 2 dimensional. This is because there is no way for the vectors to be transformed with extra dimensionality.
+As you can see above, even though the two dimensional vectors now reside in the three dimensional vector space, **the span that the basis vectors produce is still 2 dimensional**. This is because there is no way for the vectors to be transformed with **extra dimensionality**.
 
-As a general rule, you can think of any $m \times n$ matrix as a transformation that transforms an $n$-dimensional vector into an $m$-dimensional vector.
+As a general rule, you can think of any $m \times n$ matrix as a transformation that transforms an **$n$-dimensional** vector into an **$m$-dimensional vector**.
 
 #### Scalar products
 
@@ -1337,7 +1335,7 @@ z
 \end{bmatrix} = ax+by+\cdots+cz
 $$
 
-It is the measure of similarity between two vectors, For example, given three vectors, 
+It is the measure of **similarity** between two vectors, For example, given three vectors, 
 
 $$
 \vec{a}=\begin{bmatrix}
@@ -1354,24 +1352,26 @@ $$
 \end{bmatrix}
 $$
 
-Is $\vec{a}$ more similar to $\vec{b}$ or to $\vec{c}$?
+Is $\vec{a}$ **more similar** to $\vec{b}$ or to $\vec{c}$?
 
 ![similarity](https://i.imgur.com/J3SIWyN.png)
 
 $\vec{a}$ And $\vec{b}$ is more similar compared to $\vec{a}$ and $\vec{c}$:
 
 $$
+\begin{aligned}
 \vec{a}\cdot{}\vec{b}=6\\
 \vec{a}\cdot{}\vec{c}=4
+\end{aligned}
 $$
 
-This means that two vectors perpendicular to each other will have a scalar product of zero and two vectors pointing in the opposite direction will have a negative scalar product:
+This means that two vectors perpendicular to each other will have a scalar product of **zero** and two vectors pointing in the opposite direction will have a **negative** scalar product:
 
 ![dissimilar vectors](https://i.imgur.com/LjyNd7V.png)
 
-These definitions are well and good, but unsatisfying for the thesis of this lecture. How does the scalar product relate to linear transformation?
+These definitions are well and good, but unsatisfying for the thesis of this lecture. How does the scalar product relate to **linear transformations**?
 
-We can construct a different definition for the scalar product, in the perspective linear transformation. And it turns out, a scalar product is merely a transformation of any vector to one-dimensional space:
+We can construct a different definition for the scalar product, in the perspective linear transformation. And it turns out, a scalar product is merely a transformation of any vector to **one-dimensional space**:
 
 The following dot product:
 
@@ -1398,7 +1398,7 @@ b\\
 \end{bmatrix} = u_xa+u_yb
 $$
 
-This concept works for vectors of any number of dimensions. When looking at, the scalar product of two $n \times 1$ vectors, you can imagine that one vector is reduced into the one dimensional vector space. Which is similar to projecting it onto the line described by the other vector.
+This concept works for vectors of any number of dimensions. When looking at, the scalar product of two $n \times 1$ vectors, you can imagine that one vector is **reduced** into the **one dimensional vector space**. Which is similar to projecting it onto the line described by the other vector.
 
 #### Eigenvectors and Eigenvalues
 
@@ -1412,11 +1412,13 @@ $$
 $$
 
 ![animated](https://i.imgur.com/xsp3aHP.gif)
+
 ![eigen](https://i.imgur.com/AUH2KiH.png)
 
 During the transformation most of the vectors change directions (i.e. the vector gets knocked from its span). Some special vectors however, just get scaled after the transformation. The vectors above colored green are just scaled versions of their input vector.
 
 $$
+\begin{aligned}
 \begin{bmatrix}
 3& 1\\
 0&2
@@ -1424,7 +1426,7 @@ $$
 \begin{bmatrix}
 -1\\
 1
-\end{bmatrix} =
+\end{bmatrix} &=
 \begin{bmatrix}
 -2\\
 2
@@ -1439,7 +1441,7 @@ $$
 \begin{bmatrix}
 1.5\\
 0
-\end{bmatrix} =
+\end{bmatrix} &=
 \begin{bmatrix}
 4.5\\
 0
@@ -1448,23 +1450,26 @@ $$
 1.5\\
 0
 \end{bmatrix}
+\end{aligned}
 $$
 
-These special vectors are called eigenvectors. Each eigenvector is always accompanied by special scalar values called eigenvalues, which correspond to the factor of scaling for the transformation. 
+These special vectors are called **eigenvectors**. Each eigenvector is always accompanied by special scalar values called **eigenvalues**, which correspond to the factor of scaling for the transformation. 
 
-In fact all the vectors along the span of the green vectors are eigenvectors as well.
+In fact **all** the vectors along the **span of the green vectors** are eigenvectors as well.
 
 ![animatedeigen](https://i.imgur.com/5G2Bqa2.gif)
+
 ![3d-eigen](https://i.imgur.com/rniMQb6.gif)
+
 ![3d-rotation](https://i.imgur.com/5Cu3fyW.gif)
 
-Based on how eigenvectors are defined, we can derive the process to find them. For any arbitrary transformation, eigenvectors are calculated by finding the vector solutions for the following inequality. Since eigenvectors are vectors that are **only** scaled as a result of the transformation, we can solve for $\vec{e}$ in the following equality. The scalar value $\lambda$ refers to the unknown eigenvalue.
+Based on how eigenvectors are defined, we can derive the process to find them. For any arbitrary transformation, eigenvectors are calculated by finding the vector solutions for the following inequality. Since eigenvectors are vectors that are **only** scaled as a result of the transformation, we can solve for $\vec{e}$ in the following equality. The scalar value **$\lambda$** refers to the unknown eigenvalue.
 
 $$
 T\vec{e}=\lambda\vec{e}
 $$
 
-Scalar times vector multiplication $\lambda \vec{e}$ can be written as a linear transformation instead. The effect of multiplying, $\lambda$ to $\vec{e}$, is exactly the same as multiplying $\lambda I$ to $\vec{e}$.
+Scalar times vector multiplication $\lambda \vec{e}$ can be written as a **linear transformation** instead. The effect of multiplying, $\lambda$ to $\vec{e}$, is exactly the same as **multiplying $\lambda I$ to $\vec{e}$**.
 
 $$
 \begin{bmatrix}
@@ -1476,7 +1481,7 @@ $$
 \vec{e}
 $$
 
-We need to do that we can rewrite $T\vec{e}=\lambda\vec{e}$ into a solution from zero:
+To solve for the unknowns, we can rewrite $T\vec{e}=\lambda\vec{e}$ into a s**olution from zero**:
 
 $$
 \begin{align*}
@@ -1486,7 +1491,7 @@ T\vec{e}-\lambda I\vec{e}&=\vec{0}\\
 \end{align*}
 $$
 
-If you recall, a non-zero vector can only be transformed to zero if and only if the whole vector space has been squished to zero itself. And this can only happen when the determinant of transformation is zero.
+If you recall, a non-zero vector can only be transformed to zero if and only if the whole vector space has been **squished to zero itself**. And this can only happen when the **determinant** of transformation is **zero**.
 
 $$
 \det(T-\lambda I)=\det(\begin{bmatrix}
@@ -1497,20 +1502,22 @@ t_{n1}& t_{n2}& \cdots& t_{nn}-\lambda
 \end{bmatrix}) = 0
 $$
 
-This means that we can find the eigenvalues of any transformation by finding the lambdas that reduces the value to $0$. On a two dimensional vector, this is straightforward:
+This means that we can find the eigenvalues of any transformation by finding the **lambdas** that reduces the determinant to **$0$**. On a two dimensional vector, this is straightforward:
 
 $$
+\begin{aligned}
 \det(\begin{bmatrix}
 a-\lambda& b\\
 c& d-\lambda
 \end{bmatrix})=0\\
 (a-\lambda)(d-\lambda)-bc=0
+\end{aligned}
 $$
 
 Revealing the eigenvalues makes solving for the eigenvectors straightforward. Using the example above:
 
 $$
-\begin{align*}
+\begin{aligned}
 \det(\begin{bmatrix}
 3-\lambda& 1\\
 0& 2-\lambda
@@ -1520,7 +1527,7 @@ $$
 \\
 \lambda &=2\\
 \lambda &=3
-\end{align*}
+\end{aligned}
 $$
 
 Since we know the eigenvalues, we can plug this back into the original equality, and solve the system of linear equations to find all the eigenvectors.
@@ -1538,7 +1545,12 @@ $$
 0&2
 \end{bmatrix}
 \vec{e} &=
-3\vec{e}\\\\
+3\vec{e}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
 \text{Eigenvectors for } &\lambda=2\\
 3x +y &=2x\\
 2y &= 2y\\
@@ -1547,7 +1559,12 @@ x&=-y\\
 &\begin{bmatrix}
 u\\
 -u
-\end{bmatrix}\\\\
+\end{bmatrix}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
 \text{Eigenvectors for } &\lambda=3\\
 3x+y &=3x\\
 2y &= 3y\\
@@ -1559,4 +1576,4 @@ v\\
 \end{aligned}
 $$
 
-As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form $\begin{bmatrix}u\\-u\end{bmatrix}$ and any vector of the form $\begin{bmatrix} v\\0\end{bmatrix}$. 
+As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$**. 
