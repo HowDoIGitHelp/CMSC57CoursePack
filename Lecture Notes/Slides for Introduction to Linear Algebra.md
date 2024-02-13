@@ -1482,6 +1482,66 @@ $$
 
 ---
 
+##  Minors and Cofactors
+The **minor** of some element $a_{ij}$ of a square matrix $A$, denoted by $M_{ij}$ is the determinant of the submatrix formed by deleting the $i$th row and $j$th column of $A$
+
+---
+
+##  Minors and Cofactors
+The **cofactor** of some element $a_{ij}$ of a square matrix $A$, denoted by $C_{ij}$ is calculated as:
+
+---
+
+##  Minors and Cofactors
+$$
+\begin{aligned}
+C_{ij}=(-1)^{i+j}M_{ij}
+\end{aligned}
+$$
+
+---
+
+##  Minors and Cofactors
+The **cofactor matrix** $C$ of some matrix $A$ is the matrix of $A$'s cofactors $C_{ij}$:
+
+---
+
+##  Minors and Cofactors
+$$
+\begin{aligned}
+C = \begin{bmatrix}
+C_{11}&C_{12}&C_{13}\\
+C_{21}&C_{22}&C_{23}\\
+C_{31}&C_{32}&C_{33}
+\end{bmatrix}
+\end{aligned}
+$$
+
+---
+
+##  Minors and Cofactors
+$$
+\begin{aligned}
+A^{-1} = \frac{1}{\det(A)}C^{T}
+\end{aligned}
+$$
+
+---
+
+##  Minors and Cofactors
+$$
+\begin{aligned}
+A = \begin{bmatrix}
+3&0&2\\
+1&-2&2\\
+-1&3&2
+\end{bmatrix}\\
+C_{11} = (-1)^{1+1}\det\begin{bmatrix}-2&2\\3&2 \end{bmatrix}, C_{12} = (-1)^{1+2}\det\begin{bmatrix}1&2\\-1&2 \end{bmatrix}, C_{13} = (-1)^{1+3}\det\begin{bmatrix}1&-2\\-1&3 \end{bmatrix}
+\end{aligned}
+$$
+
+---
+
 ##  Singular Matrices
 1. There is one solution
 2. There are infinitely many solutions

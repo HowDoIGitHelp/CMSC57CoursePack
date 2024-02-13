@@ -951,7 +951,7 @@ $$
 
 ###### Finding the inverse matrix
 
-To find the inverse of a matrix is important to solve systems of linear equations, First you need to write your matrix beside an identity matrix like this. As an example lets use a $3 \times 3$ matrix:
+First you need to write your matrix augmented with identity matrix like this. As an example lets use a $3 \times 3$ matrix:
 
 $$
 \left[
@@ -1095,6 +1095,95 @@ $$
 $$
 
 ![Imgur](https://i.imgur.com/ai5xiaq.png)
+
+###### Finding Inverses using the Cofactor Matrix
+
+The inverse matrix can also be found using the cofactor matrix. To find the cofactor we use must first define the following matrix concepts:
+
+###### Minors and Cofactors
+
+The **minor** of some element $a_{ij}$ of a square matrix $A$, denoted by $M_{ij}$ is the determinant of the submatrix formed by deleting the $i$th row and $j$th column of $A$. Given a 3x3 matrix, we can find the three minors $M_{11}$, $M_{12}$, and $M_{13}$ as:
+$$
+\begin{aligned}
+A &= \begin{bmatrix}
+a&b&c\\
+d&e&f\\
+g&h&i
+\end{bmatrix}\\
+M_{11} &= \det(\begin{bmatrix}
+e&f\\
+h&i
+\end{bmatrix})\\
+M_{12} &= \det(\begin{bmatrix}
+d&f\\
+g&i
+\end{bmatrix})\\
+M_{13} &= \det(\begin{bmatrix}
+d&e\\
+g&h
+\end{bmatrix})\\
+&\vdots
+\end{aligned}
+$$
+
+The **cofactor** of some element $a_{ij}$ of a square matrix $A$, denoted by $C_{ij}$ is calculated as:
+
+$$
+\begin{aligned}
+C_{ij}=(-1)^{i+j}M_{ij}
+\end{aligned}
+$$
+
+The **cofactor matrix** $C$ of some matrix $A$ is the matrix of $A$'s cofactors $C_{ij}$:
+
+$$
+\begin{aligned}
+C = \begin{bmatrix}
+C_{11}&C_{12}&C_{13}\\
+C_{21}&C_{22}&C_{23}\\
+C_{31}&C_{32}&C_{33}
+\end{bmatrix}
+\end{aligned}
+$$
+
+Using the cofactor matrix, we can calculate some the inverse $A^{-1}$ as:
+
+$$
+\begin{aligned}
+A^{-1} = \frac{1}{\det(A)}C^{T}
+\end{aligned}
+$$
+
+Using the previous example:
+
+$$
+\begin{aligned}
+A &= \begin{bmatrix}
+3&0&2\\
+1&-2&2\\
+-1&3&2
+\end{bmatrix}\\
+A^{-1} &=\frac{1}{\det(A)}C^T\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+A^{-1} &=\frac{1}{\det(A)}C^T\\
+A^{-1} &=\frac{1}{-28}\begin{bmatrix}
+ -10 & -4 & 1 \\
+ 6 & 8 & -9 \\
+ 4 & -4 & -6 \\
+\end{bmatrix}^T\\
+A^{-1} &= \begin{bmatrix}
+ \frac{5}{14} & -\frac{3}{14} & -\frac{1}{7} \\
+ \frac{1}{7} & -\frac{2}{7} & \frac{1}{7} \\
+ -\frac{1}{28} & \frac{9}{28} & \frac{3}{14} \\
+\end{bmatrix}
+\end{aligned}
+$$
+
+
 
 ###### Singular Matrices
 
