@@ -1531,12 +1531,31 @@ $$
 ##  Minors and Cofactors
 $$
 \begin{aligned}
-A = \begin{bmatrix}
+A &= \begin{bmatrix}
 3&0&2\\
 1&-2&2\\
 -1&3&2
 \end{bmatrix}\\
-C_{11} = (-1)^{1+1}\det\begin{bmatrix}-2&2\\3&2 \end{bmatrix}, C_{12} = (-1)^{1+2}\det\begin{bmatrix}1&2\\-1&2 \end{bmatrix}, C_{13} = (-1)^{1+3}\det\begin{bmatrix}1&-2\\-1&3 \end{bmatrix}
+A^{-1} &=\frac{1}{\det(A)}C^T\\
+\end{aligned}
+$$
+
+---
+
+##  Minors and Cofactors
+$$
+\begin{aligned}
+A^{-1} &=\frac{1}{\det(A)}C^T\\
+A^{-1} &=\frac{1}{-28}\begin{bmatrix}
+-10 & -4 & 1 \\
+6 & 8 & -9 \\
+4 & -4 & -6 \\
+\end{bmatrix}^T\\
+A^{-1} &= \begin{bmatrix}
+\frac{5}{14} & -\frac{3}{14} & -\frac{1}{7} \\
+\frac{1}{7} & -\frac{2}{7} & \frac{1}{7} \\
+-\frac{1}{28} & \frac{9}{28} & \frac{3}{14} \\
+\end{bmatrix}
 \end{aligned}
 $$
 
@@ -1566,6 +1585,7 @@ $$
 
 ##  Singular Matrices
 $$
+\begin{aligned}
 \begin{bmatrix}
 -1&2\\
 0.5&-1
@@ -1578,6 +1598,7 @@ y
 -1\\
 3
 \end{bmatrix}
+\end{aligned}
 $$
 
 ---
@@ -1585,6 +1606,24 @@ $$
 <!-- _class: imgh -->
 ####  Singular Matrices
 ![bg contain](https://i.imgur.com/lgZSIuw.png)
+
+---
+
+##  Singular Matrices
+- Since a singular transformation **collapses** the space from an $n$-dimensional span to $m$-dimensional span (where $m<n$), the space is shrunk to 0
+- Therefore, any singular matrix will have a **determinant of zero**
+
+---
+
+##  Singular Matrices
+$$
+\begin{aligned}
+\det\begin{bmatrix}
+-1&2\\
+0.5&-1
+\end{bmatrix} = (-1)(-1)-(2)(0.5) = 0
+\end{aligned}
+$$
 
 ---
 
@@ -1601,7 +1640,7 @@ $$
 ---
 
 ##  Singular Matrices
-We call non-invertible matrices such as the transformation above, **singular**.
+We call non-invertible matrices such as the aforementioned transformation above, **singular**.
 
 ---
 
@@ -2216,6 +2255,11 @@ $$
 ---
 
 ##  Eigenvectors and Eigenvalues
-As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$**.
+As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$** is an eigenvector.
+
+---
+
+##  Positive Definite Matrices and Positive Semidefinite Matrices
+A symmetric matrix $A$ is said to be positive **semidefinite** if the scalar value $v^T A v$ is a positive number
 
 ---

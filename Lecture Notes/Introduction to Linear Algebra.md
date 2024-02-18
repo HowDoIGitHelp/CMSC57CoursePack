@@ -1118,11 +1118,11 @@ M_{12} &= \det(\begin{bmatrix}
 d&f\\
 g&i
 \end{bmatrix})\\
-M_{13} &= \det(\begin{bmatrix}
-d&e\\
-g&h
+&\vdots\\
+M_{33} &= \det(\begin{bmatrix}
+a&b\\
+d&e
 \end{bmatrix})\\
-&\vdots
 \end{aligned}
 $$
 
@@ -1205,6 +1205,7 @@ $$
 If the transformed vector $\vec{v}'$ is not on the line described by the column space of $T$:
 
 $$
+\begin{aligned}
 \begin{bmatrix}
 -1&2\\
 0.5&-1
@@ -1217,21 +1218,29 @@ y
 -1\\
 3
 \end{bmatrix}
+\end{aligned}
 $$
 
 ![Imgur](https://i.imgur.com/lgZSIuw.png)
 
-Then there are no solutions.
+Then there are no solutions. On the other hand you may get lucky and the transformed vector $\vec{v}'$ may fall in the column space of $T$. 
 
-On the other hand you may get lucky and the transformed vector $\vec{v}'$ may fall in the column space of $T$.
+One way to check if a matrix is singular is by calculating the determinant. Since a singular transformation **collapses** the space from an $n$-dimensional span to $m$-dimensional span (where $m<n$), the space is shrunk to 0. Therefore, any singular matrix will have a **determinant of zero**. Using the previous example, we find that 
+
+$$
+\begin{aligned}
+\det\begin{bmatrix}
+-1&2\\
+0.5&-1
+\end{bmatrix} = (-1)(-1)-(2)(0.5) = 0
+\end{aligned}
+$$
 
 ![Imgur](https://i.imgur.com/on6JXc0.png)
 
 ![animated singular](https://i.imgur.com/JlBeMdK.gif)
 
-Then the system has infinitely many solutions.
-
-We call non-invertible matrices such as the transformation above, **singular**.
+Then the system has infinitely many solutions. We call non-invertible matrices such as the aforementioned transformation above, **singular**. 
 
 #### Matrices in the Perspective of Linear Algebra
 
@@ -1285,7 +1294,7 @@ $$
 
 ![nonsquare](https://i.imgur.com/3YFU6iT.png)
 
-From this we could gain an intuition about the special property of non-square matrices. It is also a linear transformation, but it is specifically a transformation that **changes** the number of dimensions of the vector space. There is some similarity between, transformation above and the transformation below:
+From this we could gain an intuition about the special property of non-square matrices. It is also a linear transformation, but it is specifically a transformation that **changes** the number of dimensions of the vector space. There is some similarity between the transformation above and the transformation below:
 
 $$
 \begin{bmatrix}
@@ -1665,4 +1674,17 @@ v\\
 \end{aligned}
 $$
 
-As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$**. 
+As you can see, the solutions for $\vec{e}$ is infinitely many, any vector of the form **$\begin{bmatrix}u\\-u\end{bmatrix}$** and any vector of the form **$\begin{bmatrix} v\\0\end{bmatrix}$** is an eigenvector. 
+
+#### Positive Definite Matrices and Positive Semidefinite Matrices
+
+A symmetric matrix $A$ is said to be positive **semidefinite** if the scalar value $v^T A v$ is a positive number
+
+#### Orthogonal Matrices
+
+Square matrices where the corresponding basis vectors are exactly $90^{\circ}$ apart and their lengths are exactly 1 unit. Any orthogonal matrix $A$ satisfies the following condition:
+$$
+\begin{aligned}
+A^{T} = A^{-1}
+\end{aligned}
+$$
