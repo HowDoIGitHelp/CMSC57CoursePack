@@ -666,6 +666,29 @@ $$
 ---
 
 ##  Span
+$$
+\{
+\begin{bmatrix}
+1\\1\\0
+\end{bmatrix},
+\begin{bmatrix}
+0\\0\\1
+\end{bmatrix},
+\begin{bmatrix}
+-1\\-1\\0.5
+\end{bmatrix}
+\}
+$$
+
+---
+
+<!-- _class: imgh -->
+####  Span
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/span3dLinDep.png)
+
+---
+
+##  Span
 And spans that describe a **line**:
 $$
 \{
@@ -708,30 +731,36 @@ $$
 
 ---
 
-##  Liner Transformations
+<!-- _class: imgh -->
+####  Linear Transformations and Matrix Multiplication
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/spanTransform.gif)
+
+---
+
+##  Linear Transformations
 **Linear Transformations** are special transformations where the distortion of the vector space follows these rules:
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 1. The origin should not move
 2. Parallel lines stay parallel
 3. Straight lines stay straight
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 It turns out all transformations that satisfy the above rules can be perfectly described by watching how the **basis vectors** are transformed
 
 ---
 
 <!-- _class: imgh -->
-####  Liner Transformations
+####  Linear Transformations
 ![bg contain](https://i.imgur.com/f2GmdKv.png)
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 - new $\hat{\imath}$ (red vector) :$\hat{\imath}'=\begin{bmatrix}0\\1\end{bmatrix}$
 
 -  new $\hat{\jmath}$ (blue vector): $\hat{\jmath}'=\begin{bmatrix}-1\\0\end{bmatrix}$
@@ -743,7 +772,7 @@ It turns out all transformations that satisfy the above rules can be perfectly d
 
 ----
 
-##  Liner Transformations
+##  Linear Transformations
 - Brown vector: $2\begin{bmatrix}0\\1\end{bmatrix}+1\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$
 
 - Yellow vector: $-2\begin{bmatrix}0\\1\end{bmatrix}+0.5\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}-0.5\\-2\end{bmatrix}$
@@ -753,18 +782,18 @@ It turns out all transformations that satisfy the above rules can be perfectly d
 
 ----
 
-##  Liner Transformations
+##  Linear Transformations
 - Black vector: $1\begin{bmatrix}0\\1\end{bmatrix}+-2\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}2\\1\end{bmatrix}$
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 - All of the other vector values after the transformation is basically **scaled versions** of the new basis vectors in the same way that the pretransformed vector values are combinations of the original basis vectors
 - This means that any 2-dimensional linear transformation can be represented by 4 numbers, which we can write as a **matrix**, where each column corresponds to a basis vector
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 $$
 T=\begin{bmatrix}
 0&-1\\
@@ -774,7 +803,7 @@ $$
 
 ---
 
-##  Liner Transformations
+##  Linear Transformations
 $$
 T=\begin{bmatrix}
 a&b\\
@@ -1141,6 +1170,30 @@ $$
 
 ---
 
+##  Determinant
+If the determinant of the transformation is **zero**, it means that the transformation has **compressed** the vector space to the point where the area or volume is zero:
+
+---
+
+##  Determinant
+$$
+\begin{aligned}
+\begin{bmatrix}
+3 & 0 & -1.5 \\
+-1 & -2 & 2.5 \\
+2 & 1 & -2 \\
+\end{bmatrix}
+\end{aligned}
+$$
+
+---
+
+<!-- _class: imgh -->
+####  Determinant
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/3detTransformFlat.gif)
+
+---
+
 <!-- _class: imgh -->
 ####  Determinant
 ![bg contain](https://i.imgur.com/OJUub1V.png)
@@ -1362,7 +1415,7 @@ $$
 -1&3&2&0&0&1
 \end{array}
 \right]
-\tag{$R_1\to \frac{1}{3}R_1$}
+\text{$R_1\to \frac{1}{3}R_1$}
 $$
 
 ---
@@ -1376,7 +1429,7 @@ $$
 -1&3&2&0&0&1
 \end{array}
 \right]
-\tag{$R_2\to -R_1+R_2$}
+\text{$R_2\to -R_1+R_2$}
 $$
 
 ---
@@ -1390,7 +1443,7 @@ $$
 0&3&\frac{8}{3}&\frac{1}{3}&0&1
 \end{array}
 \right]
-\tag{$R_3\to R_1+R_3$}
+\text{$R_3\to R_1+R_3$}
 $$
 
 ---
@@ -1404,7 +1457,7 @@ $$
 0&3&\frac{8}{3}&\frac{1}{3}&0&1
 \end{array}
 \right]
-\tag{$R_2\to -\frac{1}{2}R_2$}
+\text{$R_2\to -\frac{1}{2}R_2$}
 $$
 
 ---
@@ -1418,7 +1471,7 @@ $$
 0&0&\frac{14}{3}&-\frac{1}{6}&\frac{3}{2}&1
 \end{array}
 \right]
-\tag{$R_3\to -3R_2+R_3$}
+\text{$R_3\to -3R_2+R_3$}
 $$
 
 ---
@@ -1432,7 +1485,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_3\to \frac{3}{14}R_3$}
+\text{$R_3\to \frac{3}{14}R_3$}
 $$
 
 ---
@@ -1446,7 +1499,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_1\to -\frac{2}{3}R_3+R_1$}
+\text{$R_1\to -\frac{2}{3}R_3+R_1$}
 $$
 
 ---
@@ -1460,7 +1513,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_2\to \frac{2}{3}R_3+R_2$}
+\text{$R_2\to \frac{2}{3}R_3+R_2$}
 $$
 
 ---

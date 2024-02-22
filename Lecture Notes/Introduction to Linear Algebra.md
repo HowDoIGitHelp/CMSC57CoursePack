@@ -481,6 +481,22 @@ $$
 
 ![2dspan](https://i.imgur.com/E6P3pqF.png)
 
+$$
+\{
+\begin{bmatrix}
+1\\1\\0
+\end{bmatrix},
+\begin{bmatrix}
+0\\0\\1
+\end{bmatrix},
+\begin{bmatrix}
+-1\\-1\\0.5
+\end{bmatrix}
+\}
+$$
+
+![2dspan2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/span3dLinDep.png)
+
 And spans that describe a **line**:
 $$
 \{
@@ -509,7 +525,9 @@ Applied with a shear distortion
 
 ![Imgur](https://i.imgur.com/uZbFBE3.png)
 
-#### Liner Transformations
+![spanTransform](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/spanTransform.gif)
+
+#### Linear Transformations
 
 **Linear Transformations** are special transformations where the distortion of the vector space follows these rules:
 
@@ -820,6 +838,20 @@ g&h
 \end{aligned}
 $$
 
+If the determinant of the transformation is **zero**, it means that the transformation has **compressed** the vector space to the point where the area or volume is zero:
+
+$$
+\begin{aligned}
+\begin{bmatrix}
+ 3 & 0 & -1.5 \\
+ -1 & -2 & 2.5 \\
+ 2 & 1 & -2 \\
+\end{bmatrix}
+\end{aligned}
+$$
+
+![flat transformation](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/3detTransformFlat.gif)
+
 Consider the the following transformation:
 
 ![Imgur](https://i.imgur.com/OJUub1V.png)
@@ -990,7 +1022,7 @@ $$
 -1&3&2&0&0&1
 \end{array}
 \right]
-\tag{$R_1\to \frac{1}{3}R_1$}
+\text{$R_1\to \frac{1}{3}R_1$}
 $$
 
 To change the value of row 2, col 1 to 0, we need to multiply the $R_1$ by $-1$ and add it to $R_2$. We choose $R_1$ for this because we know that the value on row 1 col 1 is 1.
@@ -1003,7 +1035,7 @@ $$
 -1&3&2&0&0&1
 \end{array}
 \right]
-\tag{$R_2\to -R_1+R_2$}
+\text{$R_2\to -R_1+R_2$}
 $$
 
 Next is to change $R_3$ by simply adding $R_1$ to it
@@ -1016,7 +1048,7 @@ $$
 0&3&\frac{8}{3}&\frac{1}{3}&0&1
 \end{array}
 \right]
-\tag{$R_3\to R_1+R_3$}
+\text{$R_3\to R_1+R_3$}
 $$
 
 We have completed the first column so we move to the second. Since row 1 col 2 is already 0, we move to row 2 col 2. And multiply $-\frac{1}{2}$ to the whole row to make it 1.
@@ -1029,7 +1061,7 @@ $$
 0&3&\frac{8}{3}&\frac{1}{3}&0&1
 \end{array}
 \right]
-\tag{$R_2\to -\frac{1}{2}R_2$}
+\text{$R_2\to -\frac{1}{2}R_2$}
 $$
 
 To finish this column we need to add the $-3R_2$ to the 3rd row to change the 3 to a zero. We choose the 2nd row because row 2 col 2 is now equal to 1.
@@ -1042,7 +1074,7 @@ $$
 0&0&\frac{14}{3}&-\frac{1}{6}&\frac{3}{2}&1
 \end{array}
 \right]
-\tag{$R_3\to -3R_2+R_3$}
+\text{$R_3\to -3R_2+R_3$}
 $$
 
 We now move on to the third column and change it to $\frac{14}{3}$ to 1. (You must always start by changing to 1 for each column so that changing to 0 is easier). We do this by multiplying it by $\frac{3}{14}$.
@@ -1055,7 +1087,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_3\to \frac{3}{14}R_3$}
+\text{$R_3\to \frac{3}{14}R_3$}
 $$
 
 Next, we multiply $R_3$ by  $-\frac{2}{3}$ and add it to $R_1$.
@@ -1068,7 +1100,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_1\to -\frac{2}{3}R_3+R_1$}
+\text{$R_1\to -\frac{2}{3}R_3+R_1$}
 $$
 
 Finally, we just need to multiply $R_3$ by $\frac{2}{3}$ and add it to $R_2$.
@@ -1081,7 +1113,7 @@ $$
 0&0&1&-\frac{1}{28}&\frac{9}{28}&\frac{3}{14}
 \end{array}
 \right]
-\tag{$R_2\to \frac{2}{3}R_3+R_2$}
+\text{$R_2\to \frac{2}{3}R_3+R_2$}
 $$
 
 The matrix on the right is the inverse of the original matrix
