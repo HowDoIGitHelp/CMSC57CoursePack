@@ -1315,7 +1315,7 @@ $$
 
 ![squished](https://i.imgur.com/DcsmPGP.gif)
 
-But the results of the transformation is actually different, the vector:
+But the results of the transformation are actually different, the vector:
 
 $$
 \begin{bmatrix}
