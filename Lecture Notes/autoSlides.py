@@ -5,6 +5,17 @@ from mistletoe.span_token import RawText,Image,Emphasis,LineBreak,EscapeSequence
 import re
 import sys
 
+def splitSlides(slides,maxSlides):
+    splitSlides =[]
+    startPoint = 0
+    for breakPoint in range(maxSlides,len(slides)+maxSlides,maxSlides):
+        splitSlides.append(slides[startPoint:breakPoint])
+        startPoint = breakPoint
+    if len(splitSlides[-1]) < (0.5*maxSlides):
+        splitSlides[-2] += splitSlides[-1]
+        del splitSlides[-1]
+    return splitSlides
+
 def slideHeading(doc,childNumber):
     for i in range(childNumber,-1,-1):
         if isinstance(doc.children[i], Heading):
@@ -12,7 +23,7 @@ def slideHeading(doc,childNumber):
 
 #def slideContent(paragraph,renderer):
 #    for child in paragraph.children:
-#        outputString += renderer.render(child))
+#        slideString += renderer.render(child))
 
 def isMathBlock(paragraph):
     return isinstance(paragraph.children[0], RawText) and len(paragraph.children) > 2 and paragraph.children[0].content == '$$' and isinstance(paragraph.children[-1], RawText) and paragraph.children[-1].content == '$$'
@@ -46,9 +57,9 @@ def paragraphSummary(paragraph,renderer):
     slideContent = []
     rSlides = []
     for sentence in sentences:
-        #outputString += sentence)
+        #slideString += sentence)
         matches = re.findall(r'\*\*[^*]+\*\*',sentence)
-        #outputString += f'matches:{matches}'
+        #slideString += f'matches:{matches}'
         if len(matches) > 0:
             if len(matches) > 1 or len(matches[0].split(' ')) < 5:
                 slideContent.append(sentence)
@@ -81,7 +92,7 @@ def listBreakdown(paragraph,renderer,maxchars = 320):
         if i == len(paragraph.children)-1:
             itemSlides.append(currentSlide)
         i+=1
-    #outputString += itemSlides)
+    #slideString += itemSlides)
     return itemSlides
 
 def quoteBreakdown(paragraph,renderer,maxchars = 320):
@@ -102,7 +113,7 @@ def quoteBreakdown(paragraph,renderer,maxchars = 320):
         if i == len(paragraph.children)-1:
             itemSlides.append(currentSlide)
         i+=1
-    #outputString += itemSlides)
+    #slideString += itemSlides)
     return itemSlides
 
 def mathBreakdown(paragraph,renderer,maxlines = 3):
@@ -137,103 +148,113 @@ def main():
     imgOptions = args[2] if len(args) > 2 else ''
     with open('styles/style.css','r') as css:
         style = f'{css.read()}\n'
-
+    outputStrin_g = f"---\ntype: slide\ntheme: uncover\nstyle: |\n{style}---\n\n # {args[1].split('.')[0]} \n\n"
+    slides = []
     with open(f'{args[1]}', 'r') as fin:
-        outputString = f"---\ntype: slide\ntheme: uncover\nstyle: |\n{style}---\n\n # {args[1].split('.')[0]} \n\n"
+        
         with MarkdownRenderer() as renderer:
             doc = Document(fin)
             
             for i,child in enumerate(doc.children):
                 if not isInvisible(child):
-                    #outputString += f'slide {i}:{type(child)}'
+                    #slideString += f'slide {i}:{type(child)}'
+                    slideString = ''
                     if isParagraph(child):
                         if isImageBlock(child):
-                            #outputString += 'image'
-                            outputString += '---'
-                            outputString += '\n\n'
-                            outputString += '<!-- _class: imgh -->\n'
-                            #outputString += f'{renderer.render(slideHeading(doc,i))}'
+                            #slideString += 'image'
+                            slideString += '---'
+                            slideString += '\n\n'
+                            slideString += '<!-- _class: imgh -->\n'
+                            #slideString += f'{renderer.render(slideHeading(doc,i))}'
                             #print(renderer.render(slideHeading(doc,i)))
-                            outputString += f"#### {renderer.render(slideHeading(doc,i)).replace('#','')}"
+                            slideString += f"#### {renderer.render(slideHeading(doc,i)).replace('#','')}"
                             if child.children[0].src[-3:] == 'gif':
-                                outputString += f'![{imgOptions}]({child.children[0].src})\n'
+                                slideString += f'![{imgOptions}]({child.children[0].src})\n'
                             else:
-                                outputString += f'![{imgOptions}]({child.children[0].src})\n'
-                            #outputString += renderer.render(child)
-                            outputString += '\n'
+                                slideString += f'![{imgOptions}]({child.children[0].src})\n'
+                            #slideString += renderer.render(child)
+                            slideString += '\n'
 
                         elif isMathBlock(child):
-                            outputString += '---'
-                            outputString += '\n\n'
-                            outputString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
+                            slideString += '---'
+                            slideString += '\n\n'
+                            slideString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
                             #breakDown = mathBreakdown(child,renderer)
                             #for j,slide in enumerate(breakDown):
-                            #    outputString += renderer.render(slide)
+                            #    slideString += renderer.render(slide)
                             #    if j != len(breakDown) - 1:
-                            #        outputString += '\n'
-                            #        outputString += '----'
-                            #        outputString += '\n\n'
-                            outputString += renderer.render(child)
-                            outputString += '\n'
+                            #        slideString += '\n'
+                            #        slideString += '----'
+                            #        slideString += '\n\n'
+                            slideString += renderer.render(child)
+                            slideString += '\n'
 
                         else:
                             pSummary = paragraphSummary(child,renderer)
                             if len(pSummary) > 0:
-                                outputString += '---'
-                                outputString += '\n\n'
-                                outputString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
+                                slideString += '---'
+                                slideString += '\n\n'
+                                slideString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
                                 for content in pSummary:
-                                    outputString += renderer.render(content)
-                                outputString += '\n'
+                                    slideString += renderer.render(content)
+                                slideString += '\n'
 
                     elif isQuote(child):
-                        #outputString += '---'
-                        #outputString += '\n\n'
-                        #outputString += renderer.render(child)
-                        #outputString += '\n'
-                        #outputString += 'list'
-                        outputString += '---'
-                        outputString += '\n\n'
+                        #slideString += '---'
+                        #slideString += '\n\n'
+                        #slideString += renderer.render(child)
+                        #slideString += '\n'
+                        #slideString += 'list'
+                        slideString += '---'
+                        slideString += '\n\n'
                         breakDown = quoteBreakdown(child,renderer)
                         for j,slide in enumerate(breakDown):
                             for item in slide:
-                                outputString += renderer.render(item)
+                                slideString += renderer.render(item)
                             if j != len(breakDown) - 1:
-                                outputString += '\n'
-                                outputString += '----'
-                                outputString += '\n\n'
-                        outputString += '\n'
+                                slideString += '\n'
+                                slideString += '----'
+                                slideString += '\n\n'
+                        slideString += '\n'
 
                     elif isList(child):
-                        #outputString += 'list'
-                        outputString += '---'
-                        outputString += '\n\n'
+                        #slideString += 'list'
+                        slideString += '---'
+                        slideString += '\n\n'
                         breakDown = listBreakdown(child,renderer)
                         for j,slide in enumerate(breakDown):
-                            outputString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
+                            slideString += f"## {renderer.render(slideHeading(doc,i)).replace('#','')}"
                             for item in slide:
-                                outputString += renderer.render(item)
+                                slideString += renderer.render(item)
                             if j != len(breakDown) - 1:
-                                outputString += '\n'
-                                outputString += '----'
-                                outputString += '\n\n'
-                        outputString += '\n'
+                                slideString += '\n'
+                                slideString += '----'
+                                slideString += '\n\n'
+                        slideString += '\n'
 
                     elif isTable(child):
-                        #outputString += 'table'
-                        outputString += '---'
-                        outputString += '\n\n'
+                        #slideString += 'table'
+                        slideString += '---'
+                        slideString += '\n\n'
                         breakDown = tableBreakdown(child,renderer)
                         for j,slide in enumerate(breakDown):
-                            outputString += renderer.render(slide)
+                            slideString += renderer.render(slide)
                             if j != len(breakDown) - 1:
-                                outputString += '\n'
-                                outputString += '----'
-                                outputString += '\n\n'
-                        outputString += '\n'
-        outputString += '---'
-    with open(f'Slides for {args[1]}', 'w+') as fout:
-        fout.write(outputString)
+                                slideString += '\n'
+                                slideString += '----'
+                                slideString += '\n\n'
+                        slideString += '\n'
+                    slides.append(slideString)
+        outputStrin_g += '---'
+
+    slideParts = splitSlides(slides,100)
+    for partNum,part in enumerate(slideParts):
+        with open(f'Part {partNum+1} slides for {args[1]}', 'w+') as fout:
+            revealSlides = f"---\ntype: slide\ntheme: uncover\nstyle: |\n{style}---\n\n # {args[1].split('.')[0]} \n\n"
+            for slide in part:
+                revealSlides += slide
+            fout.write(revealSlides)
+        print(f'generated {len(part)} slides for part {partNum+1}')
     print('finished')
 
 
