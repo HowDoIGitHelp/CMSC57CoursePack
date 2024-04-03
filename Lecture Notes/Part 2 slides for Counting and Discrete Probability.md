@@ -22,6 +22,12 @@ style: |
 
 ---
 
+##  Probability theory
+- **$p(E_1 \cup E_2)=p(E_1)+p(E_2)-p(E_1 \cap E_2)$**
+- **$p(\overline{E})=1-p(E)$**
+
+---
+
 To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**, since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
 
 ---

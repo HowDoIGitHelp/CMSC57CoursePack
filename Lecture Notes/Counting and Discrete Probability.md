@@ -166,9 +166,7 @@ To answer this counting problem, all we need to do is to apply the **division** 
 > \end{aligned}
 > $$
 
-Since one combination is actually equivalent to **$P(3,3)$** permutations. We simply divide the total amount of 3-permutations by **$P(3,3)$**. Which is **$\frac{60}{6}=10$** combinations.
-
-This gives us the formula for **$r$-combinations from a set of **$n$** elements:
+Since one combination is actually equivalent to **$P(3,3)$** permutations. We simply divide the total amount of 3-permutations by **$P(3,3)$**. Which is **$\frac{60}{6}=10$** combinations. This gives us the formula for **$r$-combinations** from a set of **$n$** elements:
 
 > $$
 > \begin{aligned}
@@ -243,7 +241,9 @@ $$
 $$
 
 Which actually make sense if you answer the question using the product rule since you there are 2 ways (selecting either **$x$** or **$y$**) in each of the **$n$** tasks in the whole procedure. This also makes sense on the context of bit strings since there are exactly **$2^n$** unique bit strings of length **$n$**.
+
 The binomial theorem can lead us to more interesting corollaries related to combinatoric summations,
+
 $$
 \begin{aligned}
 \sum_{i=0}^{n}{(-1)^i{n \choose i}}&=\sum_{i=0}^{n}{n \choose i}(-1)^i 1^{n-i}\\

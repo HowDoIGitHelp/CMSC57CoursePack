@@ -257,12 +257,8 @@ $$
 ##  Combinations
 - Since one combination is actually equivalent to **$P(3,3)$** permutations
 - We simply divide the total amount of 3-permutations by **$P(3,3)$**
-- Which is **$\frac{60}{6}=10$** combinations.
-
----
-
-##  Combinations
-**$r$-combinations from a set of **
+- Which is **$\frac{60}{6}=10$** combinations
+- This gives us the formula for **$r$-combinations** from a set of **$n$** elements:
 
 ---
 
@@ -382,14 +378,17 @@ $$
 ##  Binomial Theorem
 - Which actually make sense if you answer the question using the product rule since you there are 2 ways (selecting either **$x$** or **$y$**) in each of the **$n$** tasks in the whole procedure
 - This also makes sense on the context of bit strings since there are exactly **$2^n$** unique bit strings of length **$n$**.
-  The binomial theorem can lead us to more interesting corollaries related to combinatoric summations,
-  $$
-  \begin{aligned}
-  \sum_{i=0}^{n}{(-1)^i{n \choose i}}&=\sum_{i=0}^{n}{n \choose i}(-1)^i 1^{n-i}\\
-  \sum_{i=0}^{n}{(-1)^i{n \choose i}}&=(-1+1)^n\\
-  \sum_{i=0}^{n}{(-1)^i {n \choose i}}&=0^n=0
-  \end{aligned}
-  $$
+
+---
+
+##  Binomial Theorem
+$$
+\begin{aligned}
+\sum_{i=0}^{n}{(-1)^i{n \choose i}}&=\sum_{i=0}^{n}{n \choose i}(-1)^i 1^{n-i}\\
+\sum_{i=0}^{n}{(-1)^i{n \choose i}}&=(-1+1)^n\\
+\sum_{i=0}^{n}{(-1)^i {n \choose i}}&=0^n=0
+\end{aligned}
+$$
 
 ---
 
@@ -600,10 +599,4 @@ This then gives us a more general definition for the probability of an event **$
 $$
 p(E)=\sum_{s \in E}{p(s)}
 $$
-
----
-
-##  Probability theory
-- **$p(E_1 \cup E_2)=p(E_1)+p(E_2)-p(E_1 \cap E_2)$**
-- **$p(\overline{E})=1-p(E)$**
 
