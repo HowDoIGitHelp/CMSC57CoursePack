@@ -314,7 +314,7 @@ Let's start this topic by discussing some key terminologies:
 
 Using laplace's definition:
 
-> if **$S$** is a **finite** nonempty sample space of equally likely outcomes, and **$E$** is an event, given that **$E \subset S$**, The probability of event **$E$**, (denoted by **$p(E)$):
+> if **$S$** is a **finite** nonempty sample space of equally likely outcomes, and **$E$** is an event, given that **$E \subset S$**, The probability of event **$E$**, (denoted by **$p(E)$**):
 > 
 > $$
 > p(E)=\frac{|E|}{|S|}
@@ -322,7 +322,7 @@ Using laplace's definition:
 
 The probability of an event can only be between **$0$** to **$1$**. That is because the **$E$** is a subset of **$S$**. Therefore, we can conclude that its cardinality is greater than or equal to **$0$** and less than or equal to **$|S|$** ($0 \leq |E| \leq |S|$).
 
-For example, given a box that contains 3 oranges, 6 apples, and 2 bananas, what is the probability that a fruit chosen at random from the box is an orange?
+For example, given a box that contains 3 oranges, 6 apples, and 2 bananas, what is the probability that a fruit chosen at random from the box is an **orange**?
 
 To answer this question, we first identify what is the sample space and what is the event. The sample space in this experiment is the set of eleven fruits, 3 of them are oranges and 6 of them are apples, and two of them are bananas. The event that we are concerned with is the event that chooses an orange. Since there are  3 oranges, the probability for choosing an orange can be calculated as: **$\frac{3}{11}$**.
 
@@ -335,7 +335,7 @@ To answer this question, we first identify what is the sample space and what is 
 
 #### Probabilities of unions of events
 
-If your looking for the probability that either one of two events **$E$** or **$F$** occurs (where both **$E$** and **$F$** are subsets of **$S$), you can simply combine the two events into one event which corresponds to their union. Since this union is still the subset of the sample space **$S$**, you can use Laplace's definition to find the probability:
+If your looking for the probability that either one of two events **$E$** or **$F$** occurs (where both **$E$** and **$F$** are subsets of **$S$**), you can simply combine the two events into one event which corresponds to their union. Since this union is still the subset of the sample space **$S$**, you can use Laplace's definition to find the probability:
 
 $$
 \begin{aligned}
@@ -348,7 +348,7 @@ $$
 
 #### Probabilities of complements
 
-Finding the probability that an event doesn't occur, is very easy. We can leverage the fact that since event **$E$** is a subset of **$S$**, then the set difference **$S-E$** (which is also a subset of **$S$), corresponds to all events where **$E$** is not the outcome. That is because **$S-E$** is literally the set of all outcomes that are not **$E$**. This leads us to the formula for the probability of the **complement** of an event, (denoted by **$p(\overline{E})$):
+If the probability of an event is known, finding the probability that said event doesn't occur is very easy. We can leverage the fact that since event **$E$** is a subset of **$S$**, then the set difference **$S-E$** (which is also a subset of **$S$**), corresponds to all events where **$E$** is not the outcome. That is because **$S-E$** is literally the set of all outcomes that are not **$E$**. This leads us to the formula for the probability of the **complement** of an event, (denoted by **$p(\overline{E})$**):
 
 $$
 \begin{aligned}
@@ -360,7 +360,7 @@ $$
 \end{aligned}
 $$
 
-This principle is very useful since there are times where the complement of an event is much easier to identify than the event itself. For example, solving for the probability of a random 8-bit string having at least one zero directly is tedious since you have to add the probabilities for the events where the string has one zero, two zeroes, three zeroes, and etc. If you instead identify the complement, which is the probability that a random 8-bit string has 8 ones, (zero zeroes, or the probability not of having at least one zero):
+This principle is very useful since there are times where the **complement** of an event is much **easier** to identify than the event itself. For example, solving for the probability of a random 8-bit string having at least one zero directly is tedious since you have to add the probabilities for the events where the string has one zero, two zeroes, three zeroes, and etc. If you instead identify the complement, which is the probability that a random 8-bit string has 8 ones, (zero zeroes, or the probability not of having at least one zero):
 
 (Given **$E$** as the event where the random bit string has at least one zero)
 
@@ -376,9 +376,9 @@ $$
 
 ### Probability theory
 
-Laplace's definition for the probability of an event in a finite sample space assumes that all possible outcomes have equal likelihood to occur. This cannot be assumed for all experiments in the real world since some outcomes are actually more likely than the others. A coin may be biased in such a way that outcome of flipping to one specific side is more likely, than the other side.
+Laplace's definition for the probability of an event in a finite sample space assumes that all possible outcomes have **equal** likelihood to occur. This cannot be assumed for all experiments in the **real world** since some outcomes are actually more likely than the others. A coin may be **biased** in such a way that outcome of flipping to one specific side is more likely, than the other side.
 
-The definition for probability can be generalized for finite probability space experiments that don't have equally likely outcomes. This is done by assigning a specific probability **$p(s)$** for each outcome **$s \in S$**. The assignment of specific probabilities can only be valid if **$0 \leq p(s) \leq 1$** for each outcome **$s$**, and that **$\sum_{s \in S}{p(s)}=1$** (each probability is within the range **$[0,1]$**, and the sum of all probabilities is exactly **$1$). By satisfying both conditions, an experiment is guaranteed to have exactly one outcome among the sample space.
+The definition for probability can be generalized for finite probability space experiments that **don't** have equally likely outcomes. This is done by assigning a specific probability **$p(s)$** for each outcome **$s \in S$**. The assignment of specific probabilities can only be valid if **$0 \leq p(s) \leq 1$** for each outcome **$s$**, and that **$\sum_{s \in S}{p(s)}=1$** (each probability is within the range **$[0,1]$**, and the sum of all probabilities is exactly **$1$**). By satisfying both conditions, an experiment is guaranteed to have exactly one outcome among the sample space.
 
 This definition of probability describes the function, **$p:S\to [0,1]$**, known as the **probability distribution** for the particular experiment. The correct assignment of each probability **$p(S)$** should satisfy the limit: 
 
@@ -390,10 +390,10 @@ Given that after performing the experiment **$n$** times, the outcome **$s$** oc
 
 An example of proper assignments of probabilities look something like this:
 
-> Given the sample space for flipping a coin, **$S=\{H,T\}$:
+> Given the sample space for flipping a coin, **$S=\{H,T\}$**:
 >
-> - **$p(H)=\frac{1}{2}$
-> - **$p(T)=\frac{1}{2}$
+> - **$p(H)=\frac{1}{2}$**
+> - **$p(T)=\frac{1}{2}$**
 
 A probability distribution such as the above which follows Laplace's assumption of having equally likely outcomes, is called a **uniform distribution**. This implies that a uniformly distributed experiment will have a probability assignment **$p(s)=\frac{1}{n}$** where **$s \in S$** and **$|S|=n$**.
 
@@ -410,21 +410,21 @@ The formula for compound probabilities remain to be true in the general definiti
 
 #### Conditional Probability
 
-Given a six-sided die, what is the probability that the sum of two rolls is divisible by three?
+Given a six-sided die, what is the probability that the sum of two rolls is **divisible by three**?
 
->  To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**, since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
+To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**. Since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
 
 How would the probability change, if we change the scenario, such that the first die roll is **$2$**? 
 
 A modified scenario like this asks for:
 
-" the **conditional probability** of two rolls being divisible by three given that the first roll is 2" 
+"the **conditional probability** of two rolls being divisible by three given that the first roll is 2" 
 
 A conditional probability is often denoted by **$p(E|F)$** where **$E$** is the desired event and **$F$** is the assumed event.
 
 We can answer these probability questions by imagining a sample space where all first dice rolls are **$2$**, **$F=\{(2,1),(2,2),(2,3),(2,4),(2,5),(2,6)\}$**. We then look at the set of outcomes where both **$E$** and **$F$** is satisfied (the first roll is 2 and the sum of both rolls is divisible by three) or the set **$E \cap F=\{(2,1),(2,4)\}$**. This means that the **$E|F$** occurs 2 out of 6 times, giving us the conditional probability **$p(E|F)=\frac{1}{3}$**.
 
-In general the formula for a conditional probability of **$E$** given **$F$** is:
+In general the formula for a conditional probability of $E$ given $F$ is:
 
 $$
 p(E|F)=\frac{p(E \cap F)}{p(F)}
@@ -432,7 +432,8 @@ $$
 
 Let's look at another example, what is the probability that the second flip of a fair coin is heads given that the first flip is tails?
 
-Given **$H$** as the event that the second flip is heads, and **$T$** as the event that the first flip is tails, we solve for **$p(H|T)$:
+Given **$H$** as the event that the second flip is heads, and **$T$** as the event that the first flip is tails, we solve for **$p(H|T)$**:
+
 $$
 \begin{aligned}
 p(H|T)&=\frac{p(H \cap T)}{p(T)}=\frac{\frac{1}{4}}{\frac{1}{2}}\\\\
@@ -442,7 +443,7 @@ $$
 
 ##### Independence
 
-When considering conditional probabilities, the concept of probabilistic independence often comes up. When you think about it, the outcome of the first coin flip does not actually affect the outcome of the second coin flip. Knowing the outcome of the first coin flip will not give us any information about the outcome of the second coin flip. In fact you can remove the first roll out of the picture and restate the question as the following: "*what is the probability of  flipping a heads*". The probability of this event is exactly the same as the probability of **$p(H|T)$**.  Whenever **$p(H|T)=p(H)$**, we can conclude that the events **$H$** and **$T$** are **independent**. This gives us the mathematical definition for independent events:
+When considering conditional probabilities, the concept of probabilistic independence often comes up. When you think about it, the outcome of the first coin flip **does not actually affect** the outcome of the second coin flip. Knowing the outcome of the first coin flip will not give us any information about the outcome of the second coin flip. In fact you can remove the first roll out of the picture and restate the question as the following: **"*what is the probability of  flipping a heads*"**. The probability of this event is exactly the same as the probability of **$p(H|T)$**.  Whenever **$p(H|T)=p(H)$**, we can conclude that the events **$H$** and **$T$** are **independent**. This gives us the mathematical definition for independent events:
 
 > **$E$** and **$F$** are independent if and only if **$p(E \cap F)=p(E)p(F)$
 >

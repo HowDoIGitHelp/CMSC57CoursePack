@@ -28,7 +28,14 @@ style: |
 
 ---
 
-To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**, since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
+##  Conditional Probability
+Given a six-sided die, what is the probability that the sum of two rolls is **divisible by three**?
+
+---
+
+##  Conditional Probability
+- Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**
+- Since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
 
 ---
 
@@ -38,7 +45,7 @@ How would the probability change, if we change the scenario, such that the first
 ---
 
 ##  Conditional Probability
-" the **conditional probability** of two rolls being divisible by three given that the first roll is 2"
+"the **conditional probability** of two rolls being divisible by three given that the first roll is 2"
 
 ---
 
@@ -55,11 +62,6 @@ A conditional probability is often denoted by **$p(E|F)$** where **$E$** is the 
 ---
 
 ##  Conditional Probability
-In general the formula for a conditional probability of **$E$** given **$F$** is:
-
----
-
-##  Conditional Probability
 $$
 p(E|F)=\frac{p(E \cap F)}{p(F)}
 $$
@@ -67,7 +69,11 @@ $$
 ---
 
 ##  Conditional Probability
-Given **$H$** as the event that the second flip is heads, and **$T$** as the event that the first flip is tails, we solve for **$p(H|T)$:
+Given **$H$** as the event that the second flip is heads, and **$T$** as the event that the first flip is tails, we solve for **$p(H|T)$**:
+
+---
+
+##  Conditional Probability
 $$
 \begin{aligned}
 p(H|T)&=\frac{p(H \cap T)}{p(T)}=\frac{\frac{1}{4}}{\frac{1}{2}}\\\\
@@ -78,6 +84,7 @@ $$
 ---
 
 ##  Independence
+- When you think about it, the outcome of the first coin flip **does not actually affect** the outcome of the second coin flip
 - The probability of this event is exactly the same as the probability of **$p(H|T)$**
 -  Whenever **$p(H|T)=p(H)$**, we can conclude that the events **$H$** and **$T$** are **independent**
 

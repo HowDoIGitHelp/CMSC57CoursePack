@@ -465,7 +465,7 @@ $$
 
 ---
 
-if **$S$** is a **finite** nonempty sample space of equally likely outcomes, and **$E$** is an event, given that **$E \subset S$**, The probability of event **$E$**, (denoted by **$p(E)$):
+if **$S$** is a **finite** nonempty sample space of equally likely outcomes, and **$E$** is an event, given that **$E \subset S$**, The probability of event **$E$**, (denoted by **$p(E)$**):
 
 $$
 p(E)=\frac{|E|}{|S|}
@@ -477,6 +477,11 @@ $$
 - The probability of an event can only be between **$0$** to **$1$**
 - That is because the **$E$** is a subset of **$S$**
 - Therefore, we can conclude that its cardinality is greater than or equal to **$0$** and less than or equal to **$|S|$** ($0 \leq |E| \leq |S|$).
+
+---
+
+##  Finite Probability Space
+For example, given a box that contains 3 oranges, 6 apples, and 2 bananas, what is the probability that a fruit chosen at random from the box is an **orange**?
 
 ---
 
@@ -498,7 +503,7 @@ Since there are  3 oranges, the probability for choosing an orange can be calcul
 ---
 
 ##  Probabilities of unions of events
-- If your looking for the probability that either one of two events **$E$** or **$F$** occurs (where both **$E$** and **$F$** are subsets of **$S$), you can simply combine the two events into one event which corresponds to their union
+- If your looking for the probability that either one of two events **$E$** or **$F$** occurs (where both **$E$** and **$F$** are subsets of **$S$**), you can simply combine the two events into one event which corresponds to their union
 - Since this union is still the subset of the sample space **$S$**, you can use Laplace's definition to find the probability:
 
 ---
@@ -515,9 +520,9 @@ $$
 ---
 
 ##  Probabilities of complements
-- We can leverage the fact that since event **$E$** is a subset of **$S$**, then the set difference **$S-E$** (which is also a subset of **$S$), corresponds to all events where **$E$** is not the outcome
+- We can leverage the fact that since event **$E$** is a subset of **$S$**, then the set difference **$S-E$** (which is also a subset of **$S$**), corresponds to all events where **$E$** is not the outcome
 - That is because **$S-E$** is literally the set of all outcomes that are not **$E$**
-- This leads us to the formula for the probability of the **complement** of an event, (denoted by **$p(\overline{E})$):
+- This leads us to the formula for the probability of the **complement** of an event, (denoted by **$p(\overline{E})$**):
 
 ---
 
@@ -531,6 +536,11 @@ p(\overline{E}) &= p(S-E)\\
 p(\overline{E})&=1-p(E)
 \end{aligned}
 $$
+
+---
+
+##  Probabilities of complements
+This principle is very useful since there are times where the **complement** of an event is much **easier** to identify than the event itself
 
 ---
 
@@ -553,8 +563,16 @@ $$
 ---
 
 ##  Probability theory
+- Laplace's definition for the probability of an event in a finite sample space assumes that all possible outcomes have **equal** likelihood to occur
+- This cannot be assumed for all experiments in the **real world** since some outcomes are actually more likely than the others
+- A coin may be **biased** in such a way that outcome of flipping to one specific side is more likely, than the other side.
+
+---
+
+##  Probability theory
+- The definition for probability can be generalized for finite probability space experiments that **don't** have equally likely outcomes
 - This is done by assigning a specific probability **$p(s)$** for each outcome **$s \in S$**
-- The assignment of specific probabilities can only be valid if **$0 \leq p(s) \leq 1$** for each outcome **$s$**, and that **$\sum_{s \in S}{p(s)}=1$** (each probability is within the range **$[0,1]$**, and the sum of all probabilities is exactly **$1$)
+- The assignment of specific probabilities can only be valid if **$0 \leq p(s) \leq 1$** for each outcome **$s$**, and that **$\sum_{s \in S}{p(s)}=1$** (each probability is within the range **$[0,1]$**, and the sum of all probabilities is exactly **$1$**)
 
 ---
 
@@ -577,10 +595,10 @@ $$
 
 ---
 
-Given the sample space for flipping a coin, **$S=\{H,T\}$:
+Given the sample space for flipping a coin, **$S=\{H,T\}$**:
 
-- **$p(H)=\frac{1}{2}$
-- **$p(T)=\frac{1}{2}$
+- **$p(H)=\frac{1}{2}$**
+- **$p(T)=\frac{1}{2}$**
 
 ---
 
