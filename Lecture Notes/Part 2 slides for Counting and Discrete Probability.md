@@ -135,13 +135,13 @@ $$
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes1.jpg)
 
 ---
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes2.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes2.jpg)
 
 ---
 
@@ -157,7 +157,7 @@ Lets call picking a blue ball **$b$**.
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes3.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes3.jpg)
 
 ---
 
@@ -194,7 +194,7 @@ What exactly is **$p(B|b)$**? Before we answer that, let us derive Bayes' theore
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes4.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes4.jpg)
 
 ---
 
@@ -214,7 +214,7 @@ The sample space can be divided into two outcomes **$Q$** and **$\overline{Q}$**
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes5.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes5.jpg)
 
 ---
 
@@ -226,7 +226,7 @@ The sample space can be divided into two outcomes **$Q$** and **$\overline{Q}$**
 
 <!-- _class: imgh -->
 ####  Bayes' Theorem
-![bg contain](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes6.png)
+![bg contain](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes6.jpg)
 
 ---
 

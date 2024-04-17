@@ -483,17 +483,17 @@ One of the most powerful theorems related to probability is the Bayes' theorem. 
 
 Consider the following scenario:
 
-![bayes](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes.png)
+![bayes](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes1.jpg)
 
 Consider three opaque boxes, lets call them B, R, and M. Box B has 6 blue balls, box R has 6 red balls and box and box M has 3 blue balls and 3 red balls. Suppose you select a box randomly:
 
-![bayes2](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes2.png)
+![bayes2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes2.jpg)
 
 What is the probability that the selected box is box B (lets call this **$p(B)$)? The answer is very straightforward, since box B is one event out of 3 possible outcomes in the sample space, the probability is **$\frac{1}{3}$**. In fact the selected box is equally likely to be box R or box M.
 
 Suppose you pick a random ball in the selected box without looking inside and it turned out to be a blue ball. Lets call picking a blue ball **$b$**.
 
-![bayes3](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes3.png)
+![bayes3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes3.jpg)
 
 How does event **$b$** affect the probability that this box is box B? Does this increase or decrease the probability that this is box B? 
 
@@ -511,7 +511,7 @@ Given some event **$Q$**, and some evidence **$R$**, what is the probability of 
 
 We can represent this general scenario using the following diagram:
 
-![bayes4](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes4.png)
+![bayes4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes4.jpg)
 
 $$
 \begin{aligned}
@@ -521,11 +521,11 @@ $$
 
 This diagram represents the probabilities of all possible events in the sample space. The sample space can be divided into two outcomes **$Q$** and **$\overline{Q}$** (either **$Q$** occurs or **$Q$** doesn't occur), 
 
-![bayes5](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes5.png)
+![bayes5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes5.jpg)
 
 Within the outcome **$p(Q)$**, the evidence **$R$** has the probability of being observed as **$p(R|Q)$**. Therefore to figure out **$p(Q|R)$**, we just need to look at the proportion of the occurrences of **$R|Q$**, among all occurrences of **$Q$** in the sample space,
 
-![bayes6](https://rubslecturenotes.herokuapp.com/static/md/Counting%20and%20Discrete%20Probability/media/bayes6.png)
+![bayes6](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/counting%20and%20probability/bayes6.jpg)
 
 Suppose the size of the sample space is **$|S|$**, we can represent the total number of **$|Q|$** occurences as **$p(Q)|S|$**. That's because **$p(Q)$** is basically the ratio of **$|Q|$** occurences divided by all possible outcomes:
 
