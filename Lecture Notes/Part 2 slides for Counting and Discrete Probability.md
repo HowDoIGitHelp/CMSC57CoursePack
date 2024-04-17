@@ -202,7 +202,6 @@ What exactly is **$p(B|b)$**? Before we answer that, let us derive Bayes' theore
 $$
 \begin{aligned}
 P(Q) &= P(R|Q) + P(\overline{R}|Q)\\
-P(R) &= P(R|Q) + P(R|\overline{Q})\\
 \end{aligned}
 $$
 
@@ -355,6 +354,36 @@ $$
 
 ---
 
+##  Bayes' Theorem
+Therefore the posterior probability **$p(B|b)$**:
+
+---
+
+##  Bayes' Theorem
+$$
+\begin{aligned}
+p(B|b)&=\frac{p(b|B)p(B)}{p(b|B)p(B)+p(b|\overline{B})p(\overline{B})}\\
+p(B|b)&=\frac{1(\frac{1}{3})}{1(\frac{1}{3})+(\frac{1}{4})(\frac{2}{3})}\\\\
+p(B|b)&=\frac{2}{3}
+\end{aligned}
+$$
+
+---
+
+##  Bayes' Theorem
+$$
+\begin{aligned}
+p(M|b)&=\frac{p(b|M)p(M)}{p(b|M)p(M)+p(b|\overline{M})p(\overline{M})}\\
+p(M|b)&=\frac{(\frac{1}{2})(\frac{1}{3})}{(\frac{1}{2})(\frac{1}{3})+(\frac{1}{2})(\frac{2}{3})}\\\\
+p(M|b)&=\frac{1}{3}\\\\
+p(R|b)&=\frac{p(b|R)p(R)}{p(b|R)p(R)+p(b|\overline{R})p(\overline{R})}\\
+p(R|b)&=\frac{(0)(\frac{1}{3})}{(0)(\frac{1}{3})+(\frac{3}{4})(\frac{2}{3})}\\\\
+p(R|b)&=0
+\end{aligned}
+$$
+
+---
+
 ##  Bayesian spam filters
 - The **naive bayes algorithm** uses the bayesian theorem to classify the classification of something based on its characteristics
 - This algorithm has been used in **bayesian spam** filters where an email can be classified as spam or not spam
@@ -368,6 +397,17 @@ The **expected value** of some random variable (some variable that represents th
 
 ##  Random variable and expected value
 If we imagine a random variable **$X$** that represents the number of heads in a coin flip, we know that this random variable **$X$** have two possible values, **$X=1$** or **$X=0$**
+
+---
+
+##  Random variable and expected value
+$$
+\begin{aligned}
+E(X)&=\sum_{s\in\{1,0\}}{p(s)s}\\
+E(X)&=\frac{1}{2}(1)+\frac{1}{2}(0)\\\\
+E(X)&=0.5
+\end{aligned}
+$$
 
 ---
 

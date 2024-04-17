@@ -516,7 +516,6 @@ We can represent this general scenario using the following diagram:
 $$
 \begin{aligned}
 P(Q) &= P(R|Q) + P(\overline{R}|Q)\\
-P(R) &= P(R|Q) + P(R|\overline{Q})\\
 \end{aligned}
 $$
 
@@ -603,7 +602,8 @@ To answer the question earlier, what exactly is the probability of the selected 
 > $$
 > 
 
-Therefore the posterior probability **$p(B|b)$:
+Therefore the posterior probability **$p(B|b)$**:
+
 $$
 \begin{aligned}
 p(B|b)&=\frac{p(b|B)p(B)}{p(b|B)p(B)+p(b|\overline{B})p(\overline{B})}\\
@@ -611,7 +611,9 @@ p(B|b)&=\frac{1(\frac{1}{3})}{1(\frac{1}{3})+(\frac{1}{4})(\frac{2}{3})}\\\\
 p(B|b)&=\frac{2}{3}
 \end{aligned}
 $$
+
 Calculating the probabilites for other boxes supports our intuition earlier,
+
 $$
 \begin{aligned}
 p(M|b)&=\frac{p(b|M)p(M)}{p(b|M)p(M)+p(b|\overline{M})p(\overline{M})}\\
@@ -634,6 +636,7 @@ The **expected value** of some random variable (some variable that represents th
 For example you might be interested in knowing the expected number of heads after flipping a coin 100 times. This can be identified by calculating the sum of all products of each outcome in the sample space times the probability of said outcome. 
 
 Assuming the coin is fair, one coin flip has two outcomes, heads or tails, so one coin flip can have either zero or one heads. If we imagine a random variable **$X$** that represents the number of heads in a coin flip, we know that this random variable **$X$** have two possible values, **$X=1$** or **$X=0$**. Therefore the expected value of  canX be calculated as the following:
+
 $$
 \begin{aligned}
 E(X)&=\sum_{s\in\{1,0\}}{p(s)s}\\
