@@ -20,7 +20,7 @@ $E$={{"Whiterun", "Falkreath"}, {"Whiterun", "Morthal"}, {"Falkreath","Markarth"
 
 To visualize this graph we draw labelled dots as vertices and connect dots if an edge exists between them:
 
-![belongstonords](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/graph.png)
+![belongstonords](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graph.jpg)
 
 > Note that the exact location of the dots are not part of the characteristics of the graph, The dots can be arbitrarily placed anywhere.
 
@@ -30,7 +30,7 @@ The example shown above is called an undirected graph. An undirected graph means
 
 A directed graph is a generalization where the direction of the connection between two vertices matter. $(a,b)\in E$ Does not necessarily mean $(b,a)\in E$. When visualized a directed graph's edges are drawn as arrow to specify the direction:
 
-![directed graph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/directedgraph.png)
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
 
 > An undirected graph's edge is denoted using unordered pair, (note the curly braces"{ }") while a directed graph's edge is denoted using an ordered pair, (note the parenthesis).
 
@@ -38,11 +38,11 @@ A directed graph is a generalization where the direction of the connection betwe
 
 The graphs we have looked at so far are examples of **simple graphs**. Simple graphs are graphs where there are at most 1 edge for every pair of vertex. If at least one pair of vertex has more than one edge then that graph is a **multigraph**. The graph below is an undirected multigraph since there are two of $\{a, c\}$ and two of $\{b,c\}$.
 
-![multigraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/multigraph.png)
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/multigraph.jpg)
 
 The graph below is a directed multigraph since there are two of $(a,b)$ and two of $(c,a)$.
 
-![multigraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dmultigraph.png)
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
 
 ### Some important graph terminologies
 
@@ -51,11 +51,11 @@ The graph below is a directed multigraph since there are two of $(a,b)$ and two 
 
 - **degree** - the degree of a vertex in an undirected graph, denoted by $\deg(a)$ is the number of edges that connect to $a$. In an undirected graph $\{a,b\}$ and $\{b,a\}$ are counted as one degree. In the example below,  $\deg(\text{"Morthal"})=3$, $\deg(\text{"Whiterun"})=2$
 
-  ![belongstonords](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/graph.png)
+  ![belongstonords](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graph.jpg)
 
 > **Loops and degrees** - Some graphs contain special edges called loops. Loops are edges where the endpoints is one vertex. In the example below one of the edges is an edge that connects $a$ to itself, $(a,a)$.
 >
-> ![graphloop](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/graphloop.png)
+> ![graphloop](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graphloop.jpg)
 >
 > It is important to note that when counting the degree of $a$, the loop, $\{a,a\}$ is counted twice. Therefore, $\deg(a)=3$. This might seem strange but there are a couple of reasons why graph theorists decided to define it as such. One of the reasons is the following:  if you look at a non-loop edge, like $\{a,b\}$, this edge is counted as the edge of $b$ and counted as an edge of $a$ again. Meaning, in the total degree of the graph, $\{a,b\}$ is counted exactly **twice**. Applying the same reasoning to a loop like $\{a,a\}$, means that this edge must be counted once for vertex $a$ and another for the other vertex $a$. Meaning it must be counted twice as well.
 
@@ -67,7 +67,7 @@ The graph below is a directed multigraph since there are two of $(a,b)$ and two 
 
 Complete graphs are graphs where any combination of two vertices are connected by an edge. This means that a complete graph with $m$ edges contain the maximum amount of edges. Graphs that are not complete are incomplete graphs.
 
-![graphcycles](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/graphcomplete.png)
+![graphcycles](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graphcomplete.jpg)
 
 ###### Cycles
 
@@ -75,7 +75,7 @@ Cycles are graphs with 3 or more vertices with the following edge pattern:
 
 $E=\{\{v_1,v_2\},\{v_2,v_3\},\{v_3,v_4\},\cdots,\{v_n-1,v_n\},\{v_n,v_1\}\}$.
 
-![graphcycles](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/graphcycles.png)
+![graphcycles](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graphcycles.jpg)
 
 ### Bipartite graphs
 
@@ -83,7 +83,7 @@ Bipartite graphs are special graphs where the vertices of the graph can be divid
 
 For example, a cycle of 6 vertices is bipartite as shown below:
 
-![bipartitegraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/bipartitegraph.png) 
+![bipartitegraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/bipartitegraph.jpg) 
 
 ### Graphs Representations
 
@@ -93,7 +93,7 @@ When encountering graph related problems, you often need to devise a way to repr
 
 There are two main ways to do this, one is to list all vertices. For each vertex, list all the neighbors of the vertex. This method is called **adjacency list**. For example the graph below:
 
-![graph example](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/subgraph.png)
+![graph example](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/subgraph.jpg)
 
 can be represented by the following adjacency list:
 
@@ -107,7 +107,7 @@ can be represented by the following adjacency list:
 
 When representing a directed graph, only the **terminal neighbors** are listed. The terminal neighbors of an edge are the neighbors on the arrowhead of the edge. For example the following directed graph,
 
-![directed graph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/directedgraph.png)
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
 
 can be represented by the following adjacency list:
 
@@ -120,7 +120,7 @@ can be represented by the following adjacency list:
 
 For multigraphs, when there are $n$ edges connecting two vertices, list the neighbor $n$ times. For example the multigraph below 
 
-![multigraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dmultigraph.png)
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
 
 | vertex | neighbors |
 | :----: | :-------: |
@@ -134,7 +134,7 @@ For multigraphs, when there are $n$ edges connecting two vertices, list the neig
 
 Another way to represent the graph is to use an **adjacency matrix**. Given a graph with $m$ vertices, create an $m \times m$ matrix called $A$. Each vertex in the graph is associated to a number from $1$ to $m$, such that vertex $v_i$ is associated to the number $i$. If an edge connecting $v_i$ to $v_j$ exists, then the cell value at $A_{i,j}=1$. For example the same undirected graph,
 
-![graph example](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/subgraph.png)
+![graph example](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/subgraph.jpg)
 
 can be represented by the following adjacency matrix:
 $$
@@ -154,7 +154,7 @@ $$
 
 For undirected graphs, $A_{ij}=1$ if and only if $(v_i,v_j)$ is an edge (i.e. $v_j$ is a terminal vertex connecting $v_i$). Therefore, the same directed graph,
 
-![directed graph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/directedgraph.png)
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
 
 can be represented by the following adjacency matrix:
 $$
@@ -170,7 +170,7 @@ $$
 $$
 For multigraph, when there are $n$ edges connecting two vertices $v_i$ and $v_j$, $A_{i,j}=n$,
 
-![multigraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dmultigraph.png)
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
 $$
 \begin{align*}
 	&v_1=a,v_2=b,v_3=c\\\\
@@ -190,23 +190,23 @@ Given a  graph $G$, if there exists a path connecting every distinct pair of ver
 
 The graph below is connected
 
-![connectedgraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/connectedgraph.png)
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/connectedgraph.jpg)
 
 while the graph below is unconnected, since there is no path from $a$ to $c$, $d$, or, $e$ (there is also no path from $b$ to $c$, $d$, or, $e$)
 
-![connectedgraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/unconnectedgraph.png)
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/unconnectedgraph.jpg)
 
 > For directed graphs, connectivity can either be strong or weak. A directed graph is **strongly connected** if there exists a path connecting every distict pair of vertices. A directed graph is **weakly connected** if it is not strongly connected but its couterpart undirected graph (i.e. the same directed graph except all edges are replaced with undirected edges) is connected.
 >
 > The leftmost graph is strongly connected. The middle graph is weakly connected (there is no path from $d$ to $a$, $b$, or $c$ but there will be if you the replace edges with undirected ones). The rightmost graph is unconnected.
 >
-> ![undirected connectivity](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/undirectedconnectivity.png)
+> ![undirected connectivity](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/undirectedconnectivity.jpg)
 
 #### Euler Circuits and Paths
 
 One of the most well known graph theory related problems is the **seven bridges of Königsberg** problem. In the town of then Prussia called Königsberg, there were a total of seven bridges connecting 4 sections divided by the Pregel river. The townspeople of Königsberg wondered if there was a way to start at some section of the town, travel across all the bridges exactly once and return to the starting point. Leonhard Euler interpreted the problem as a graph problem (dated in 1736 arguably one of the first use of graph theory), represented by the multigraph below:
 
-![konigsberg](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/konigsberg.png)
+![konigsberg](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/konigsberg.jpg)
 
 > Since bridges can be travelled on two directions, this is an undirected graph, one cannot travel from c to d and then d to c since you will travel on the same bridge twice.
 
@@ -214,7 +214,7 @@ As a graph problem, the seven bridges problem can be stated as the search for **
 
 While solving the seven bridges of Königsberg problem Euler was able to characterize the exact conditions for a graph for an Euler circuit to exist. Consider the following graphs, the graphs below contain Euler circuits:
 
-![euler circuits](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/eulercircuits.png)
+![euler circuits](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/eulercircuits.jpg)
 
 > - **leftmost graph** - $\{a, b\}, \{b, c\}, \{c, d\}, \{d, e\}, \{e, c\}, \{c, a\}$
 > - **middle graph** -$ \{a, b\}, \{b, f\}, \{f, e\}, \{e, b\}, \{b, c\}, \{c, d\}, \{d, e\}, \{e, c\}, \{c, a\}$
@@ -225,7 +225,7 @@ While solving the seven bridges of Königsberg problem Euler was able to charact
 
 While the graphs below do not contain Euler circuits:
 
-![non euler circuits](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/noneulercircuits.png)
+![non euler circuits](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/noneulercircuits.jpg)
 
 You'll notice that all the vertices of the graphs with Euler circuits have even degrees while some of the vertices of the graph with no Euler circuits have odd degrees. In fact this is what Leonhard Euler discovered when studying the seven bridges problem. A graph has an Euler circuit if and only if all its vertices have even degrees. We can prove this using the algorithm for searching an Euler circuit.
 
@@ -239,13 +239,13 @@ You'll notice that all the vertices of the graphs with Euler circuits have even 
 >
 > After traversing an arbitrary amount of vertices, we will eventually return to $v_0$ thus creating a circuit. There are two possibilities when this happens, either we have successfully visited all edges, creating an actual Euler circuit, or we have not. If we have not successfully visited all the edges, you would at least have created an Euler circuit for the subgraph of the $G$. Lets call this subgraph $H$ and the subgraph left behind, I.
 >
-> ![euler proof](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/eulerproof.png)
+> ![euler proof](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/eulerproof.jpg)
 >
 > Let the sequence of edges $Q=\{v_0,v_1\}, \{v_1,v_2\},\{v_2,v_3\}, \cdots, \{v_k,v_0\}$, be an euler circuit for the subgraph H. One of the properties of any circuit, is that you can rearrange the sequence starting anywhere, say $\{v_1,v_2\}$. If you transfer all the edges before $\{v_1,v_2\}$ to the end of the sequence, you will still have a circuit ($\{v_1,v_2\},\{v_2,v_3\}, \cdots, \{v_k,v_0\}, \{v_0,v_1\}$). 
 >
 > Because of this you can start the traversal all over again but starting  from a vertex that connects $H$ to $I$. Lets call this $v_c$. After traversing the euler circuit for $H$, you are now back to $v_c$. Continue the traversal from here and you'll either find the Euler circuit for entire graph $G$ or find the Euler circuit for a bigger subgraph. When that happens, you just redo the earlier steps until you find the complete Euler circuit.
 >
-> ![euler proof](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/eulerproof2.png)
+> ![euler proof](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/eulerproof2.jpg)
 
 This shows that the seven bridges of Konigsberg do not have an Euler circuit.
 
@@ -257,17 +257,17 @@ Although these problems are similar and related, there is no known simple soluti
 
 The example below shows a Hamilton circuit of a graph:
 
-![hamilton cycle](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/hamiltoncycle.png)
+![hamilton cycle](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/hamiltoncycle.jpg)
 
 The graph below cannot have a hamilton cycle since $\deg(d) = 1$.
 
-![connectedgraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/connectedgraph.png)
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/connectedgraph.jpg)
 
 ### Shortest path problems
 
 Before we talk about shortest path problems, let us introduce weighted graphs. Weighted graphs are graphs where each edge has an associated value. For example the following graph's edges are associated to the distances between each connected vertex.
 
-![weightedgraph](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/weightedgraph.png)
+![weightedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/weightedgraph.jpg)
 
 You might be interested to know the shortest distance between Windhelm and Morthal. Or you might be interested in finding the shortest path that visits every city in the map. Finding the shortest path that visits every vertex is also called the **travelling salesman problem**. Another well known difficult problem in CS.
 
@@ -277,11 +277,11 @@ There are a lot of algorithms to find the shortest path between two vertices. Wh
 
 For example, consider the following graph. What is the length of the shortest path between $a$ and $e$?
 
-![djkstra](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dijkstra.png)
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra.jpg)
 
 Starting from $a$, we have two choices, we can either traverse $\{a,c\}$, or $\{a,b\}$. These edges have lengths $1$ and $2$ respectively, meaning we are sure that the current shortest path to $c$ is $1$ and the current shortest path to $b$ is $2$. To avoid retraversing $\{a,c\}$ or $\{a,b\}$ we label these edges as visited. Retraversing these edges will only lengthen the path so we cannot traverse these edges ever again.
 
-![djkstra](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dijkstra2.png)
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra2.jpg)
 
 We continue the algorithm now while we are at $b$ and $c$. There are three edges from $b$ and three edges from $c$. 
 
@@ -305,7 +305,7 @@ We continue the algorithm now while we are at $b$ and $c$. There are three edges
 
 We then mark all the edges we traversed in this round as visited:
 
-![djkstra](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dijkstra3.png)
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra3.jpg)
 
 We are currently at the vertices $d$, $e$ and $f$. We can omit $e$ since it is our destination.
 
@@ -321,7 +321,7 @@ We are currently at the vertices $d$, $e$ and $f$. We can omit $e$ since it is o
 
 After this round we have visited all possible edges, concluding that the shortest path to $e$ has length $4$.
 
-![djkstra](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/dijkstra4.png)
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra4.jpg)
 
 > To figure out the actual shortest path not just the length, you can record the path along with the length. You can also figure out the shortest path by backtracking from the destination vertex and figure out the previous vertex based on the edge lengths
 
@@ -343,7 +343,7 @@ Trees are special graphs have the following characteristics
 - **connected** - there exists a path between any two vertices
 - **acyclic** - it contains no circuits that repeat edges ($\{v_i,v_j\}, \{v_j,v_i\}$ is technically a circuit but these can exists in trees)
 
-![trees and non trees](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/treesandnontrees.png)
+![trees and non trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/treesandnontrees.jpg)
 
 Trees are useful mathematical structures that are usually used to characterize special relationships like hierarchy, recursive structures and composition. Computer file structures are example of recursive structures (folders can be composed of subfolders) that are represented using trees. A family tree which highlights a hierarchal structure are also represented by trees.
 
@@ -353,7 +353,7 @@ A tree is usually characterized with a special vertex designated as the origin f
 
 The **descendants** of a vertex includes, the children of said vertex, the children of the children of said vertex (also known as the grandchildren), the children of the children of the children of said vertex (also known as great grand children), and so on. The **ancestors** of a vertex are the opposite. It includes, the parent of a vertex, the parent of the parent of said vertex (also known as the grandparent), the parent of the parent of the parent of said vertex (also known as the great grand parent.), and so on. Vertices that share the same parent are known as **siblings**. A vertex without children is called a **leaf**.
 
-![family tree](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/familytree.png)
+![family tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/familytree.jpg)
 
 
 
@@ -371,11 +371,11 @@ The **descendants** of a vertex includes, the children of said vertex, the child
 
 The designation of the root vertex is very important that changing the designated root of a tree changes the tree structure itself. For example the same graph below can be represented by more than one rooted tree. If the blue vertex is designated as root or if the black vertex is designated as root.
 
-![rooted tree](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/rootedtrees.png)
+![rooted tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/rootedtrees.jpg)
 
 > When working with rooted trees, a vertex becomes some sort of representative for the vertices below it. For example in the tree below, when you refer to the tree $a$, you refer to the rooted tree formed by $a$ and its descendants:
 >
-> ![recursive tree](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/recursivetree.png)
+> ![recursive tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/recursivetree.jpg)
 >
 > This is what it means when we say that a tree is a recursive composite structure. A tree is either a leaf (which is also a tree) or composed of  subtrees, which are also trees. Since these subtrees are also trees they can also either be trees or composed of subtrees.
 
@@ -395,17 +395,17 @@ preorder($T$) = $T$, preorder($T_1$), preorder($T_2$), ..., preorder($T_n$).
 
 For example in the tree below, we start with $a$ then preorder($b$), then preorder($c$).
 
-![preorder1](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/preorder1.png)
+![preorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder1.jpg)
 
 The answer is still not complete since we still need to resolve preorder($b$) and preorder($c$). Since preorder($b$)=($b$, preorder($d$)), resolving that gives us:	
 
-![preorder2](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/preorder2.png)
+![preorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder2.jpg)
 
 > the order of resolving preorders does not matter, you can try resolving preorder($c$) first and the final result will be the same.
 
 Resolving preorder($d$) is trivial since it does not have children. preorder($d$)=$d$. We resolve that and preorder($c$) as well, which is preorder($c$)=$c$, preorder($e$), preorder($f$), preorder($g$):
 
-![preorder3](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/preorder3.png)
+![preorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder3.jpg)
 
 Resolving the following:
 
@@ -413,11 +413,11 @@ Resolving the following:
 - preorder($f$)=$f$
 - preorder($g$)=$g$, preorder($h$)
 
-![preorder4](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/preorder4.png)
+![preorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder4.jpg)
 
 Finally resolving preorder($h$)=$h$:
 
-![preorder5](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/preorder5.png)
+![preorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder5.jpg)
 
 ##### Inorder traversal
 
@@ -431,15 +431,15 @@ Inorder($T$)=Inorder($T_1$), $T$, Inorder($T_2$), Inorder($T_3$), ..., Inorder($
 
 Using the previous tree as an example, inorder works the following way:
 
-![inorder1](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/inorder1.png)
+![inorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder1.jpg)
 
-![inorder2](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/inorder2.png)
+![inorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder2.jpg)
 
-![inorder3](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/inorder3.png)
+![inorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder3.jpg)
 
-![inorder4](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/inorder4.png)
+![inorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder4.jpg)
 
-![inorder5](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/inorder5.png)
+![inorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder5.jpg)
 
 ##### Postorder traversal
 
@@ -453,15 +453,15 @@ postorder($T$) = postorder($T_1$), postorder($T_2$), ..., postorder($T_n$), $T$.
 
 Using the previous tree as an example:
 
-![postorder1](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/postorder1.png)
+![postorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder1.jpg)
 
-![postorder2](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/postorder2.png)
+![postorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder2.jpg)
 
-![postorder3](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/postorder3.png)
+![postorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder3.jpg)
 
-![postorder4](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/postorder4.png)
+![postorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder4.jpg)
 
-![postorder5](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/postorder5.png)
+![postorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder5.jpg)
 
 ##### Traversals and expressions
 
@@ -473,15 +473,15 @@ A mathematical expression such as this is also recursive compositions as well. A
 
 Using the expression above we can construct a tree this way. Starting from the sub expression $(2/4)$, we construct the tree:
 
-![exptree](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/exptree.png)
+![exptree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree.jpg)
 
 We also have the expressions $(3*5)$ and $(4+1)$ which are combined via subtraction. Which means we combine $(3*5)$ and $(4+1)$ in a subtraction tree to obtain $((3*5)-(4+1))$
 
-![exptree2](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/exptree2.png)
+![exptree2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree2.jpg)
 
 Finally these $(2/4)$ and $((3*5)-(4+1))$ are added together to form $(2/4)+((3*5)-(4+1))$:
 
-![exptree3](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/exptree3.png)
+![exptree3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree3.jpg)
 
 Note that the way we write expressions is actually the inorder traversal of the expression tree. Traversing the tree above will give us:
 $$
@@ -491,7 +491,7 @@ But because inorder traversal ambiguous, we have to add parentheses to the expre
 
 > **Ambiguity example**. The following tree is one of the may ways you can interpret the same expression without parentheses:
 >
-> ![expamb](https://rubslecturenotes.herokuapp.com/static/md/Graphs%20and%20Trees/media/expamb.png)
+> ![expamb](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/expamb.jpg)
 
 Preorder and postorder traversals however do not have ambiguities. Any preorder/postorder traversals rebuilds into exactly one expression. Therefore, if you write expression using either preorder or postorder, you will not need parentheses. The same expression but preorder and postorder:
 
