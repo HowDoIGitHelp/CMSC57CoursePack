@@ -11,8 +11,13 @@
    c. At least one dice roll is even and the two coins are tails
 
 > *each individual die roll is not great greater than 2
->
-3. I'm given three sealed unlabelled boxes to choose from called A, B, and C. Suppose these are the contents of the boxes;
+2. Given that 1 in 10 people are left handed. 
+
+   a. What is the chance that from a group of 50 people there are **exactly** 5 left handed people?
+
+   b. What is the chance that from a group of 50 people there are **at least** 5 left handed people?
+
+3. I'm given three sealed unlabeled boxes to choose from called A, B, and C. Suppose these are the contents of the boxes;
 
    - **Box A** - 213 centipedes, 43 razor blades, 4 spiders
    - **Box B** - 101 centipedes, 43 razor blades, 33 spiders
