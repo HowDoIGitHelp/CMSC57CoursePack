@@ -1,5 +1,7 @@
 ## Proof that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4{(\log_2{n})})}$​
 
+If we keep on applying LHR to prove this, we will end up expanding the  ratio more an more. Instead we will solve this in multiple steps.
+
 First we establish that the fraction $\frac{\sqrt{n+2}}{\log_2{n}}$ is more complex than $\log_2{n}$. By solving the limit we find:
 $$
 \begin{aligned}
@@ -7,6 +9,8 @@ $$
 
 \end{aligned}
 $$
+
+To solve $\lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}$ we must first establish some lemmas.
 
 ### Lemma 1: $\sqrt{n+2} \in \Theta(\sqrt{n})$
 
@@ -20,7 +24,9 @@ $$
 \end{aligned}
 $$
 
-Since $\sqrt{n}$ and $\sqrt{n+2}$ have the same complexity, $\lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}=\lim_{n \to \infty}{\frac{\sqrt{n}}{(\log_2{n})^2}}$. The limit $\lim_{n \to \infty}{\frac{\sqrt{n}}{(\log_2{n})^2}}$ can be solved as:
+### Lemma 2: $\sqrt{n+2} \in \Theta((\log_2{n})^2) $
+
+Given that $\sqrt{n+2} \in \Theta(\sqrt{n})$, it means they have the same complexity. We can use $\sqrt{n}$ as an easier substitute for $\sqrt{n+2}$. Below shows that $\sqrt{n} \in \Omega{(\log_2 {n})^2}$
 $$
 \begin{aligned}
 \lim_{n \to \infty}{\frac{\sqrt{n}}{(\log_2{n})^2}}&=\lim_{n \to \infty}{\frac{\frac{1}{2\sqrt{n}}}{2\log_2{n}\frac{1}{n \ln2}}}\\
@@ -32,20 +38,31 @@ $$
 \lim_{n \to \infty}{\frac{\sqrt{n}}{(\log_2{n})^2}}&=\infty
 \end{aligned}
 $$
-Therefore, $\lim_{n \to \infty}{\frac{\sqrt{n}}{(\log_2{n})^2}}=\infty=lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}$. The function $\sqrt{n+2}$ is more complex than $(\log_2 n)^2$.
+From lemma 1, we know that $\sqrt{n+2} \in \Theta(\sqrt{n})$ and therefore $c_1\sqrt{n+2} \leq \sqrt{n} \leq c_2\sqrt{n+2}$ (from the set definition of $\Omega$). 
 
-### Lemma 2: $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$
+Also, since $\sqrt{n} \in \Omega{(\log_2 {n})^2}$ we can conclude that $c_3(\log_2 {n})^2 \leq \sqrt{n}$. Combining the inequalities we can conclude that: $c_3(\log_2 {n})^2 \leq \sqrt{n} \leq c_2\sqrt{n+2}$. Which can be rearranged as such:
+$$
+\begin{aligned}
+c_3(\log_2 {n})^2 &\leq \sqrt{n} \leq c_2\sqrt{n+2}\\
+c_3(\log_2 {n})^2 & \leq c_2\sqrt{n+2}\\
+\frac{c_3}{c_2}(\log_2 {n})^2 & \leq \sqrt{n+2}\\
+\end{aligned}
+$$
+From the definition of $\Omega$, We can conclude that $\sqrt{n+2} \in \Theta((\log_2{n})^2)$.
+
+### Lemma 3: $(\log_2 n)^2 \in \Omega(\log_4 {(\log_2 n)})$
 
 $$
 \begin{aligned}
-\lim_{n \to \infty}{\frac{\log_2{n}}{(\log_4{(\log_2{n})}}}&=\lim_{n \to \infty}{\frac{\frac{1}{n \ln2}}{\frac{1}{n\log_2 n \ln 4 \ln2}}}\\
-&=\lim_{n \to \infty}{\frac{n\log_2 n \ln 4 \ln2}{n \ln2}}\\
-&=\lim_{n \to \infty}{\frac{\log_2 n \ln 4 }{1}}\\
-\lim_{n \to \infty}{\frac{\log_2{n}}{(\log_4{(\log_2{n})}}}&=\infty\\
+\lim_{n \to \infty}{\frac{(\log_2{n})^2}{\log_4{(\log_2{n})}}}&=\lim_{n \to \infty}{\frac{(2 \log_2 n)\frac{1}{n \ln2}}{(\frac{1}{\log_2 n \ln 4}) (\frac{1}{n \ln2})}}\\
+&=\lim_{n \to \infty}{2 (\log_2 n)^2 \ln 4}\\
+\lim_{n \to \infty}{\frac{(\log_2{n})^2}{\log_4{(\log_2{n})}}}&=\infty\\
 \end{aligned}
 $$
 
-### Lemma 3: $f(n) \in \Omega(g(n)) \land g(n) \in \Omega(h(n)) \to f(n) \in \Omega(h(n))$​
+### Lemma 4: $f(n) \in \Omega(g(n)) \land g(n) \in \Omega(h(n)) \to f(n) \in \Omega(h(n))$​
+
+The lemma above shows how asymptotic relationships can behave like inequalities. Lemma 4 is analogues to the the property of inequality:$f \geq g \land g \geq h \to f \geq h$. 
 
 Given $f(n) \in \Omega(g(n))$ and $g(n) \in \Omega(h(n))$, it follows from the set definition that:
 $$
@@ -62,4 +79,4 @@ $$
 
 From the inequality $\frac{1}{c_1c_2}f(n) &\geq h(n)\\$, we can conclude that $f(n) \in \Omega(h(n))$.
 
-Since it was demonstrated that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_2{n})}$ and $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$ (Lemma 2) it follows from Lemma 3 that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4 {(\log_2 n)})}$.
+Since it was demonstrated that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_2{n})}$ and $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$ (Lemma 3) it follows using Lemma 4 that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4 {(\log_2 n)})}$.

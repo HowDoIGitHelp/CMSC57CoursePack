@@ -1,6 +1,6 @@
 # CMSC 57 Course Guide
 
-**Discrete Mathematics in Computer Science 2** *2nd Semester 2020-2021*
+**Discrete Mathematics in Computer Science 2** *2nd Semester 2024-2025 
 
 ## Course Description
 
@@ -49,21 +49,15 @@ Asymptotic analysis, principles of linear algebra, combinatorics, probability, a
 
 ## Mode of Delivery
 
-This course will be delivered asynchronously through lecture notes with accompanying lecture videos. This course can also be found online on VLE. We won't always have scheduled zoom sessions but you're free to setup consultation on the scheduled times for this class.
+This course will be delivered asynchronously through lecture notes with accompanying lecture videos. This course can also be found online on UVEC. We won't always have scheduled zoom sessions but you're free to setup consultation on the scheduled times for this class.
 
-### Enrolling through VLE
+### Enrolling through UVEC
 
-Look for the course [Discrete Mathematics in Computer Science 2](https://vle.upcebu.edu.ph/course/view.php?id=160) in VLE and enroll yourself to the course. Make sure you enroll using the correct enrollment key for your section:
+Look for the course [Discrete Mathematics in Computer Science 2](https://uvec.upcebu.edu.ph/course/view.php?id=160) in UVEC and enroll yourself to the course. Make sure you enroll using the correct enrollment key for your section:
 
 - Section A - **CMSC57A**
 - Section B - **CMSC57B**
 - Section C - **CMSC57C**
-
-### Joining  the slack workspace
-
-Make sure you join the [slack workspace](https://join.slack.com/t/cmsc57/shared_invite/zt-ep87ayds-xfv80hXP6giSFfbH8QDzUQ) as soon as you can
-
-https://join.slack.com/t/cmsc57/shared_invite/zt-ep87ayds-xfv80hXP6giSFfbH8QDzUQ
 
 ### Asking Questions and Scheduling Remote Consultations
 
@@ -75,9 +69,9 @@ You can contact me through sms, email, slack dms, or through discord. You can fi
 
 All of the resources in this course can be found in the course pack. The course pack includes:
 
-- **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the mark down version of this file (use a markdown viewr to open the md files)
-- **Lecture Videos** - There's a link to the youtube playlist here. If you want the master copies 
-- **Seatworks** - Not really seatworks since you'll be doing it at home, You can find them on the textbook as well.
+- **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the mark down version of this file (use a markdown viewer to open the md files)
+- **Lecture Videos** 
+- **Seatworks**
 
 ## Study Schedule
 
@@ -99,23 +93,29 @@ This class is asynchronous, but if you start too late, you might end up getting 
 | 12          | Graphs and Trees (Graphs)                                    |                                     |
 | 13          | Graphs and Trees (Trees)                                     | SW (Graphs and Trees)               |
 
-## Course Requirements
+## Grade Breakdown
 
-There will be two exams in this course, with a few very short quizzes that can be found in uvec. There are also Lab exercises for every major topic. Exams account for 40% of your grade, lab exercises will account for 50% while quizzes will account for 10%.
+| Component   | Percentage |
+| ----------- | ---------- |
+| Seatworks   | 50%        |
+| Long Exam 1 | 25%        |
+| Long Exam 2 | 25%        |
 
-### Exercises
+## Grade Transmutation
 
-1. Seatwork (Asymptotic Analysis)
-2. Seatwork (Introduction to Linear Algebra)
-3. Seatwork (Counting Rules)
-4. Seatwork (Permutations and Combinations)
-5. Seatwork (Probability)
-6. Seatwork (Graphs and Trees)
+| Numerical Grade | SAIS Grade |
+| --------------- | ---------- |
+| $[0,55)$        | 5.00       |
+| $[55,60]$       | 3.00       |
+| $(60,67]$       | 2.75       |
+| $(67,72]$       | 2.50       |
+| $(72,77]$       | 2.25       |
+| $(77,82]$       | 2.00       |
+| $(82,87]$       | 1.75       |
+| $(87,92]$       | 1.50       |
+| $(92,97]$       | 1.25       |
+| $(97,\infty)$   | 1.00       |
 
-## How to reach me
+How to reach me
 
-Don't share these info please
-
-- SMS +63 921 031 2455
 - email rrabella@up.edu.ph
-- discord ruberoni#5100
