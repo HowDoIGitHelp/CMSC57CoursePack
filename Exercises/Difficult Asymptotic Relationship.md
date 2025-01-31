@@ -9,6 +9,8 @@ $$
 \end{aligned}
 $$
 
+Since they have the same limits, solving $\lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}$ will also solve $\lim_{n \to \infty}{\frac{\frac{\sqrt{n+2}}{\log_2{n}}}{\log_2n}}$.
+
 To solve $\lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}$ we must first establish some lemmas.
 
 ### Lemma 1: $\sqrt{n+2} \in \Theta(\sqrt{n})$
@@ -47,15 +49,16 @@ c_3(\log_2 {n})^2 & \leq c_2\sqrt{n+2}\\
 \frac{c_3}{c_2}(\log_2 {n})^2 & \leq \sqrt{n+2}\\
 \end{aligned}
 $$
-From the definition of $\Omega$, We can conclude that $\sqrt{n+2} \in \Theta((\log_2{n})^2)$.
+From the definition of $\Omega$, We can conclude that $\sqrt{n+2} \in \Theta((\log_2{n})^2)$. Therefore, $\lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}} = \infty = \lim_{n \to \infty}{\frac{\frac{\sqrt{n+2}}{\log_2{n}}}{\log_2n}}$.
 
-### Lemma 3: $(\log_2 n)^2 \in \Omega(\log_4 {(\log_2 n)})$
+### Lemma 3: $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$
 
 $$
 \begin{aligned}
-\lim_{n \to \infty}{\frac{(\log_2{n})^2}{\log_4{(\log_2{n})}}}&=\lim_{n \to \infty}{\frac{(2 \log_2 n)\frac{1}{n \ln2}}{(\frac{1}{\log_2 n \ln 4}) (\frac{1}{n \ln2})}}\\
-&=\lim_{n \to \infty}{2 (\log_2 n)^2 \ln 4}\\
-\lim_{n \to \infty}{\frac{(\log_2{n})^2}{\log_4{(\log_2{n})}}}&=\infty\\
+\lim_{n \to \infty}{\frac{\log_2{n}}{(\log_4{(\log_2{n})}}}&=\lim_{n \to \infty}{\frac{\frac{1}{n \ln2}}{\frac{1}{n\log_2 n \ln 4 \ln2}}}\\
+&=\lim_{n \to \infty}{\frac{n\log_2 n \ln 4 \ln2}{n \ln2}}\\
+&=\lim_{n \to \infty}{\frac{\log_2 n \ln 4 }{1}}\\
+\lim_{n \to \infty}{\frac{\log_2{n}}{(\log_4{(\log_2{n})}}}&=\infty\\
 \end{aligned}
 $$
 
@@ -78,4 +81,5 @@ $$
 
 From the inequality $\frac{1}{c_1c_2}f(n) &\geq h(n)\\$, we can conclude that $f(n) \in \Omega(h(n))$.
 
-Since it was demonstrated that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_2{n})}$ and $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$ (Lemma 3) it follows using Lemma 4 that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4 {(\log_2 n)})}$.
+Since it was demonstrated that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_2{n})}$ (lemma 2) and $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$ (Lemma 3) it follows from Lemma 4 that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4 {(\log_2 n)})}$.
+
