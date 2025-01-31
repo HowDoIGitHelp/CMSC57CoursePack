@@ -6,7 +6,6 @@ First we establish that the fraction $\frac{\sqrt{n+2}}{\log_2{n}}$ is more comp
 $$
 \begin{aligned}
 \lim_{n \to \infty}{\frac{\frac{\sqrt{n+2}}{\log_2{n}}}{\log_2n}} &= \lim_{n \to \infty}{\frac{\sqrt{n+2}}{(\log_2{n})^2}}\\
-
 \end{aligned}
 $$
 
