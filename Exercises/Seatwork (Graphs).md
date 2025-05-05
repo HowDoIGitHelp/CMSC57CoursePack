@@ -2,7 +2,7 @@
 
 1. Given the following directed graph $G$:
 
-   ![graph_g](graph_g.png)
+   ![graph_g](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Exercises/graph_g.png)
 
    a. Create the adjacency matrix for $G$
 
