@@ -392,8 +392,8 @@ An example of proper assignments of probabilities look something like this:
 
 > Given the sample space for flipping a coin, **$S=\{H,T\}$**:
 >
-> - **$p(H)=\frac{1}{2}$**
-> - **$p(T)=\frac{1}{2}$**
+> - **$p(H)=0.5001$**
+> - $p(T)=0.4999$
 
 A probability distribution such as the above which follows Laplace's assumption of having equally likely outcomes, is called a **uniform distribution**. This implies that a uniformly distributed experiment will have a probability assignment **$p(s)=\frac{1}{n}$** where **$s \in S$** and **$|S|=n$**.
 
@@ -410,7 +410,7 @@ The formula for compound probabilities remain to be true in the general definiti
 
 #### Conditional Probability
 
-Given a six-sided die, what is the probability that the sum of two rolls is **divisible by three**?
+Given a six-sided dice, what is the probability that the sum of two rolls is **divisible by three**?
 
 To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**. Since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
 
@@ -445,7 +445,7 @@ $$
 
 When considering conditional probabilities, the concept of probabilistic independence often comes up. When you think about it, the outcome of the first coin flip **does not actually affect** the outcome of the second coin flip. Knowing the outcome of the first coin flip will not give us any information about the outcome of the second coin flip. In fact you can remove the first roll out of the picture and restate the question as the following: **"*what is the probability of  flipping a heads*"**. The probability of this event is exactly the same as the probability of **$p(H|T)$**.  Whenever **$p(H|T)=p(H)$**, we can conclude that the events **$H$** and **$T$** are **independent**. This gives us the mathematical definition for independent events:
 
-> **$E$** and **$F$** are independent if and only if **$p(E \cap F)=p(E)p(F)$
+> **$E$** and **$F$** are independent if and only if $p(E \cap F)=p(E)p(F)$
 >
 > **$p(E \cap F)=p(E)p(F)$** is just algebraic manipulation of **$p(E|F)=p(E)$**.
 

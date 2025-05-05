@@ -245,7 +245,7 @@ def main():
                                 slideString += '\n\n'
                         slideString += '\n'
                     slides.append(slideString)
-        outputStrin_g += '---'
+        outputString += '---'
 
     slideParts = splitSlides(slides,100)
     for partNum,part in enumerate(slideParts):

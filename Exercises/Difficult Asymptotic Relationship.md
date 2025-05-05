@@ -25,7 +25,7 @@ $$
 \end{aligned}
 $$
 
-### Lemma 2: $\sqrt{n+2} \in \Theta((\log_2{n})^2) $
+### Lemma 2: $\sqrt{n+2} \in \Theta((\log_2{n})^2)$
 
 Given that $\sqrt{n+2} \in \Theta(\sqrt{n})$, it means they have the same complexity. We can use $\sqrt{n}$ as an easier substitute for $\sqrt{n+2}$. Below shows that $\sqrt{n} \in \Omega{(\log_2 {n})^2}$
 $$
@@ -79,7 +79,7 @@ $$
 
 > Given nonzero constants $c_1$ and $c_2$ and for sufficiently large values of $n$.
 
-From the inequality $\frac{1}{c_1c_2}f(n) &\geq h(n)\\$, we can conclude that $f(n) \in \Omega(h(n))$.
+From the inequality $\frac{1}{c_1c_2}f(n) \geq h(n)$, we can conclude that $f(n) \in \Omega(h(n))$.
 
 Since it was demonstrated that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_2{n})}$ (lemma 2) and $\log_2 n \in \Omega(\log_4 {(\log_2 n)})$ (Lemma 3) it follows from Lemma 4 that $\frac{\sqrt{n+2}}{\log_2{n}} \in \Omega{(\log_4 {(\log_2 n)})}$.
 
