@@ -609,7 +609,7 @@ Given a weighted graph, the minimum spanning tree is a spanning tree that has th
 
 #### Kruskal's algorithm
 
-One of the many algorithms used for finding the minimum spanning tree is Prim's algorithm. It works by adding the smallest available edge in that doesn't form a cycle until all vertices are connected.
+One of the many algorithms used for finding the minimum spanning tree is Kruskal's algorithm. It works by adding the smallest available edge in that doesn't form a cycle until all vertices are connected.
 
 In the diagram below, the smallest edges are added (red), rejecting cycle forming ones (blue), until the all vertices are connected.
 
