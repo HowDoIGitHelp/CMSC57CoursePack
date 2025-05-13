@@ -381,7 +381,77 @@ The designation of the root vertex is very important that changing the designate
 
 #### Tree Traversals
 
-When characterizing rooted trees, it is important to devise a way to traverse all of the vertices in a specific order. Given a tree $T$, a traversal of $T$ is an ordered sequence of vertices. Each of these traversals are recursive operations along the tree structure.
+When characterizing rooted trees, it is important to devise a way to traverse all of the vertices in a specific order. Given a tree $T$, a traversal of $T$ is an ordered sequence of vertices. 
+
+##### Breadth First Traversal
+
+Breadth first traversal starts at the root node and visits all nodes on the a level before visiting nodes in the lower level. Given two nodes $u$ and $v$, where $u$ is in an older generation than $v$, then $u$ will be visited first before $v$.
+
+Traversing a tree breadth first uses a data structure called a queue. A queue is a list with only two actions, enqueue and dequeue. Enqueuing adds an item to the tail end of the list while dequeuing removes an item at the head of the list. Breadth first search works as follows:
+
+Enqueue the root, while there are items in the queue, dequeue an item and enqueue every child of said item. Nodes are visited by order of dequeue.
+
+For example, in the tree below, we start by enqueuing the root node $a$.
+
+![bfs1](media/bfs/Slide1.png)
+
+Since the queue is not empty we dequeue one item which happens to be $a$. We then enqueue every child of the dequeued item (node $a$), which are node $b$ and node $c$, as shown below: (the order of enqueuing children doesn't matter. Enqueuing $c$ then $b$ is still a valid breadth first traversal.)
+
+![bfs1](media/bfs/Slide2.png)
+
+Since the queue is not empty we repeat the process by dequeuing one (node $b$), and enqueuing its children (node $d$).
+
+![bfs1](media/bfs/Slide3.png)
+
+We continue until the queue is empty completing the traversal.
+
+![bfs1](media/bfs/Slide4.png)
+
+![bfs1](media/bfs/Slide5.png)
+
+![bfs1](media/bfs/Slide6.png)
+
+![bfs1](media/bfs/Slide7.png)
+
+![bfs1](media/bfs/Slide8.png)
+
+![bfs1](media/bfs/Slide9.png)
+
+Depth first traversal
+
+Depth first traversal traverses a branch of a tree as far as possible before traversing other branches. Depth first traversal algorithm uses a stack instead of queue. It can also be represented as a recursive process.
+
+A stack is a list with two actions, push and pop. Push adds an item at the head of the list while pop removes an item at the head of the list. The algorithm works as follows: 
+
+Push the root. While there are items in the stack, pop an item and push every child of said item. Nodes are visited by order of pops.
+
+For example. In the tree below, we start by pushing the root $a$. 
+
+![dfs](media/dfs/Slide1.png)
+
+Since the stack is not  empty we pop one item (node $a$) and push said items children.
+
+![dfs](media/dfs/Slide2.png)
+
+The stack is still not empty so we repeat the process by popping one item (node $c$) and pushing its children.
+
+![dfs](media/dfs/Slide3.png)
+
+We repeat the algorithm until the stack is empty:
+
+![dfs](media/dfs/Slide4.png)
+
+![dfs](media/dfs/Slide5.png)
+
+![dfs](media/dfs/Slide6.png)
+
+![dfs](media/dfs/Slide7.png)
+
+![dfs](media/dfs/Slide8.png)
+
+![dfs](media/dfs/Slide9.png)
+
+Based when the parent node gets visited, depth first search can either be preorder, postorder or inorder. Preorder traversal visits the parents before any child, postoder visits the parents after all children while inorder visits parents in between the visiting the children. 
 
 ##### Preorder traversal
 
@@ -498,4 +568,49 @@ Preorder and postorder traversals however do not have ambiguities. Any preorder/
 - **preorder-** $+,/,2,4, -, *, 3,5, +, 4,1$
 - **postorder**- $2,4,/,3,5*,4,1,+,-,+$
 
-> try rebuilding these traversals, and you will get the same trees.
+> if you try rebuilding these traversals, and you will get the same trees.
+
+### Spanning Trees
+
+Given a connected graph $G=(V,E)$, a spanning tree is a subgraph of $G$ that contains all vertices in $V$ and satisfies the conditions of trees (simple, acyclic and connected). 
+
+In the example below, a graph can have multiple spanning trees.
+
+![spanning trees](media/spanning trees.png)
+
+A spanning tree can be found by traversing a connected graph breadth first or depth first. You can start from any vertex and avoid forming cycles by making sure each vertex is visited exactly once. Edges are added to the spanning tree whenever children are enqueued/pushed. 
+
+In the example below, we can form a spanning tree by traversing the graph breadth first using $a$ as the root.
+
+![spanning tree bfs](media/spanning trees bfs.png)
+
+| Queue                                                        |                                 Edges added to spanning tree |
+| :----------------------------------------------------------- | -----------------------------------------------------------: |
+| $a$                                                          |                                                       $\{\}$ |
+| $\cancel{a},b,d$                                             |                                        $\{\{a,b\},\{a,d\}\}$ |
+| $\cancel{a},\cancel{b},d,c,e$                                |                        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},c,e,g$                     |                $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},e,g,f$          |        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},g,f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},h,i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},\cancel{h},i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},\cancel{h},\cancel{i}$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+
+When traversed depth first starting from $a$ it forms a different spanning tree as shown below:
+
+![spanning tree dfs](media/spanning trees dfs.png)
+
+#### Minimum spanning tree
+
+Given a weighted graph, the minimum spanning tree is a spanning tree that has the smallest sum of edge weights. In the example below, the top right tree formed from breadth first traversal from $a$ has a total edge weight of $14$. The bottom spanning trees are considered minimum spanning trees, each with a total edge weight of $7$.
+
+![minimum spanning trees](media/spanning trees weighted.png)
+
+#### Kruskal's algorithm
+
+One of the many algorithms used for finding the minimum spanning tree is Prim's algorithm. It works by adding the smallest available edge in that doesn't form a cycle until all vertices are connected.
+
+In the diagram below, the smallest edges are added (red), rejecting cycle forming ones (blue), until the all vertices are connected.
+
+![kruskals](media/kruskals.png)
