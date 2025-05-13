@@ -578,7 +578,7 @@ In the example below, a graph can have multiple spanning trees.
 
 ![spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtrees.png)
 
-A spanning tree can be found by traversing a connected graph breadth first or depth first. You can start from any vertex and avoid forming cycles by making sure each vertex is visited exactly once. Edges are added to the spanning tree whenever children are enqueued/pushed. 
+A spanning tree can be found by traversing a connected graph breadth first. You can start from any vertex and avoid forming cycles by making sure each vertex is visited exactly once. Edges are added to the spanning tree whenever children are enqueued. 
 
 In the example below, we can form a spanning tree by traversing the graph breadth first using $a$ as the root.
 
@@ -597,9 +597,43 @@ In the example below, we can form a spanning tree by traversing the graph breadt
 | $i$     | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
 |         | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
 
-When traversed depth first starting from $a$ it forms a different spanning tree as shown below:
+When traversed depth first starting from $a$ it forms a different spanning tree. 
 
 ![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesdfs.png)
+
+Traversing depth first produces a different spanning tree. To avoid cycles in this traversal, you only push children of unvisited edges. Once the order of traversal is found, edges are created by backtracking to closest neighbor.
+
+For example in the graph below we start by designating $a$ as the root, pushing it to the stack:
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide1.PNG)
+
+While the stack is not empty we proceed with the algorithm, popping from the stack and pushing the neighbors of each popped vertex.
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide2.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide3.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide4.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide5.PNG)
+
+Vertex $d$ and $e$ are popped. But since both vertices are already visited, their neighbors are not pushed into the stack.
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide6.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide7.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide8.PNG)
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide9.PNG)
+
+Once the last node is visited ($c$), all items in the stack will be popped without pushing any new vertices, emptying the stack and completing the traversal.
+
+![spanning tree dfs]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide10.PNG)
+
+With the traversal sequence known, we build the spanning tree by backtracking from $c$. We connect each vertex to the closest neighboring vertex to the right with respect to the traversal sequence. Vertex $c$ connects to $b$. Vertex $b$ connects to $d$ (since $b$ and $g$ are not neighbors, $b$'s closest neighboring vertex is $d$ in the sequence), and so on until the spanning tree connects to $a$.
+
+![backtracking]https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/backtracking.png)
 
 #### Minimum spanning tree
 
