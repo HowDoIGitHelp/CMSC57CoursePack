@@ -576,36 +576,36 @@ Given a connected graph $G=(V,E)$, a spanning tree is a subgraph of $G$ that con
 
 In the example below, a graph can have multiple spanning trees.
 
-![spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees.png)
+![spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtrees.png)
 
 A spanning tree can be found by traversing a connected graph breadth first or depth first. You can start from any vertex and avoid forming cycles by making sure each vertex is visited exactly once. Edges are added to the spanning tree whenever children are enqueued/pushed. 
 
 In the example below, we can form a spanning tree by traversing the graph breadth first using $a$ as the root.
 
-![spanning tree bfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees bfs.png)
+![spanning tree bfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesbfs.png)
 
-| Queue                                                        |                                 Edges added to spanning tree |
-| :----------------------------------------------------------- | -----------------------------------------------------------: |
-| $a$                                                          |                                                       $\{\}$ |
-| $\cancel{a},b,d$                                             |                                        $\{\{a,b\},\{a,d\}\}$ |
-| $\cancel{a},\cancel{b},d,c,e$                                |                        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},c,e,g$                     |                $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},e,g,f$          |        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},g,f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},h,i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},\cancel{h},i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
-| $\cancel{a},\cancel{b},\cancel{d},\cancel{c},\cancel{e},\cancel{g},\cancel{f},\cancel{h},\cancel{i}$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+| Queue   |                                 Edges added to spanning tree |
+| :------ | -----------------------------------------------------------: |
+| $a$     |                                                       $\{\}$ |
+| $b,d$   |                                        $\{\{a,b\},\{a,d\}\}$ |
+| $d,c,e$ |                        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\}\}$ |
+| $c,e,g$ |                $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\}\}$ |
+| $e,g,f$ |        $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\}\}$ |
+| $g,f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $f,h$   | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $h,i$   | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+| $i$     | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+|         | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
 
 When traversed depth first starting from $a$ it forms a different spanning tree as shown below:
 
-![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees dfs.png)
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesdfs.png)
 
 #### Minimum spanning tree
 
 Given a weighted graph, the minimum spanning tree is a spanning tree that has the smallest sum of edge weights. In the example below, the top right tree formed from breadth first traversal from $a$ has a total edge weight of $14$. The bottom spanning trees are considered minimum spanning trees, each with a total edge weight of $7$.
 
-![minimum spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees weighted.png)
+![minimum spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesweighted.png)
 
 #### Kruskal's algorithm
 
