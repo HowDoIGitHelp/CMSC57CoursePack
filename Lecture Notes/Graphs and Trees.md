@@ -393,29 +393,29 @@ Enqueue the root, while there are items in the queue, dequeue an item and enqueu
 
 For example, in the tree below, we start by enqueuing the root node $a$.
 
-![bfs1](media/bfs/Slide1.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide1.PNG)
 
 Since the queue is not empty we dequeue one item which happens to be $a$. We then enqueue every child of the dequeued item (node $a$), which are node $b$ and node $c$, as shown below: (the order of enqueuing children doesn't matter. Enqueuing $c$ then $b$ is still a valid breadth first traversal.)
 
-![bfs1](media/bfs/Slide2.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide2.PNG)
 
 Since the queue is not empty we repeat the process by dequeuing one (node $b$), and enqueuing its children (node $d$).
 
-![bfs1](media/bfs/Slide3.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide3.PNG)
 
 We continue until the queue is empty completing the traversal.
 
-![bfs1](media/bfs/Slide4.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide4.PNG)
 
-![bfs1](media/bfs/Slide5.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide5.PNG)
 
-![bfs1](media/bfs/Slide6.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide6.PNG)
 
-![bfs1](media/bfs/Slide7.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide7.PNG)
 
-![bfs1](media/bfs/Slide8.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide8.PNG)
 
-![bfs1](media/bfs/Slide9.png)
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide9.PNG)
 
 Depth first traversal
 
@@ -427,29 +427,29 @@ Push the root. While there are items in the stack, pop an item and push every ch
 
 For example. In the tree below, we start by pushing the root $a$. 
 
-![dfs](media/dfs/Slide1.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide1.PNG)
 
 Since the stack is not  empty we pop one item (node $a$) and push said items children.
 
-![dfs](media/dfs/Slide2.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide2.PNG)
 
 The stack is still not empty so we repeat the process by popping one item (node $c$) and pushing its children.
 
-![dfs](media/dfs/Slide3.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide3.PNG)
 
 We repeat the algorithm until the stack is empty:
 
-![dfs](media/dfs/Slide4.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide4.PNG)
 
-![dfs](media/dfs/Slide5.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide5.PNG)
 
-![dfs](media/dfs/Slide6.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide6.PNG)
 
-![dfs](media/dfs/Slide7.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide7.PNG)
 
-![dfs](media/dfs/Slide8.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide8.PNG)
 
-![dfs](media/dfs/Slide9.png)
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide9.PNG)
 
 Based when the parent node gets visited, depth first search can either be preorder, postorder or inorder. Preorder traversal visits the parents before any child, postoder visits the parents after all children while inorder visits parents in between the visiting the children. 
 
@@ -576,13 +576,13 @@ Given a connected graph $G=(V,E)$, a spanning tree is a subgraph of $G$ that con
 
 In the example below, a graph can have multiple spanning trees.
 
-![spanning trees](media/spanning trees.png)
+![spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees.png)
 
 A spanning tree can be found by traversing a connected graph breadth first or depth first. You can start from any vertex and avoid forming cycles by making sure each vertex is visited exactly once. Edges are added to the spanning tree whenever children are enqueued/pushed. 
 
 In the example below, we can form a spanning tree by traversing the graph breadth first using $a$ as the root.
 
-![spanning tree bfs](media/spanning trees bfs.png)
+![spanning tree bfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees bfs.png)
 
 | Queue                                                        |                                 Edges added to spanning tree |
 | :----------------------------------------------------------- | -----------------------------------------------------------: |
@@ -599,13 +599,13 @@ In the example below, we can form a spanning tree by traversing the graph breadt
 
 When traversed depth first starting from $a$ it forms a different spanning tree as shown below:
 
-![spanning tree dfs](media/spanning trees dfs.png)
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees dfs.png)
 
 #### Minimum spanning tree
 
 Given a weighted graph, the minimum spanning tree is a spanning tree that has the smallest sum of edge weights. In the example below, the top right tree formed from breadth first traversal from $a$ has a total edge weight of $14$. The bottom spanning trees are considered minimum spanning trees, each with a total edge weight of $7$.
 
-![minimum spanning trees](media/spanning trees weighted.png)
+![minimum spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanning trees weighted.png)
 
 #### Kruskal's algorithm
 
@@ -613,4 +613,4 @@ One of the many algorithms used for finding the minimum spanning tree is Prim's 
 
 In the diagram below, the smallest edges are added (red), rejecting cycle forming ones (blue), until the all vertices are connected.
 
-![kruskals](media/kruskals.png)
+![kruskals](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/kruskals.png)
