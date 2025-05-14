@@ -8,7 +8,7 @@ description: A lot of structures in mathematics and computer science can be char
 
 A lot of structures in mathematics and computer science can be characterized by complex connections and relationships. These structures are intimately known to computer scientists as graphs and trees.
 
-## Graphs
+# Graphs
 
 A **graph** commonly denoted as $G=(V,E)$, where $V$ is a nonempty set of **vertices** (sometimes called **nodes**) and $E$ is a set of **edges**. Each edge connects two vertices in $V$.
 
@@ -24,7 +24,7 @@ To visualize this graph we draw labelled dots as vertices and connect dots if an
 
 > Note that the exact location of the dots are not part of the characteristics of the graph, The dots can be arbitrarily placed anywhere.
 
-### Directed and Undirected Graphs
+## Directed and Undirected Graphs
 
 The example shown above is called an undirected graph. An undirected graph means that if any two vertices $a$ and $b$ are connected, $b$ and $a$ are also connected. Meaning the connection between $a$ and $b$ goes both ways. Formally an undirected graph $G=(V,E)$ is a graph defined such that, $\forall a\in V,b\in V(\{a,b\}\in E \to \{b,a\} \in E)$. Simply put, if a graph is specified to be undirected $\{a,b\} \in E$ automatically means $\{b,a\}\in E$.
 
@@ -34,7 +34,7 @@ A directed graph is a generalization where the direction of the connection betwe
 
 > An undirected graph's edge is denoted using unordered pair, (note the curly braces"{ }") while a directed graph's edge is denoted using an ordered pair, (note the parenthesis).
 
-### Simple graphs and multigraphs
+## Simple graphs and multigraphs
 
 The graphs we have looked at so far are examples of **simple graphs**. Simple graphs are graphs where there are at most 1 edge for every pair of vertex. If at least one pair of vertex has more than one edge then that graph is a **multigraph**. The graph below is an undirected multigraph since there are two of $\{a, c\}$ and two of $\{b,c\}$.
 
@@ -44,7 +44,7 @@ The graph below is a directed multigraph since there are two of $(a,b)$ and two 
 
 ![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
 
-### Some important graph terminologies
+## Some important graph terminologies
 
 - **adjacency** - vertices $a$ and $b$ are said to be **adjacent** or **neighbors** in $G$ if $(a,b)\in E$. We also say $(a,b)$ **connects** $a$ to $b$ or $e$ is **incident with** $a$ and $b$.
 - **neighborhood** - the neighborhood of some vertex $a$ in graph $G(V,E)$, usually denoted as $N(a)$, is the set of all neighbors of $a$ in $G$. Given some set of vertices $A$, $N(A)$ is the set of vertices that are neighbors of at least one vertex in $A$. 
@@ -61,9 +61,9 @@ The graph below is a directed multigraph since there are two of $(a,b)$ and two 
 
 - **degree sum** - the sum of all degrees of all vertices in some graph $G=(V,E)$ is exactly twice the number of edges. This is known as the **handshaking theorem** which formally states that $\sum_{v\in V}{\deg(v)}=2|E|$. This is again because each edge is counted twice  as a degree, one for each vertex it connects.
 
-### Some special graphs
+## Some special graphs
 
-###### Complete graphs
+### Complete graphs
 
 Complete graphs are graphs where any combination of two vertices are connected by an edge. This means that a complete graph with $m$ edges contain the maximum amount of edges. Graphs that are not complete are incomplete graphs.
 
@@ -85,11 +85,11 @@ For example, a cycle of 6 vertices is bipartite as shown below:
 
 ![bipartitegraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/bipartitegraph.jpg) 
 
-### Graphs Representations
+## Graphs Representations
 
 When encountering graph related problems, you often need to devise a way to represent the graph into a convenient data structure. By representing graphs using these data structures you are able to solve problems such as connectivity, shortest paths, and etc.
 
-#### Adjacency list 
+### Adjacency list 
 
 There are two main ways to do this, one is to list all vertices. For each vertex, list all the neighbors of the vertex. This method is called **adjacency list**. For example the graph below:
 
@@ -130,7 +130,7 @@ For multigraphs, when there are $n$ edges connecting two vertices, list the neig
 
 
 
-#### Adjacency matrix
+### Adjacency matrix
 
 Another way to represent the graph is to use an **adjacency matrix**. Given a graph with $m$ vertices, create an $m \times m$ matrix called $A$. Each vertex in the graph is associated to a number from $1$ to $m$, such that vertex $v_i$ is associated to the number $i$. If an edge connecting $v_i$ to $v_j$ exists, then the cell value at $A_{i,j}=1$. For example the same undirected graph,
 
@@ -182,7 +182,7 @@ $$
 \end{align*}
 $$
 
-### Paths and Circuits
+## Paths and Circuits
 
 A **path** along a graph, is a sequence of edges $(v_0,v_1),(v_1,v_2),\cdots ,(v_{n-1},v_n)$. A path describes a traversal from $v_0$ to $v_n$ along the edges of the graph. If the starting point and end point of a path with length greater than zero is the same edge, or $v_0 = v_n$, then that path is a **circuit**.
 
@@ -202,7 +202,7 @@ while the graph below is unconnected, since there is no path from $a$ to $c$, $d
 >
 > ![undirected connectivity](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/undirectedconnectivity.jpg)
 
-#### Euler Circuits and Paths
+### Euler Circuits and Paths
 
 One of the most well known graph theory related problems is the **seven bridges of Königsberg** problem. In the town of then Prussia called Königsberg, there were a total of seven bridges connecting 4 sections divided by the Pregel river. The townspeople of Königsberg wondered if there was a way to start at some section of the town, travel across all the bridges exactly once and return to the starting point. Leonhard Euler interpreted the problem as a graph problem (dated in 1736 arguably one of the first use of graph theory), represented by the multigraph below:
 
@@ -249,7 +249,7 @@ You'll notice that all the vertices of the graphs with Euler circuits have even 
 
 This shows that the seven bridges of Konigsberg do not have an Euler circuit.
 
-#### Hamilton circuits and paths
+### Hamilton circuits and paths
 
 Hamilton circuits are similar Euler circuits. Instead of visiting every edge exactly once, you visit every vertex exactly once. A hamilton circuit can visit an edge either zero or one time.
 
@@ -335,7 +335,7 @@ You'll notice that the travelling salesman problem is very similar to the hamilt
 
 > Note that there are solutions to these problems. It's just that the known solutions to these problems are algorithms that run in $\Omega(n^c)$.
 
-## Trees
+# Trees
 
 Trees are special graphs have the following characteristics
 
@@ -347,7 +347,7 @@ Trees are special graphs have the following characteristics
 
 Trees are useful mathematical structures that are usually used to characterize special relationships like hierarchy, recursive structures and composition. Computer file structures are example of recursive structures (folders can be composed of subfolders) that are represented using trees. A family tree which highlights a hierarchal structure are also represented by trees.
 
-#### Root
+### Root
 
 A tree is usually characterized with a special vertex designated as the origin for all paths in the tree. This vertex is known as the **root**. The root of a tree is  important in hierarchal structures since it is where the "highest" vertex resides. By designating a root, a tree can be structured in a way where the relationship between a any two vertices that share an edge is that of a **parent** and **child**. The children of a vertex (also called a **subtree**) are the neighbors of said vertex found hierarchally below. The parent of a vertex (also called a **supertree**) is the sole neighbor found hierarchally above the vertex. The root is the only vertex that does not have a parent. 
 
@@ -379,11 +379,11 @@ The designation of the root vertex is very important that changing the designate
 >
 > This is what it means when we say that a tree is a recursive composite structure. A tree is either a leaf (which is also a tree) or composed of  subtrees, which are also trees. Since these subtrees are also trees they can also either be trees or composed of subtrees.
 
-#### Tree Traversals
+### Tree Traversals
 
 When characterizing rooted trees, it is important to devise a way to traverse all of the vertices in a specific order. Given a tree $T$, a traversal of $T$ is an ordered sequence of vertices. 
 
-##### Breadth First Traversal
+#### Breadth First Traversal
 
 Breadth first traversal starts at the root node and visits all nodes on the a level before visiting nodes in the lower level. Given two nodes $u$ and $v$, where $u$ is in an older generation than $v$, then $u$ will be visited first before $v$.
 
@@ -417,7 +417,7 @@ We continue until the queue is empty completing the traversal.
 
 ![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide9.PNG)
 
-Depth first traversal
+#### Depth first traversal
 
 Depth first traversal traverses a branch of a tree as far as possible before traversing other branches. Depth first traversal algorithm uses a stack instead of queue. It can also be represented as a recursive process.
 
@@ -635,13 +635,13 @@ With the traversal sequence known, we build the spanning tree by backtracking fr
 
 ![backtracking](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/backtracking.png)
 
-#### Minimum spanning tree
+## Minimum spanning tree
 
 Given a weighted graph, the minimum spanning tree is a spanning tree that has the smallest sum of edge weights. In the example below, the top right tree formed from breadth first traversal from $a$ has a total edge weight of $14$. The bottom spanning trees are considered minimum spanning trees, each with a total edge weight of $7$.
 
 ![minimum spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesweighted.png)
 
-#### Kruskal's algorithm
+### Kruskal's algorithm
 
 One of the many algorithms used for finding the minimum spanning tree is Kruskal's algorithm. It works by adding the smallest available edge in that doesn't form a cycle until all vertices are connected.
 
