@@ -27,4 +27,4 @@
    $$
    In this adjacency matrix, the value of an element represents the weight of the corresponding edge. Any edge $\{v_i,v_j\}$ with weight $u$, implies that the element $A_{ij} = u$ in the adjacency matrix.
 
-   List all of the edges of one minimum spanning tree from $G$. 
+   List all of the edges of a minimum spanning tree from $G$. (For consistent labelling, vertex $v_i$ corresponds to row and column $i$ in the adjacency matrix)
