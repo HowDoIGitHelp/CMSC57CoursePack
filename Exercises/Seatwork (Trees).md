@@ -1,6 +1,6 @@
 # Seatwork (Trees)
 
-![figure](exertree.png)
+![figure](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Exercises/exertree.png)
 
 1. Arrange the nodes from $T$ according to breadth first traversal, first visited to last visited
 
