@@ -74,15 +74,15 @@ In some questions you will combine multiple concepts to find the correct answer
 
 3. When drawing the graph you will notice that the graph consists of $n$ vertices and$\frac{n}{2}$ edges. 
 
-   ![graph](graph.png)
+   ![graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Exercises/graph.png)
 
    The formula of degree weight is $2|E|$. Since $|E| = \frac{n}{2}$, the degree weight is $n$, which is the number of vertices. Therefore **the correct answer is a**.
 
 4. Construct the tree using the specifications provided:
 
-   ![tree](tree.png)
+   ![tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Exercises/tree.png)
 
-With these example only one choice has valid preorder and postorder traversal, **choice b**.
+With these example only one choice has valid preorder and postorder traversals, **choice b**.
 
 - choice a is invalid since a,b,d,c,e,f is not a valid depth first traversal, vertex e cannot come after c in this traversal. the left subtree must be completely traversed before traversing vertices in the right
 - Choice c is invalid for the same reason above and also the postorder is invalid
