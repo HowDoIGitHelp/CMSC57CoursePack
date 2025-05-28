@@ -138,7 +138,7 @@ Another way to represent the graph is to use an **adjacency matrix**. Given a gr
 
 can be represented by the following adjacency matrix:
 $$
-\begin{align*}
+\begin{aligned}
 	&v_1=a,v_2=b,v_3=c,v_4=d,v_5=e\\\\
   &A=\begin{bmatrix}
 		0 & 1 & 1 & 0 & 0\\
@@ -147,7 +147,7 @@ $$
 		0 & 0 & 0 & 0 & 1\\
 		0 & 0 & 1 & 1 & 0\\
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
 > Notice that the adjacency matrix of an undirected graph is symmetrical ($A^T=A$). That is because, $A_{ij}=A_{ji}$ (i.e. edge $\{v_i,v_j\}$ exist if and only if $\{v_j,v_i\}$ exists).
@@ -158,7 +158,7 @@ For undirected graphs, $A_{ij}=1$ if and only if $(v_i,v_j)$ is an edge (i.e. $v
 
 can be represented by the following adjacency matrix:
 $$
-\begin{align*}
+\begin{aligned}
 	&v_1=a,v_2=b,v_3=c,v_4=d\\\\
   &A=\begin{bmatrix}
 		0 & 1 & 1 & 1\\
@@ -166,20 +166,20 @@ $$
 		1 & 1 & 0 & 0\\
 		0 & 0 & 0 & 0\\
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 For multigraph, when there are $n$ edges connecting two vertices $v_i$ and $v_j$, $A_{i,j}=n$,
 
 ![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
 $$
-\begin{align*}
+\begin{aligned}
 	&v_1=a,v_2=b,v_3=c\\\\
   &A=\begin{bmatrix}
 		0 & 2 & 1\\
 		0 & 0 & 0\\
 		2 & 1 & 0\\
   \end{bmatrix}
-\end{align*}
+\end{aligned}
 $$
 
 ## Paths and Circuits

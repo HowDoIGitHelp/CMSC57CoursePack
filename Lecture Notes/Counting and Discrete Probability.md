@@ -279,27 +279,27 @@ $$
 This identity actually proves the mechanism behind Pascal's triangle
 
 $$
-\begin{matrix}
-&&&&&&&1&&&&&&\\
-&&&&&&1&&1&&&&&\\
-&&&&&1&&2&&1&&&&\\
-&&&&1&&3&&3&&1&&&\\
-&&&1&&4&&6&&4&&1&&\\
-&&1&&5&&10&&10&&5&&1&\\
-&1&&6&&15&&20&&15&&6&&1
-\end{matrix}
+\begin{array}{cccccccccccccc}
+& & & & & & &1& & & & & &\\
+& & & & & &1& &1& & & & &\\
+& & & & &1& &2& &1& & & &\\
+& & & &1& &3& &3& &1& & &\\
+& & &1& &4& &6& &4& &1& &\\
+& &1& &5& &10& &10& &5& &1&\\
+&1& &6& &15& &20& &15& &6& &1
+\end{array}
 $$
 
 $$
-\begin{matrix}
-&&&&&&&{0 \choose 0}&&&&&&\\
+\begin{array}{cccccccccccccc}
+&&&&&&&{0 \choose 0}&&&&&\\
 &&&&&&{0 \choose 0}&&{0 \choose 0}&&&&&\\
 &&&&&{2 \choose 0}&&{2 \choose 1}&&{2 \choose 2}&&&&\\
 &&&&{3 \choose 0}&&{3 \choose 1}&&{3 \choose 2}&&{3 \choose 3}&&&\\
 &&&{4 \choose 0}&&{4 \choose 1}&&{4 \choose 2}&&{4 \choose 3}&&{4 \choose 4}&&\\
 &&{5 \choose 0}&&{5 \choose 1}&&{5 \choose 2}&&{5 \choose 3}&&{5 \choose 4}&&{5 \choose 5}&\\
 &{6 \choose 0}&&{6 \choose 1}&&{6 \choose 2}&&{6 \choose 3}&&{6 \choose 4}&&{6 \choose 5}&&{6 \choose 6}
-\end{matrix}
+\end{array}
 $$
 
 ## Finite Probability Space
