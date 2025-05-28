@@ -1614,11 +1614,11 @@ $$
 To solve for the unknowns, we can rewrite $T\vec{e}=\lambda\vec{e}$ into a s**olution from zero**:
 
 $$
-\begin{align*}
+\begin{aligned}
 T\vec{e}&=\lambda I\vec{e}\\
 T\vec{e}-\lambda I\vec{e}&=\vec{0}\\
 (T-\lambda I)\vec{e}&=\vec{0}\\
-\end{align*}
+\end{aligned}
 $$
 
 If you recall, a non-zero vector can only be transformed to zero if and only if the whole vector space has been **squished to zero itself**. And this can only happen when the **determinant** of transformation is **zero**.

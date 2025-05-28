@@ -713,7 +713,7 @@ $$
 #### Different bases on exponential functions
 
 $$
-0<a<b \to a^n \in \omicron(b^n)
+0<a<b \to a^n \in o(b^n)
 $$
 
 **Bases for exponential functions on the other hand matter**, as shown in this proof:
