@@ -65,6 +65,13 @@ In some questions you will combine multiple concepts to find the correct answer
 
    Choice c is not true for all cases where $p(E) \neq p(F)$. On these cases $\frac{p(E \cap F)}{ p(F)}$ and $\frac{p(E \cap F)}{ p(E)}$ have different denominators. Which means $\frac{p(E \cap F)}{ p(F)} \neq \frac{p(E \cap F)}{ p(E)}$ and $p(E|F) \neq p(F|E)$.
 
+   > What to study if you cant answer this:
+   >
+   > - Definition of probability according to Laplace
+   >
+   > - Complement rule of probabilities
+   > - Conditional probabilities
+
 2. You simply solve for the probabilities for each choice:
 
    - Choice a: given rolling a dice as trial and denoting rolling a three as a success outcome, you can solve for this probability as $b(3;5,\frac{1}{6})+b(4;5,\frac{1}{6})+b(5;5,\frac{1}{6}) \approx 0.03215 + 0.00322 + 0.00013 \approx 0.03549$
@@ -72,11 +79,22 @@ In some questions you will combine multiple concepts to find the correct answer
    - **Choice c:** The conditional probability $p(Q|R) = \frac{p(Q \cap R)}{R} = \frac{0.05}{0.35} = \approx 0.14$
    - Choice d: $b(4;8,0.3)={8 \choose 4}0.3^4 0.7^4 \approx 0.13614$
 
+   > What to study if you cant answer this:
+   >
+   > - Conditional probabilities
+   > - Bernoulli trials
+   > - Product rule (Counting Principles)
+
 3. When drawing the graph you will notice that the graph consists of $n$ vertices and$\frac{n}{2}$ edges. 
 
    ![graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Exercises/graph.png)
 
    The formula of degree weight is $2|E|$. Since $|E| = \frac{n}{2}$, the degree weight is $n$, which is the number of vertices. Therefore **the correct answer is a**.
+
+   > What to study if you cant answer this:
+   >
+   > - Formal definition of graphs
+   > - degrees, degree weights
 
 4. Construct the tree using the specifications provided:
 
@@ -87,4 +105,10 @@ With these example only one choice has valid preorder and postorder traversals, 
 - choice a is invalid since a,b,d,c,e,f is not a valid depth first traversal, vertex e cannot come after c in this traversal. the left subtree must be completely traversed before traversing vertices in the right
 - Choice c is invalid for the same reason above and also the postorder is invalid
 - Choice d is invalid since a,b,c,d,e,f, is not depth first
+
+> What to study if you cant answer this:
+>
+> - Root (Trees)
+> - Definition of children (trees)
+> - Tree traversals
 
