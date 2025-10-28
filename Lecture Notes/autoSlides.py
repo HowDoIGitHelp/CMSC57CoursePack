@@ -148,7 +148,7 @@ def main():
     imgOptions = args[2] if len(args) > 2 else ''
     with open('styles/style.css','r') as css:
         style = f'{css.read()}\n'
-    outputStrin_g = f"---\ntype: slide\ntheme: uncover\nstyle: |\n{style}---\n\n # {args[1].split('.')[0]} \n\n"
+    outputString = f"---\ntype: slide\ntheme: uncover\nstyle: |\n{style}---\n\n # {args[1].split('.')[0]} \n\n"
     slides = []
     with open(f'{args[1]}', 'r') as fin:
         
