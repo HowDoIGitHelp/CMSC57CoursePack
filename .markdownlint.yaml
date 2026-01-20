@@ -1,4 +1,3 @@
-MD013: false
-# or to disable the rule completely:
-# MD013: false
-
+MD013:
+  line_length: 200
+  list_items: false
