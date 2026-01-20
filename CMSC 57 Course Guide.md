@@ -1,6 +1,6 @@
 # CMSC 57 Course Guide
 
-**Discrete Mathematics in Computer Science 2** *2nd Semester 2025-2026
+**Discrete Mathematics in Computer Science 2** _2nd Semester 2025-2026_
 
 ## Course Description
 
@@ -49,15 +49,19 @@ Asymptotic analysis, principles of linear algebra, combinatorics, probability, a
 
 ## Mode of Delivery
 
-This course will be delivered asynchronously through lecture notes with accompanying lecture videos. This course can also be found online on UVEC. We won't always have scheduled zoom sessions but you're free to setup consultation on the scheduled times for this class.
+This course will be delivered asynchronously through lecture notes with accompanying lecture videos.
+This course can also be found online on UVEC.
+We won't always have scheduled zoom sessions but you're free to setup consultation on the scheduled times for this class.
 
 ### Enrolling through UVEC
 
-Look for the course [Discrete Mathematics in Computer Science 2](https://uvec.upcebu.edu.ph/course/view.php?id=160) in UVEC and enroll yourself to the course. Make sure you enroll using the correct enrollment key: `cmsc572026`
+Look for the course [Discrete Mathematics in Computer Science 2](https://uvec.upcebu.edu.ph/course/view.php?id=160) in UVEC and enroll yourself to the course.
+Make sure you enroll using the correct enrollment key: `cmsc572026`
 
 ### Asking Questions and Scheduling Remote Consultations
 
-I'll try to make myself available for questions most of the time but you'll have a better chance of reaching me during our weekly schedules. You can schedule consultation as a group. Use that time to ask questions about the lecture or ask for help in answering lab exercises.
+I'll try to make myself available for questions most of the time but you'll have a better chance of reaching me during our weekly schedules.
+You can schedule consultation as a group. Use that time to ask questions about the lecture or ask for help in answering lab exercises.
 
 You can contact me through sms, email, slack dms, or through discord. You can find ways to reach me at the last section of this guide.
 
@@ -65,27 +69,31 @@ You can contact me through sms, email, slack dms, or through discord. You can fi
 
 All of the resources in this course can be found in the course pack. The course pack includes:
 
-- **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the mark down version of this file (use a markdown viewer to open the md files)
+- **Lecture Notes** - You'll find these files in the Lecture Notes Folder.
+  They come in pdf form and markdown form.
+  One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files.
+  You're better off opening the mark down version of this file (use a markdown viewer to open the md files)
 - **Lecture Videos**
 - **Seatworks**
 
 ## Study Schedule
 
-| Week Number | Videos To Watch/Lecture Notes to Read                        | Seatworks                           |
-| ----------- | ------------------------------------------------------------ | ----------------------------------- |
-| 1           | Asymptotic Analysis (Set Definitions)                        |                                     |
-| 2           | Asymptotic Analysis (Limit Definition)                       | SW (Asymptotic Analysis)            |
-| 3           | Asymptotic Analysis (Applications to CS)                     |                                     |
-| 3           | Linear Algebra (Matrices)                                    |                                     |
-| 5           | Linear Algebra (Linear Transformations)                      |                                     |
-| 6           | Linear Algebra (Composition and Determinants)                | SW (Introduction to Linear Algebra) |
-| 7           | Linear Algebra (Inverses and Nonsquare Transformations)      |                                     |
-| 8           | Counting and Discrete Probability (Counting Rules and Permuatations) | SW (Counting Rules)                 |
-| 9           | Counting and Discrete Probability (Combinations)             | SW (Permutations and Combinations)  |
-| 10          | Counting and Discrete Probability (Finite Probability Space) | SW (Probability)                    |
-| 11          | Counting and Discrete Probability (Bernoulli Trials and Bayesian Theorem) |                                     |
-| 12          | Graphs and Trees (Graphs)                                    |                                     |
-| 13          | Graphs and Trees (Trees)                                     | SW (Graphs and Trees)               |
+| Week Number | Videos To Watch/Lecture Notes to Read                                     | Seatworks                             |
+| ----------- | ------------------------------------------------------------------------- | ------------------------------------- |
+| 1           | Asymptotic Analysis (Set Definitions)                                     | SW (Asymptotic Analysis 1)            |
+| 2           | Asymptotic Analysis (Limit Definition)                                    | SW (Asymptotic Analysis 2)            |
+| 3           | Asymptotic Analysis (Applications to CS)                                  |                                       |
+| 4           | Linear Algebra (Matrices)                                                 | SW (Introduction to Linear Algebra 1) |
+| 5           | Linear Algebra (Linear Transformations)                                   | SW (Introduction to Linear Algebra 2) |
+| 6           | Linear Algebra (Composition and Determinants)                             | SW (Introduction to Linear Algebra 3) |
+| 7           | Linear Algebra (Inverses and Nonsquare Transformations)                   |                                       |
+| 8           | Counting and Discrete Probability (Counting Rules and Permuatations)      |                                       |
+| 9           | Counting and Discrete Probability (Combinations)                          | SW (Counting Rules, Perms, Combs)     |
+| 10          | Counting and Discrete Probability (Finite Probability Space)              | SW (Probability 1)                    |
+| 11          | Counting and Discrete Probability (Bernoulli Trials and Bayesian Theorem) | SW (Probability 2)                    |
+| 12          | Graphs and Trees (Graphs Structures)                                      | SW (Graphs 1)                         |
+| 13          | Graphs and Trees (Graphs Traversals)                                      | SW (Graphs 2)                         |
+| 14          | Graphs and Trees (Trees)                                                  | SW (Trees)                            |
 
 ## Grade Breakdown
 
@@ -113,4 +121,3 @@ All of the resources in this course can be found in the course pack. The course 
 ## How to reach me
 
 - email <rrabella@up.edu.ph>
-
