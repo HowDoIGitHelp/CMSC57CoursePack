@@ -1,6 +1,6 @@
 # CMSC 57 Course Guide
 
-**Discrete Mathematics in Computer Science 2** *2nd Semester 2024-2025 
+**Discrete Mathematics in Computer Science 2** *2nd Semester 2025-2026
 
 ## Course Description
 
@@ -53,11 +53,7 @@ This course will be delivered asynchronously through lecture notes with accompan
 
 ### Enrolling through UVEC
 
-Look for the course [Discrete Mathematics in Computer Science 2](https://uvec.upcebu.edu.ph/course/view.php?id=160) in UVEC and enroll yourself to the course. Make sure you enroll using the correct enrollment key for your section:
-
-- Section A - **CMSC57A**
-- Section B - **CMSC57B**
-- Section C - **CMSC57C**
+Look for the course [Discrete Mathematics in Computer Science 2](https://uvec.upcebu.edu.ph/course/view.php?id=160) in UVEC and enroll yourself to the course. Make sure you enroll using the correct enrollment key: `cmsc572026`
 
 ### Asking Questions and Scheduling Remote Consultations
 
@@ -70,12 +66,10 @@ You can contact me through sms, email, slack dms, or through discord. You can fi
 All of the resources in this course can be found in the course pack. The course pack includes:
 
 - **Lecture Notes** - You'll find these files in the Lecture Notes Folder. They come in pdf form and markdown form. One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files. You're better off opening the mark down version of this file (use a markdown viewer to open the md files)
-- **Lecture Videos** 
+- **Lecture Videos**
 - **Seatworks**
 
 ## Study Schedule
-
-This class is asynchronous, but if you start too late, you might end up getting overwhelmed by the amount of work. Here's the recommended schedule for completing the resources and lab exercises.
 
 | Week Number | Videos To Watch/Lecture Notes to Read                        | Seatworks                           |
 | ----------- | ------------------------------------------------------------ | ----------------------------------- |
@@ -97,9 +91,9 @@ This class is asynchronous, but if you start too late, you might end up getting 
 
 | Component   | Percentage |
 | ----------- | ---------- |
-| Seatworks   | 50%        |
-| Long Exam 1 | 25%        |
-| Long Exam 2 | 25%        |
+| Seatworks   | 30%        |
+| Long Exam 1 | 35%        |
+| Long Exam 2 | 35%        |
 
 ## Grade Transmutation
 
@@ -116,6 +110,7 @@ This class is asynchronous, but if you start too late, you might end up getting 
 | $(92,97]$       | 1.25       |
 | $(97,\infty)$   | 1.00       |
 
-How to reach me
+## How to reach me
 
-- email rrabella@up.edu.ph
+- email <rrabella@up.edu.ph>
+
