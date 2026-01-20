@@ -33,6 +33,7 @@ Asymptotic analysis, principles of linear algebra, combinatorics, probability, a
    3. Linear Transformations
    4. Determinants and Inverses
    5. Non-square Transformations
+   6. Eigensystems of Transformations
 3. Counting and Discrete Probability
    1. Counting Techniques
    2. Permutations and Combinations
@@ -44,14 +45,14 @@ Asymptotic analysis, principles of linear algebra, combinatorics, probability, a
 4. Graphs and Trees
    1. Graphs and Graph Definitions
    2. Euler Circuits
-   3. Trees
-   4. Tree Traversals
+   3. Graph Traversals
+   4. Trees
+   5. Tree Traversals
+   6. Minimum Spanning Trees
 
 ## Mode of Delivery
 
-This course will be delivered asynchronously through lecture notes with accompanying lecture videos.
-This course can also be found online on UVEC.
-We won't always have scheduled zoom sessions but you're free to setup consultation on the scheduled times for this class.
+This course will be delivered face to face with lecture videos available in UVEC.
 
 ### Enrolling through UVEC
 
@@ -63,8 +64,6 @@ Make sure you enroll using the correct enrollment key: `cmsc572026`
 I'll try to make myself available for questions most of the time but you'll have a better chance of reaching me during our weekly schedules.
 You can schedule consultation as a group. Use that time to ask questions about the lecture or ask for help in answering lab exercises.
 
-You can contact me through sms, email, slack dms, or through discord. You can find ways to reach me at the last section of this guide.
-
 ## Course Materials
 
 All of the resources in this course can be found in the course pack. The course pack includes:
@@ -74,7 +73,7 @@ All of the resources in this course can be found in the course pack. The course 
   One of the Lecture notes in particular, Introduction to Linear Algebra, has some gifs that will not be loaded on the pdf files.
   You're better off opening the mark down version of this file (use a markdown viewer to open the md files)
 - **Lecture Videos**
-- **Seatworks**
+- **Seatworks** - The seatworks will all be answered during class. Unexcused absences during days with seatworks means that you will also miss the seatworks.
 
 ## Study Schedule
 
@@ -94,6 +93,14 @@ All of the resources in this course can be found in the course pack. The course 
 | 12          | Graphs and Trees (Graphs Structures)                                      | SW (Graphs 1)                         |
 | 13          | Graphs and Trees (Graphs Traversals)                                      | SW (Graphs 2)                         |
 | 14          | Graphs and Trees (Trees)                                                  | SW (Trees)                            |
+
+## Requirements
+
+Along with the seatworks, the requiremnts include 2 Long Exams.
+The first Long Exam is scheduled at the end of Linear Introduction to Linear Algebra.
+The second Long Exam is scheduled at the end of the last topic.
+For those students who are unable to get a passing final grade (3.00) after Long Exam 2, they can take a Final Exam with the hopes of increasing their grades.
+This option is only available for students who have a failing standing.
 
 ## Grade Breakdown
 
