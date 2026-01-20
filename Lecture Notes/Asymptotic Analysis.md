@@ -4,7 +4,7 @@ The way we're going to approach this topic is by getting directly into the defin
 
 ## Formal Definitions
 
-We'll jump right in with the formal definition of the constructs known as Big-O (Big-O), Big-$\Omega$ (Big-Omega), and Big-$\Theta$ (Big-Theta). 
+We'll jump right in with the formal definition of the constructs known as Big-O (Big-O), Big-$\Omega$ (Big-Omega), and Big-$\Theta$ (Big-Theta).
 
 ### Big-O
 
@@ -17,7 +17,7 @@ $$
 
 Now this definition looks very complicated indeed, but if you are unable to recall how mathematical expressions of sets and quantifications are interpreted, don't worry here's how you read this definition:
 
-> *"**Big -Oh**"* of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq f(n) \leq cg(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> _"**Big -Oh**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq f(n) \leq cg(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
 
 This definition, although now closer to English, is still quite a mouthful. Let's dissect the meaning of this definition:
 
@@ -27,11 +27,11 @@ $$
 0 \leq f(n) \leq cg(n)
 $$
 
-According to the definition, any function of $n$, $f(n)$ is a member of the set known as $O(g(n))$ if it satisfies this inequality for all sufficiently large values of $n$ (or for all values of $n$ that are large enough). The extra condition: "for all sufficiently large values of $n$" is manifested in the universal quantification $\forall n\geq n_0$. What this means is that, **this inequality must hold true for all values $n$ that  reach a threshold $n_0$**. It doesn't matter which exact value $n_0$ is, all we know is that it is positive and it must exists ($\exists n_0 \geq 0$) for $f(n)$ to be a member. 
+According to the definition, any function of $n$, $f(n)$ is a member of the set known as $O(g(n))$ if it satisfies this inequality for all sufficiently large values of $n$ (or for all values of $n$ that are large enough). The extra condition: "for all sufficiently large values of $n$" is manifested in the universal quantification $\forall n\geq n_0$. What this means is that, **this inequality must hold true for all values $n$ that reach a threshold $n_0$**. It doesn't matter which exact value $n_0$ is, all we know is that it is positive and it must exists ($\exists n_0 \geq 0$) for $f(n)$ to be a member.
 
 Therefore, for a function of $n$ to be member of the set $O(g(n))$, **all images $f(n)$ must be not be greater than the corresponding image $g(n)$ times $c$**. The constant $c$ is another positive number that must exist for this inequality.
 
-*This whole definition will make much more sense with a visual example like the one below. The function $13n + 2$ can be shown to be a member of the set $O(2n^2 + n)$* 
+_This whole definition will make much more sense with a visual example like the one below. The function $13n + 2$ can be shown to be a member of the set $O(2n^2 + n)$_
 
 $$
 13n + 2 \in O(2n^2+n)
@@ -39,11 +39,11 @@ $$
 
 ![BigOExample](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigOExample.png)
 
-As shown in the plot, even though the function $13n+2$ starts bigger than $2n^2+n$, after some point, $2n^2+n$ **overtakes** the function $13n+2$ and leaves it behind so much that, $13n+2$ is only barely visible on the last plot. This shows that **there exists an $n_0$, a threshold for $n$, where, we are sure that for any $n$ greater than $n_0$, the inequality $13n+2 \leq 2n^2+n$ is always true**. In this example, the function $2n^2+n$ starts to overtake between $n=6$ and $n=7$. We don't even have to know the exact value of this turning point point, we can just show that $n_0$ exists and it's value is $n_0=7$ (you can also not be conservative and use a bigger number like $n_0=100$ or $n_0=10000$). After this point, we see that there will never be a value of $n$ greater than $n_0$ where $13n+2$ is greater than $2n^2+n$. 
+As shown in the plot, even though the function $13n+2$ starts bigger than $2n^2+n$, after some point, $2n^2+n$ **overtakes** the function $13n+2$ and leaves it behind so much that, $13n+2$ is only barely visible on the last plot. This shows that **there exists an $n_0$, a threshold for $n$, where, we are sure that for any $n$ greater than $n_0$, the inequality $13n+2 \leq 2n^2+n$ is always true**. In this example, the function $2n^2+n$ starts to overtake between $n=6$ and $n=7$. We don't even have to know the exact value of this turning point point, we can just show that $n_0$ exists and it's value is $n_0=7$ (you can also not be conservative and use a bigger number like $n_0=100$ or $n_0=10000$). After this point, we see that there will never be a value of $n$ greater than $n_0$ where $13n+2$ is greater than $2n^2+n$.
 
 Also, it looks like we have not explicitly picked a value for $c$ in this example because the value is already true for $c=1$. As long as we are able to show that this inequality will hold for at least one pair of positive values, $n_0$ and $c$ (in this case we picked $n_0=7$ and $c=1$), we are sure that $13n + 2$ is indeed a member of $O(2n^2+n)$.
 
-*Let's hammer it home with another example. One which forces us to explicitly choose a value for $c$*
+_Let's hammer it home with another example. One which forces us to explicitly choose a value for $c$_
 
 $$
 11n+1 \in O(2n+4)
@@ -57,12 +57,12 @@ From the plots above you can see that **$2n+4$, starts bigger, but then $11n+1$ 
 
 This shows that f**or $c=10$, the function $10(2n+4)$, starts as bigger than $2n+4$ and is always bigger than $2n+4$** (you can check that this is true if you notice that the difference between their values only gets bigger as $n$ increases). Remember that if we just find at least one pair of positive numbers $n_0$ and $c$ (in this case $n_0=0, c=10$) that satisfy the inequality, we are able to conclude that $11n+1 \in O(2n+4)$. It might seem strange that both $11n+1 \in O(2n+4)$ (where $n_0=0,c=10$) and $2n+4\in O(11n+1)$ is true (where $n_0=0.4,c=1$) but this is a legitimate possibility. In fact two way relationships like this have a certain implication that will be discussed later.
 
-*The relationship $13n + 2 \in O(2n^2+n)$ are usually read as the following phrases that you will repeatedly hear as computer scientists:*
+_The relationship $13n + 2 \in O(2n^2+n)$ are usually read as the following phrases that you will repeatedly hear as computer scientists:_
 
 - **$13n + 2$ is upper bounded by $O(2n^2+n)$** - it's called an upper bound because as $n$ increases to large values, $13n+2$ can never be greater than $2n^2 + n$. There is a boundary above $13n+2$ and that boundary is $2n^2 + n$.
 - **$13n  + 2$ cannot be more complex than $2n^2 + n$** - the term complexity is often used when contextualized with programming. When dealing with programming resources such as time, memory, and etc, CS often abstracts these resources as complexities (i.e. time complexity, space complexity). This will be discussed in detail later.
 
-> *When we say $f(n)$ cannot be more complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,*
+> _When we say $f(n)$ cannot be more complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,_
 
 ### Big-$\Omega$
 
@@ -77,7 +77,7 @@ $$
 
 Here's how this definition is interpreted:
 
-> *"**Big -Omega**"* of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq cg(n) \leq f(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> _"**Big -Omega**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq cg(n) \leq f(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
 
 You'll notice that the difference between this definition and the Big-O definition can be found on the inequality inside the set:
 
@@ -100,7 +100,7 @@ Here using $c=1$ we see that around $n=3.4$ the $2n^3 + 10$ starts to become big
 - **$2n^3 + 10$ is lower bounded by $4n^2 + 30$.**
 - **$2n^3 + 10$ cannot be less complex than $4n^2+30$.**
 
-> *When we say $f(n)$ cannot be less complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,*
+> _When we say $f(n)$ cannot be less complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,_
 
 ### Big-$\theta$
 
@@ -115,7 +115,7 @@ $$
 
 This is how it's interpreted:
 
-> *"**Big -Theta**"* of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c_1$ and $c_2$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> _"**Big -Theta**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c_1$ and $c_2$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
 
 In this definition, **the inequality conditions for Big-O and Big-$\Omega$ are combined into one**. The value for $f(n)$ is between $c_1g(n)$ and $c_2g(n)$. For a function to be shown as a member of $\Theta(g(n))$, we must demonstrate the existence of three positive numbers, $c_1$, $c_2$, and $n_0$. When we establish that a function $f(n)=\Theta(g(n))$, we mean that $f(n)$ is tightly bound by $g(n)$ (we say this because it is both upper bounded and lower bounded, by $g(n)$). Here's an example of this in action:
 
@@ -123,17 +123,17 @@ $$
 4n^2+30 \in \Theta(2n^2 + n)
 $$
 
-*To demonstrate that this is indeed true, we just need to satisfy the inequality:* 
+_To demonstrate that this is indeed true, we just need to satisfy the inequality:_
 
 $$
 c_1(2n^2 + n) \leq 4n^2 + 30 \leq c_2(2n^2 + n)
 $$
 
-Basically, we need to show that $2n^2 + n$ can be upper bound and lower bound $4n^2 + 30$. To do this we just need to select some appropriate coefficients, $c_1$ and $c_2$. For this example we have found that to be $c_1=1$ and $c_2=3$. This can be shown on the plot below: 
+Basically, we need to show that $2n^2 + n$ can be upper bound and lower bound $4n^2 + 30$. To do this we just need to select some appropriate coefficients, $c_1$ and $c_2$. For this example we have found that to be $c_1=1$ and $c_2=3$. This can be shown on the plot below:
 
 ![BigTheta](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/asymptoticAnalysis/BigThetaExample.png)
 
-After some threshold $n_0$ notice how the $4n^2 + 30$ stays in between $2n^2+n$. This is what it means for a function to be tightly bound to another. The value of $2n^2 + n$ can be either greater or lesser than $4n^2 + 30$, it depends on the coefficients. 
+After some threshold $n_0$ notice how the $4n^2 + 30$ stays in between $2n^2+n$. This is what it means for a function to be tightly bound to another. The value of $2n^2 + n$ can be either greater or lesser than $4n^2 + 30$, it depends on the coefficients.
 
 We can say the following about the relationship between $4n^2 + 30$ and $2n^2+n$:
 
@@ -142,21 +142,21 @@ We can say the following about the relationship between $4n^2 + 30$ and $2n^2+n$
 
 > Before we move on the next section, here are some questions to ponder upon: (don't worry, these questions will be answered and proven in the next sections)
 >
-> - **Is it true that $f(n) \in O(g(n)) \cup \Omega(g(n))$ for any pair of functions $f(n)$ and $g(n)$?** (*I.e. Is $f(n)$ guaranteed to be a member of either $O(g(n))$ or $\Omega(g(n))$?)*
+> - **Is it true that $f(n) \in O(g(n)) \cup \Omega(g(n))$ for any pair of functions $f(n)$ and $g(n)$?** (_I.e. Is $f(n)$ guaranteed to be a member of either $O(g(n))$ or $\Omega(g(n))$?)_
 > - **Is it true that if $f(n) \in O(g(n))$, then $g(n)\in \Omega(f(n))$?**
-> - **What is $O(g(n)) \cap \Omega(g(n))$?** (*What is the intersection of $O(g(n))$ and $\Omega(g(n))$?*)
+> - **What is $O(g(n)) \cap \Omega(g(n))$?** (_What is the intersection of $O(g(n))$ and $\Omega(g(n))$?_)
 
 ### Proving Asymptotic Relationships using the Formal Definition
 
 Let's look at proving asymptotic relationships between two functions. One of the things a computer scientist repeatedly does, is to establish the asymptotic relationship between two functions. Questions such as: "**is $n^2 + 5 \in O(n^2)$?** ". This task is done so ubiquitously and automatically that the techniques you'll end up using become so easy. For now, we'll discuss the most basic technique of answering these questions. For this part we'll use the definition of O, $\Omega$, and $\Theta$ to answer these questions.
 
-*For example, let's prove that the relationship demonstrated visually in the previous sections, is indeed true:*
+_For example, let's prove that the relationship demonstrated visually in the previous sections, is indeed true:_
 
 $$
 2n^3+10 \in \Omega(4n^2+30)
 $$
 
-*Recall that the definition for a $\Omega$ relationship is the following:* 
+_Recall that the definition for a $\Omega$ relationship is the following:_
 
 $$
 \begin{aligned}
@@ -174,13 +174,13 @@ $$
 \end{aligned}
 $$
 
-*We can satisfy the existential quantification above using proof by example with the following values:*
+_We can satisfy the existential quantification above using proof by example with the following values:_
 
 $$
 \text{let } c = 1, n_0 = 3.4
 $$
 
-*and a little bit of inequality algebra:*
+_and a little bit of inequality algebra:_
 
 $$
 \begin{aligned}
@@ -212,7 +212,6 @@ $$
 &(\exists n>n_0 (0 > (2n^3+10) \lor (2n^3+10) > c(4n^2+30)))
 \end{aligned}
 $$
-
 
 > note: we do not actually care for cases where $n<0$ or $f(n)<0$ or in fact anything that is less than $0$. In the context that we are using this in computer science, values are cannot be negative.
 
@@ -249,7 +248,7 @@ These definitions sound complicated, but if we try to translate these into Engli
 
 > if the limit of the ratio $\frac{f(n)}{g(n)}$ as $n$ approaches infinity...
 
-We're looking at the ratio of the two functions $f(n)$​ and $g(n)$​ and **we're trying to see what happens to the value of that ratio as $n$​ becomes very very large (as $n$​ approaches infinity).** 
+We're looking at the ratio of the two functions $f(n)$​ and $g(n)$​ and **we're trying to see what happens to the value of that ratio as $n$​ becomes very very large (as $n$​ approaches infinity).**
 
 ### Approaching Infinity
 
@@ -268,7 +267,7 @@ $$
 \begin{aligned}
 &\text{Let }n=5\\
 \\
-&\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5 
+&\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5
 \end{aligned}
 $$
 
@@ -290,7 +289,7 @@ $$
 \end{aligned}
 $$
 
-We can expect this number to increase as we increase the value of $n$. When we reach **really** big values of $n$, (around infinity), **we can expect that that number will be really big** as well. 
+We can expect this number to increase as we increase the value of $n$. When we reach **really** big values of $n$, (around infinity), **we can expect that that number will be really big** as well.
 
 And of course this behavior should happen. That's because we are looking at the ratio between two values, positively dependent $n$. It just so happens that the numerator of this fraction is of polynomial degree 3 while the denominator is of polynomial degree 2. What this means is that **the numerator of the ratio will increase much faster than the denominator**. When the value $n$ becomes really big, the value of the numerator will become extremely big compared to the denominator. And what do we get when we divide a very big number by a relatively small number? A very big number.
 
@@ -321,9 +320,7 @@ $$
 \end{aligned}
 $$
 
-As you observe here, as the value of $n$ increases, the value of the ratio, becomes closer and closer to 0. We can expect that when we reach really big values, the value of the ratio will be very close to zero. We expect this because the numerator is of degree 1 while the denominator is of degree 2. As the value of $n$ increases, both the numerator increases but the denominator increases faster. Therefore, when reaching very big values, we end up dividing a number over a relatively big number.  The result of this division is a value close to 0.
-
-
+As you observe here, as the value of $n$ increases, the value of the ratio, becomes closer and closer to 0. We can expect that when we reach really big values, the value of the ratio will be very close to zero. We expect this because the numerator is of degree 1 while the denominator is of degree 2. As the value of $n$ increases, both the numerator increases but the denominator increases faster. Therefore, when reaching very big values, we end up dividing a number over a relatively big number. The result of this division is a value close to 0.
 
 Now, instead of going through the trouble of testing for bigger and bigger numbers we can immediately figure out which one of the numerator or denominator is the relatively larger value. This is where the limit towards infinity comes to play. We directly look at the value of the ratio when the value of $n$ approaches to **infinity** (a very big value).
 
@@ -342,7 +339,6 @@ $$
 \end{aligned}
 $$
 
-
 [^2]: Just to clarify: we are not actually substituting the value here, we are solving the limit, and to do that we conceptually substitute infinity to the variable $n$.
 
 The fraction infinity over infinity is an undefined value, so instead of automatically substituting infinity to $n$, we'll need to apply **L'Hopital's rule** first:
@@ -355,7 +351,7 @@ $$
 \end{aligned}
 $$
 
-By applying L'Hopital's rule, we can now freely *substitute*, infinity to $n$, giving us:
+By applying L'Hopital's rule, we can now freely _substitute_, infinity to $n$, giving us:
 
 $$
 \lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} = \lim_{n \to \infty} \frac{3n}{4} = \infty
@@ -364,9 +360,11 @@ $$
 Therefore, based on the limit definitions, we can conclude that $2n^3+10 \in \Omega(4n^2+30)$.
 
 > If you don't know what L'Hopital's rule is, its basically a technique for solving otherwise undefined/indeterminate limit ratio values. The exact usage of L'Hopital's rule is as follows:
+>
 > $$
 > \lim_{n\to c}\frac{f(n)}{g(n)} = \lim_{n\to c}\frac{\frac{d}{dx}f(n)}{\frac{d}{dx}g(n)}
 > $$
+>
 > Basically, if you are unable to solve limits (because you end up with undefined/indeterminate values like $\frac{0}{0}$, $\frac{\infty}{\infty}$), you derive both the denominator and numerator separately. If after applying L'Hopital's rule, you still end up with undefined/indeterminate values, you can apply it again, until you get an answer that is either 0, some positive constant, or infinity.
 
 Let's look at two more examples of this:
@@ -395,7 +393,7 @@ $$
 \end{aligned}
 $$
 
-> Note how L'Hopital's rule had to be applied thrice to solve this. 
+> Note how L'Hopital's rule had to be applied thrice to solve this.
 >
 > Also, if we end up with a limit value between 0 and infinity (meaning any positive constant), This means that neither the numerator or denominator is relatively bigger than the other. In cases like these, the numerator is a member of big theta of the denominator.
 
@@ -412,8 +410,6 @@ $$
 \end{aligned}
 $$
 
-
-
 ## Asymptotically Loose Relationships
 
 You might be wondering why, we read asymptotic notation with the qualifier "Big", why do we have to specify **Big**-O, or **Big**-Omega? Well, you might have guessed it, its because there are "little" versions of O, and $\Omega$. Both little-o and little-$\omega$ are what we call asymptotically loose relationships.
@@ -425,7 +421,6 @@ Starting with the set definition of little-o, it is defined as:
 $$
 o(g(n)) = \{f(n)|\forall c>0(\exists n_0>0(\forall n>n_0(0 \leq f(n) \leq cg(n))))\}
 $$
-
 
 > For all positive constants $c$, there exists a positive constant $n_0$, such that $0 \leq f(n) \leq cg(n)$ for all $n>n_0$, (for sufficiently large values of $n$)
 
@@ -477,7 +472,7 @@ $$
 
 ### Asymptotic Tightness
 
-If $f(n) \in O(g(n))$ but $f(n) \notin o(g(n))$, then we call their relationship **asymptotically tight**, meaning $f(n)$ is shown to be upper bounded by $g(n)$, but at the same time this bound is close/tight to $f(n)$, because they actually turn out to have the exact same complexity, $f(n) \in \Theta(g(n))$. An example of this is the relationship of  $n^2 + n$ and $n^2$. Where you can show the following relationships
+If $f(n) \in O(g(n))$ but $f(n) \notin o(g(n))$, then we call their relationship **asymptotically tight**, meaning $f(n)$ is shown to be upper bounded by $g(n)$, but at the same time this bound is close/tight to $f(n)$, because they actually turn out to have the exact same complexity, $f(n) \in \Theta(g(n))$. An example of this is the relationship of $n^2 + n$ and $n^2$. Where you can show the following relationships
 
 - $n^2 + n \in O(n^2)$
 - $n^2 + n \notin o(n^2)$
@@ -489,7 +484,7 @@ The opposite of an asymptotically tight relationship is an asymptotically loose 
 
 Now that we have seen all 5 of the asymptotic notations, we can show how they behave similar to algebraic inequalities/equalities. Some of you you might have realized this now, but it may not be as obvious because we get distracted by how asymptotic relationships are presented. The way it is defined is usually through sets and set membership. But **if we look at asymptotic relationships as something similar to inequalities/equalities it becomes easier to understand their concepts**.
 
-Say we have some arbitrary number called $x$, we can define a class of sets called $L(x)$ such that 
+Say we have some arbitrary number called $x$, we can define a class of sets called $L(x)$ such that
 
 $$
 L(x) = \{y|y\leq x\}
@@ -537,15 +532,15 @@ Now that we've been introduced to the mathematics of asymptotic notation, let's 
 
 As you mature as computer scientists, you start to master how to write algorithms that work correctly. Algorithms that will give you the desired answer to the problem you are solving. By mastering this your focus shifts from writing algorithms that work to writing algorithms that work **efficiently**. It's not only important to write programs that work, it becomes important that these programs also work **quicker** and use **lesser resources**.
 
-Consider the sorting algorithms bubble sort and merge sort[^3]. Both of these algorithms solve the same problem, given a array of numbers, the algorithm should return the same array of numbers but now arranged from lowest to highest (or highest to lowest). 
+Consider the sorting algorithms bubble sort and merge sort[^3]. Both of these algorithms solve the same problem, given a array of numbers, the algorithm should return the same array of numbers but now arranged from lowest to highest (or highest to lowest).
 
 [^3]: Its not important right now to know what the actual algorithms do, for now let's focus on how they perform instead
 
 So we have these two algorithms. **How do we judge which algorithm is more efficient**? Let's say we prefer the faster algorithm between the two. **How do we compare their speeds?**
 
-One thing we can do is to look at empirical evidence and try to look at their **running times** when the algorithm is converted to actual code. The running time of some program  is simply the amount of time it takes for it to run. But there's an issue. For these algorithms, **the running time is dependent on the size of the given array**. If the given array is **shorter** in length then both algorithms have **less elements** to sort. Therefore, the algorithm will take less time time to run and the running time will be **faster**. The inverse is also true, if the given array is **longer**, then the running time would be **high**. 
+One thing we can do is to look at empirical evidence and try to look at their **running times** when the algorithm is converted to actual code. The running time of some program is simply the amount of time it takes for it to run. But there's an issue. For these algorithms, **the running time is dependent on the size of the given array**. If the given array is **shorter** in length then both algorithms have **less elements** to sort. Therefore, the algorithm will take less time time to run and the running time will be **faster**. The inverse is also true, if the given array is **longer**, then the running time would be **high**.
 
-This tells us that **the running time for an algorithm cannot be simply represented as one number** that we can easily compare against another algorithm's running time. Most of the time, an algorithm's running time is dependent on the **size of the input** [^4]. In the case of sorting algorithms, this input size is the number of elements in the given array. 
+This tells us that **the running time for an algorithm cannot be simply represented as one number** that we can easily compare against another algorithm's running time. Most of the time, an algorithm's running time is dependent on the **size of the input** [^4]. In the case of sorting algorithms, this input size is the number of elements in the given array.
 
 [^4]: An algorithm's running time is also dependent on a plethora of other factors such as how the input is initially configured, how fast the processor is, how fast the programing language is and etc. But almost always, the biggest factor is input size.
 
@@ -597,11 +592,11 @@ So what does all of this tell us?
 2. **There is no reliable way to compare algorithm efficiency. The ways that we have always end up being approximations.**
 3. **We care the most about how the algorithm performs in large input sizes**
 
-All of these factors reveal to us that the best way to compare algorithms is by the use of asymptotic notation. 
+All of these factors reveal to us that the best way to compare algorithms is by the use of asymptotic notation.
 
 1. **Since algorithm efficiency almost always ends up being functions of input sizes, we can makes use of asymptotic notation, which compare relationships between functions.** Remember that the member's of O, $\Omega$, $\Theta$, o, $\omega$, are functions. We've even shown how asymptotic relationships are similar to inequality/equality relationships, but instead of comparing numerical values, we compare functions.
 2. **You'll find that asymptotic notation relationships are good at calculating approximated values.** The asymptotic relationships between two functions still hold true even if you change the functions a little bit. For example $2n^2 + 5n \in \Theta(4n^2+3)$, even if we change the constant coefficients in these functions, their asymptotic relationship still stays the same: $an^2 +bn \in \Theta(cn^2 + d)$. This characteristic is useful in the case of running time comparisons because as we've shown, our methods of measurements are not precise enough or uniform enough. Asymptotic notation doesn't care about the small mistakes in measurement.
-3. **Asymptotic notation by definition only cares about large values of $n$.** If we recall, asymptotic relationships only care about what happens on **sufficiently large values of $n$**, or on values of $n\to \infty$. 
+3. **Asymptotic notation by definition only cares about large values of $n$.** If we recall, asymptotic relationships only care about what happens on **sufficiently large values of $n$**, or on values of $n\to \infty$.
 
 So to apply asymptotic notation to merge sort and bubble sort, we can use the functions we got by measuring the instructions in python code. We can conclude that:
 
@@ -609,7 +604,7 @@ $$
 4n^2 + 3 \in \Omega(6n \log_2 {n} + 5n + 2)
 $$
 
-This leads us to the conclusion that bubble sort's **time complexity** is higher than merge sort's time complexity. Time complexity of an algorithm is the conceptual asymptotic relationship ranking of an algorithm. The lower the algorithm's time complexity is, the faster it performs on large input sizes. Time complexity can also refer to how fast the algorithm's running time increases as the input size increases. An algorithm with lower time complexity, is more efficient.  
+This leads us to the conclusion that bubble sort's **time complexity** is higher than merge sort's time complexity. Time complexity of an algorithm is the conceptual asymptotic relationship ranking of an algorithm. The lower the algorithm's time complexity is, the faster it performs on large input sizes. Time complexity can also refer to how fast the algorithm's running time increases as the input size increases. An algorithm with lower time complexity, is more efficient.
 
 ## Reduction Rules and Complexity Classes
 
@@ -628,6 +623,7 @@ $$
 **Given a function multiplied to some constant, $cf(n)$, its complexity is exactly the same as $f(n)$.** This property can easily be demonstrated using the limit definition of $\Theta$.
 
 > **Proof**
+>
 > $$
 > \lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
 > $$
@@ -641,6 +637,7 @@ $$
 **Given $f(n)^c$ and $f(n)^d$ where $c$ and $d$ are constants and $c<d$, $f(n)^c$ is less complex than $f(n)^d$**
 
 > **Proof**
+>
 > $$
 > \begin{aligned}
 > \text{Let $0<c<d$}\\\\
@@ -665,6 +662,7 @@ $$
 > **Proof**
 >
 > Since $f(n) = \Omega(f(n))$,
+>
 > $$
 > \begin{aligned}
 > \text{for any $n>n_0$}\\\\
@@ -672,13 +670,17 @@ $$
 > f(n) +g(n)&\geq cf(n)
 > \end{aligned}
 > $$
+>
 > adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value)
 >
 > Therefore,
+>
 > $$
 > f(n)+g(n)=\Omega(f(n))
 > $$
+>
 > Also since $g(n)=O(f(n)),$
+>
 > $$
 > \begin{aligned}
 > g(n)&\leq cf(n) \\
@@ -686,21 +688,25 @@ $$
 > f(n)+g(n)&\leq (c+1)f(n)\\
 > \end{aligned}
 > $$
+>
 > Therefore,
+>
 > $$
 > f(n)+g(n) \in O(f(n))
 > $$
+>
 > And since $f(n)+g(n)=\Omega(f(n)) \land f(n) + g(n) \in O(f(n))$,
+>
 > $$
 > f(n)+g(n) \in \Theta(f(n))
 > $$
->
 
 #### Different bases on log
 
 **Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.** Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity.
 
 > **Proof**
+>
 > $$
 > \begin{aligned}
 > \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
@@ -719,6 +725,7 @@ $$
 **Bases for exponential functions on the other hand matter**, as shown in this proof:
 
 > **Proof**
+>
 > $$
 > \begin{aligned}
 > \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
@@ -726,11 +733,12 @@ $$
 > &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
 > \end{aligned}
 > $$
+>
 > since $b>a$, then, $1-\log_a b<0$. Therefore,
+>
 > $$
 > \lim_{x \to \infty}{\frac{a^n}{b^n}}=0
 > $$
->
 
 Based on these rules a complicated looking function can be **reduced** to the **simplest function** that matches its complexity. For example, In the function below, the we can look for the most complex term in this sum and drop the rest. In this case the term $6n \log_2 {n}$ is the most complex, so we apply the first sum of functions rule and drop the rest.
 
@@ -754,7 +762,7 @@ This tells us that the complexity of $6n \log_2 {n} + 5n + 2$, is the same as $n
 
 ### Complexity Classes
 
-This reduction process is something that computer scientists do a lot. When we compare algorithms, we compare them using these simple looking functions that represent their time complexity. In the domain of computer science we know a few of these *representative* functions, we call these, **complexity classes**. One of the skills you will master as you mature as computer scientists  is to be able to automatically identify any algorithm's complexity class. By knowing an algorithm's complexity class we can easily infer how the algorithm will perform. 
+This reduction process is something that computer scientists do a lot. When we compare algorithms, we compare them using these simple looking functions that represent their time complexity. In the domain of computer science we know a few of these _representative_ functions, we call these, **complexity classes**. One of the skills you will master as you mature as computer scientists is to be able to automatically identify any algorithm's complexity class. By knowing an algorithm's complexity class we can easily infer how the algorithm will perform.
 
 Here are the complexity classes in computer science, arranged from least complex, to then most complex
 
@@ -773,6 +781,6 @@ Here are the complexity classes in computer science, arranged from least complex
 
 ### Using O versus using $\Theta$
 
-When specifying time complexity, you'll find that it is usually expressed in terms of **O**. You might find this strange since **expressing the time complexity in terms of $\Theta$ is more specific**. If someone says that an algorithm is $O(n^2)$ for example, the person is saying that the algorithm is at most as complex as $n^2$. Were not sure if the exact complexity is indeed $\Theta(n^2)$, or $\Theta(n)$, or $\Theta(n \log n)$. If you want to be as specific as possible, use, $\Theta$ to express complexity. 
+When specifying time complexity, you'll find that it is usually expressed in terms of **O**. You might find this strange since **expressing the time complexity in terms of $\Theta$ is more specific**. If someone says that an algorithm is $O(n^2)$ for example, the person is saying that the algorithm is at most as complex as $n^2$. Were not sure if the exact complexity is indeed $\Theta(n^2)$, or $\Theta(n)$, or $\Theta(n \log n)$. If you want to be as specific as possible, use, $\Theta$ to express complexity.
 
 But sometimes the time complexity of an algorithm may be dependent on factors other than input size. One of these factors for example is how the input is configured. In the context of sorting, this will refer to the initial sortedness of the array. Some algorithms perform under different time complexities depending on the initial conditions. When an algorithm's complexity is expressed as some $O(f(n))$, this will tell you that, at its worst possible case, (for example in quick sort the worst case could be reverse sorted) the algorithm runs at $O(f(n))$, but there is still a possibility that on other cases, the algorithm will perform $o(f(n))$ (better than $f(n)$). You'll find that **computer scientists will end up expressing time complexities in terms of $O$ as well because we generally want our algorithms to run on some acceptable standard of complexity**. Because of this **asymptotic notation in terms of $O$ will usually suffice**.
