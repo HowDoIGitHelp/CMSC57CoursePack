@@ -446,15 +446,16 @@ $$
 
 Therefore, based on the limit definitions, we can conclude that $2n^3+10 \in \Omega(4n^2+30)$.
 
-> If you don't know what L'Hopital's rule is, its basically a technique for solving otherwise undefined/indeterminate limit ratio values.
-> The exact usage of L'Hopital's rule is as follows:
->
-> $$
-> \lim_{n\to c}\frac{f(n)}{g(n)} = \lim_{n\to c}\frac{\frac{d}{dx}f(n)}{\frac{d}{dx}g(n)}
-> $$
->
-> Basically, if you are unable to solve limits (because you end up with undefined/indeterminate values like $\frac{0}{0}$, $\frac{\infty}{\infty}$), you derive both the denominator and numerator separately.
-> If after applying L'Hopital's rule, you still end up with undefined/indeterminate values, you can apply it again, until you get an answer that is either 0, some positive constant, or infinity.
+If you don't know what L'Hopital's rule is, its basically a technique for solving otherwise undefined/indeterminate limit ratio values.
+The exact usage of L'Hopital's rule is as follows:
+
+$$
+\lim_{n\to c}\frac{f(n)}{g(n)} = \lim_{n\to c}\frac{\frac{d}{dx}f(n)}{\frac{d}{dx}g(n)}
+$$
+
+Basically, if you are unable to solve limits (because you end up with undefined/indeterminate values like $\frac{0}{0}$, $\frac{\infty}{\infty}$), you derive both the denominator and numerator separately.
+
+If after applying L'Hopital's rule, you still end up with undefined/indeterminate values, you can apply it again, until you get an answer that is either 0, some positive constant, or infinity.
 
 Let's look at two more examples of this:
 
@@ -482,10 +483,9 @@ $$
 \end{aligned}
 $$
 
-> Note how L'Hopital's rule had to be applied thrice to solve this.
->
-> Also, if we end up with a limit value between 0 and infinity (meaning any positive constant), This means that neither the numerator or denominator is relatively bigger than the other.
-> In cases like these, the numerator is a member of big theta of the denominator.
+Note how L'Hopital's rule had to be applied thrice to solve this.
+Also, if we end up with a limit value between 0 and infinity (meaning any positive constant), This means that neither the numerator or denominator is relatively bigger than the other.
+In cases like these, the numerator is a member of big theta of the denominator.
 
 $$
 \begin{aligned}
@@ -524,7 +524,6 @@ $$
 $$
 
 Compared to Big-O, where the value of the limit must jut be anything less than infinity, for a little-o relationship to be true, the value of the limit must be exactly zero.
-
 An example of this relationship is:
 
 $$
@@ -783,11 +782,11 @@ $$
 
 **Given a function multiplied to some constant, $cf(n)$, its complexity is exactly the same as $f(n)$.** This property can easily be demonstrated using the limit definition of $\Theta$.
 
-> **Proof**
->
-> $$
-> \lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
-> $$
+##### Proof
+
+$$
+\lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
+$$
 
 #### Higher degree polynomial
 
@@ -797,20 +796,20 @@ $$
 
 **Given $f(n)^c$ and $f(n)^d$ where $c$ and $d$ are constants and $c<d$, $f(n)^c$ is less complex than $f(n)^d$**
 
-> **Proof**
->
-> $$
-> \begin{aligned}
-> \text{Let $0<c<d$}\\\\
-> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
-> &=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
-> &=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
-> &\vdots\\
-> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
-> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
-> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0
-> \end{aligned}
-> $$
+##### Proof
+
+$$
+\begin{aligned}
+\text{Let $0<c<d$}\\\\
+\lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
+&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
+&=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
+&\vdots\\
+&=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+&=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+\lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0
+\end{aligned}
+$$
 
 #### Sum of functions
 
@@ -820,62 +819,62 @@ $$
 
 **In a sum of functions, the most complex function dominates the sum therefore the overall complexity will be equal to the dominant function.** This can be shown using the set definitions.
 
-> **Proof**
->
-> Since $f(n) = \Omega(f(n))$,
->
-> $$
-> \begin{aligned}
-> \text{for any $n>n_0$}\\\\
-> f(n)&\geq cf(n) \\
-> f(n) +g(n)&\geq cf(n)
-> \end{aligned}
-> $$
->
-> adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value)
->
-> Therefore,
->
-> $$
-> f(n)+g(n)=\Omega(f(n))
-> $$
->
-> Also since $g(n)=O(f(n)),$
->
-> $$
-> \begin{aligned}
-> g(n)&\leq cf(n) \\
-> f(n)+g(n)&\leq cf(n) + f(n)\\
-> f(n)+g(n)&\leq (c+1)f(n)\\
-> \end{aligned}
-> $$
->
-> Therefore,
->
-> $$
-> f(n)+g(n) \in O(f(n))
-> $$
->
-> And since $f(n)+g(n)=\Omega(f(n)) \land f(n) + g(n) \in O(f(n))$,
->
-> $$
-> f(n)+g(n) \in \Theta(f(n))
-> $$
+##### Proof
+
+Since $f(n) = \Omega(f(n))$,
+
+$$
+\begin{aligned}
+\text{for any $n>n_0$}\\\\
+f(n)&\geq cf(n) \\
+f(n) +g(n)&\geq cf(n)
+\end{aligned}
+$$
+
+Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value)
+
+Therefore,
+
+$$
+f(n)+g(n)=\Omega(f(n))
+$$
+
+Also since $g(n)=O(f(n)),$
+
+$$
+\begin{aligned}
+g(n)&\leq cf(n) \\
+f(n)+g(n)&\leq cf(n) + f(n)\\
+f(n)+g(n)&\leq (c+1)f(n)\\
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+f(n)+g(n) \in O(f(n))
+$$
+
+And since $f(n)+g(n)=\Omega(f(n)) \land f(n) + g(n) \in O(f(n))$,
+
+$$
+f(n)+g(n) \in \Theta(f(n))
+$$
 
 #### Different bases on log
 
 **Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.** Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity.
 
-> **Proof**
->
-> $$
-> \begin{aligned}
-> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
-> &=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
-> &=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
-> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}}
-> \end{aligned}
-> $$
+##### Proof
+
+$$
+\begin{aligned}
+\lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
+&=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
+&=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
+\lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}}
+\end{aligned}
+$$
 
 #### Different bases on exponential functions
 
@@ -885,22 +884,22 @@ $$
 
 **Bases for exponential functions on the other hand matter**, as shown in this proof:
 
-> **Proof**
->
-> $$
-> \begin{aligned}
-> \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
-> &=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
-> &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
-> \end{aligned}
-> $$
->
-> since $b>a$, then, $1-\log_a b<0$.
-> Therefore,
->
-> $$
-> \lim_{x \to \infty}{\frac{a^n}{b^n}}=0
-> $$
+##### Proof
+
+$$
+\begin{aligned}
+\lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
+&=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
+&=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
+\end{aligned}
+$$
+
+Since $b>a$, then, $1-\log_a b<0$.
+Therefore,
+
+$$
+\lim_{x \to \infty}{\frac{a^n}{b^n}}=0
+$$
 
 Based on these rules a complicated looking function can be **reduced** to the **simplest function** that matches its complexity.
 For example, In the function below, the we can look for the most complex term in this sum and drop the rest.
