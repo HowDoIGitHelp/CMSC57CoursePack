@@ -21,14 +21,14 @@ class: center, middle
 ---
 # Big-O
 
-<div>
+`
 $$
 \begin{aligned}
  &O(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq f(n) \leq cg(n))) \} 
+ &(\forall n>n_0 (0 \leq f(n) \leq cg(n))) \} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -41,11 +41,11 @@ $$
 
 # Big-O
 
-<div>
+`
 $$
-0 \leq f(n) \leq cg(n)
+0 \leq f(n) \leq cg(n)\\
 $$
-</div>
+`
 
 ---
 
@@ -73,11 +73,11 @@ The function $13n + 2$ can be shown to be a member of the set $O(2n^2 + n)$_
 
 # Big-O
 
-<div>
+`
 $$
-13n + 2 \in O(2n^2+n)
+13n + 2 \in O(2n^2+n)\\
 $$
-</div>
+`
 
 ---
 
@@ -105,11 +105,11 @@ One which forces us to explicitly choose a value for $c$_
 
 # Big-O
 
-<div>
+`
 $$
-11n+1 \in O(2n+4)
+11n+1 \in O(2n+4)\\
 $$
-</div>
+`
 
 ---
 
@@ -173,14 +173,14 @@ class: center, middle
 ---
 # Big-$\Omega$
 
-<div>
+`
 $$
 \begin{aligned}
  &\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} 
+ &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -193,11 +193,11 @@ $$
 
 # Big-$\Omega$
 
-<div>
+`
 $$
-0 \leq cg(n) \leq f(n)
+0 \leq cg(n) \leq f(n)\\
 $$
-</div>
+`
 
 ---
 
@@ -210,11 +210,11 @@ $$
 
 # Big-$\Omega$
 
-<div>
+`
 $$
-2n^3+10 \in \Omega(4n^2+30)
+2n^3+10 \in \Omega(4n^2+30)\\
 $$
-</div>
+`
 
 ---
 
@@ -245,14 +245,14 @@ class: center, middle
 ---
 # Big-$\theta$
 
-<div>
+`
 $$
 \begin{aligned}
  &\Theta(g(n))=\{f(n)| \exists c_1>0,c_2>0,n_0>0\\
- &(\forall n>n_0 (0 \leq c_1g(n) \leq f(n) \leq c_2g(n))) \} 
+ &(\forall n>n_0 (0 \leq c_1g(n) \leq f(n) \leq c_2g(n))) \} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -272,11 +272,11 @@ $$
 
 # Big-$\theta$
 
-<div>
+`
 $$
-4n^2+30 \in \Theta(2n^2 + n)
+4n^2+30 \in \Theta(2n^2 + n)\\
 $$
-</div>
+`
 
 ---
 
@@ -289,11 +289,11 @@ $$
 
 # Big-$\theta$
 
-<div>
+`
 $$
-c_1(2n^2 + n) \leq 4n^2 + 30 \leq c_2(2n^2 + n)
+c_1(2n^2 + n) \leq 4n^2 + 30 \leq c_2(2n^2 + n)\\
 $$
-</div>
+`
 
 ---
 
@@ -342,11 +342,11 @@ class: center, middle
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-<div>
+`
 $$
-2n^3+10 \in \Omega(4n^2+30)
+2n^3+10 \in \Omega(4n^2+30)\\
 $$
-</div>
+`
 
 ---
 
@@ -359,27 +359,27 @@ $$
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-<div>
+`
 $$
 \begin{aligned}
  &\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} 
+ &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-<div>
+`
 $$
 \begin{aligned}
  &\exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq c(4n^2 + 30) \leq 2n^3 + 10) 
+ &(\forall n>n_0 (0 \leq c(4n^2 + 30) \leq 2n^3 + 10) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -392,11 +392,11 @@ $$
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-<div>
+`
 $$
-\text{let } c = 1, n_0 = 3.4
+\text{let } c = 1, n_0 = 3.4\\
 $$
-</div>
+`
 
 ---
 
@@ -409,16 +409,16 @@ $$
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-<div>
+`
 $$
 \begin{aligned}
  4n^2 + 30 &\leq 2n^3 + 10\\
  4n^2 + 20 &\leq 2n^3\\
  2 + \frac{10}{n^2} &\leq n\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -438,27 +438,27 @@ $$
 
 # Proving non-membership
 
-<div>
+`
 $$
-2n^3+10 \notin O(4n^2+30)
+2n^3+10 \notin O(4n^2+30)\\
 $$
-</div>
+`
 
 ---
 
 # Proving non-membership
 
-<div>
+`
 $$
 \begin{aligned}
  \neg &(\exists c>0,n_0>0\\
  &(\forall n>n_0 (0 \leq (2n^3+10) \leq c(4n^2+30))))\\
 \\
  &(\forall c>0,n_0>0\\
- &(\exists n>n_0 (0 > (2n^3+10) \lor (2n^3+10) > c(4n^2+30))) 
+ &(\exists n>n_0 (0 > (2n^3+10) \lor (2n^3+10) > c(4n^2+30))) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -479,17 +479,17 @@ $$
 
 # Proving non-membership
 
-<div>
+`
 $$
 \begin{aligned}
  2n^3+10 &> c(4n^2+30)\\
  2n^3+10 &> 4n^2c+30c\\
  n+\frac{10}{2n^2} &> 2c+\frac{30c}{2n^2}\\
  n &> 2c+\frac{30c}{2n^2}-\frac{10}{2n^2}\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -506,16 +506,16 @@ class: center, middle
 ---
 # Limit Definitions
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} \frac{f(n)}{g(n)} &<\infty \to f(n) \in O(g(n))\\
  \lim_{n \to \infty} \frac{f(n)}{g(n)} &> 0 \to f(n) \in \Omega(g(n))\\
  0<\lim_{n \to \infty} \frac{f(n)}{g(n)} &< \infty \to g(n) \in \Theta(f(n))\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -528,7 +528,7 @@ $$
 
 # Limit Definitions
 
-- We're looking at the ratio of the two functions $f(n)$​ and $g(n)$​ and **we're trying to see what happens to the value of that ratio as $n$​ becomes very very large (as $n$​ approaches infinity).**
+- We're looking at the ratio of the two functions $f(n)$ and $g(n)$ and **we're trying to see what happens to the value of that ratio as $n$ becomes very very large (as $n$ approaches infinity).**
 
 
 ---
@@ -539,28 +539,28 @@ class: center, middle
 ---
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  f(n)&=2n^3+10 \\
- g(n)&=4n^2+30 
+ g(n)&=4n^2+30 \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  &\text{Let }n=5\\
  \\
- &\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5 
+ &\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5 \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -573,7 +573,7 @@ $$
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  &\text{Let }n=100\\
@@ -583,16 +583,16 @@ $$
 \\
  &\text{Let }n=1000\\
  \\
- &\frac{2(1000)^3 + 10}{4(1000)^2 + 30} \approx 500
+ &\frac{2(1000)^3 + 10}{4(1000)^2 + 30} \approx 500\\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \\
@@ -600,43 +600,38 @@ $$
  &\text{Let }n=100000\\
  \\
  &\frac{2(100000)^3 + 10}{4(100000)^2 + 30} \approx 50000\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-- When we reach **really** big values of $n$, (around infinity), **we can expect that that number will be really big** as well
-
-
----
-
-# Approaching Infinity
-
-- What this means is that **the numerator of the ratio will increase much faster than the denominator**.
+- We can expect this number to **increase** as we increase the value of $n$.
+- When we reach really big values of $n$, (around infinity), we can expect that that number will be **really** big as well.
+- When the value $n$ becomes really big, **the value of the numerator will become extremely big compared to the denominator**.
 
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  f(n)&=13n + 2 \\
- g(n)&=2n^2+n 
+ g(n)&=2n^2+n \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  &\text{Let }n=100\\
@@ -646,16 +641,16 @@ $$
 \\
  &\text{Let }n=10000\\
  \\
- &\frac{13(10000) + 2}{2(10000)^2 + 10000} \approx 0.000649
+ &\frac{13(10000) + 2}{2(10000)^2 + 10000} \approx 0.000649\\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \\
@@ -663,10 +658,18 @@ $$
  &\text{Let }n=10000000\\
  \\
  &\frac{13(10000000) + 2}{2(10000000)^2 + 10000000} \approx 6.5 \times 10^{-7}\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
+
+---
+
+# Approaching Infinity
+
+- As you observe here, as the value of $n$ increases, **the value of the ratio, becomes closer and closer to 0**.
+- We can expect that when we reach really big values, **the value of the ratio will be very close to zero**.
+
 
 ---
 
@@ -679,24 +682,24 @@ $$
 
 # Approaching Infinity
 
-<div>
+`
 $$
-\lim_{n \to \infty} \frac{2n^3+10}{4n^2+30}
+\lim_{n \to \infty} \frac{2n^3+10}{4n^2+30}\\
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  =&\frac{2(\infty) ^3+10}{4(\infty)^2+30}\\
- =&\frac{\infty}{\infty} 
+ =&\frac{\infty}{\infty} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -709,16 +712,16 @@ $$
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(2n^3+10)}{\frac{d}{dx}(4n^2+30)}\\
  &= \lim_{n \to \infty} \frac{6n^2}{8n}\\
  &= \lim_{n \to \infty} \frac{3n}{4}\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -731,43 +734,43 @@ $$
 
 # Approaching Infinity
 
-<div>
+`
 $$
-\lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} = \lim_{n \to \infty} \frac{3n}{4} = \infty
+\lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} = \lim_{n \to \infty} \frac{3n}{4} = \infty\\
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
-\lim_{n\to c}\frac{f(n)}{g(n)} = \lim_{n\to c}\frac{\frac{d}{dx}f(n)}{\frac{d}{dx}g(n)}
+\lim_{n\to c}\frac{f(n)}{g(n)} = \lim_{n\to c}\frac{\frac{d}{dx}f(n)}{\frac{d}{dx}g(n)}\\
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} \frac{13n+2}{2n^2+n} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(13n+2)}{\frac{d}{dx}(2n^2+n)}\\
  &= \lim_{n \to \infty} \frac{13}{4n+1}\\
  &=0 \\
 \\
- \therefore 13n+2 &\in O(2n^2 +n) 
+ \therefore 13n+2 &\in O(2n^2 +n) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(4n^3+3n^2)}{\frac{d}{dx}(6n^3+1)}\\
@@ -777,29 +780,29 @@ $$
  &= \lim_{n \to \infty} \frac{\frac{d}{dx}(24n+6)}{\frac{d}{dx}(36n)}\\
  &= \lim_{n \to \infty} \frac{24}{36}\\
  \lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= 46\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
 \\
- \therefore 4n^3+3n^2 &\in \Theta(6n^3+1) 
+ \therefore 4n^3+3n^2 &\in \Theta(6n^3+1) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Approaching Infinity
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(n \log_5 n +3n)}{\frac{d}{dx}(5n^2+4n+2)}\\
@@ -809,10 +812,10 @@ $$
  &= \lim_{n \to \infty} \frac{1}{10n(\ln5)}\\
  \lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= 0 \\
 \\
- \therefore n \log_5 n +3n &\in O(5n^2+4n+2) 
+ \therefore n \log_5 n +3n &\in O(5n^2+4n+2) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -833,11 +836,11 @@ class: center, middle
 ---
 # Little-o
 
-<div>
+`
 $$
-o(g(n)) = \{f(n)|\forall c>0(\exists n_0>0(\forall n>n_0(0 \leq f(n) \leq cg(n))))\}
+o(g(n)) = \{f(n)|\forall c>0(\exists n_0>0(\forall n>n_0(0 \leq f(n) \leq cg(n))))\}\\
 $$
-</div>
+`
 
 ---
 
@@ -850,21 +853,21 @@ $$
 
 # Little-o
 
-<div>
+`
 $$
-\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0 \to  f(n) \in o(g(n))
+\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0 \to  f(n) \in o(g(n))\\
 $$
-</div>
+`
 
 ---
 
 # Little-o
 
-<div>
+`
 $$
-5n^2 + 3n \in o(2n^3)
+5n^2 + 3n \in o(2n^3)\\
 $$
-</div>
+`
 
 ---
 
@@ -874,11 +877,11 @@ class: center, middle
 ---
 # Little-$\omega$
 
-<div>
+`
 $$
-\omega(g(n)) = \{f(n)|\forall c>0(\exists n_0>0(\forall n>n_0(0 \leq cg(n) \leq f(n))))\}
+\omega(g(n)) = \{f(n)|\forall c>0(\exists n_0>0(\forall n>n_0(0 \leq cg(n) \leq f(n))))\}\\
 $$
-</div>
+`
 
 ---
 
@@ -891,21 +894,21 @@ $$
 
 # Little-$\omega$
 
-<div>
+`
 $$
-\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty \to  f(n) \in \omega(g(n))
+\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty \to  f(n) \in \omega(g(n))\\
 $$
-</div>
+`
 
 ---
 
 # Little-$\omega$
 
-<div>
+`
 $$
-2n^3 \in \omega(5n^2 + 3n)
+2n^3 \in \omega(5n^2 + 3n)\\
 $$
-</div>
+`
 
 ---
 
@@ -949,11 +952,11 @@ class: center, middle
 
 # Analogy to inequalities/equalities
 
-<div>
+`
 $$
-L(x) = \{y|y\leq x\}
+L(x) = \{y|y\leq x\}\\
 $$
-</div>
+`
 
 ---
 
@@ -968,7 +971,7 @@ $$
 # Analogy to inequalities/equalities
 
 | Algebraic Inequalities/Equalities | Asymptotic Notation |
-|-----|-----|
+|:----|:----|
 | $L(x) = \{y \rvert y\leq x\}$ | $f(n) \in O(g(n))$ |
 | $G(x) = \{y \rvert y\geq x\}$ | $f(n) \in\Omega(g(n))$ |
 | $E(x) = \{y \rvert y = x\}$ | $f(n) \in\Theta(g(n))$ |
@@ -1080,7 +1083,7 @@ class: center, middle
 # Measuring running time through experiment
 
 | Array Size | Runtime in s (Bubble Sort) | Runtime in s (Merge Sort) |
-|-----|-----|-----|
+|:----|:----|:----|
 | 1 | 0.001188 | 0.001119 |
 | 2 | 0.001301 | 0.000818 |
 | 10 | 0.035985 | 0.028135 |
@@ -1196,11 +1199,11 @@ The ways that we have always end up being approximations.**
 
 # Finally, Asymptotic Notation
 
-<div>
+`
 $$
-4n^2 + 3 \in \Omega(6n \log_2 {n} + 5n + 2)
+4n^2 + 3 \in \Omega(6n \log_2 {n} + 5n + 2)\\
 $$
-</div>
+`
 
 ---
 
@@ -1221,11 +1224,11 @@ class: center, middle
 ---
 # Dropping the coefficient
 
-<div>
+`
 $$
-c>0 \to cf(n) \in \Theta(f(n))
+c>0 \to cf(n) \in \Theta(f(n))\\
 $$
-</div>
+`
 
 ---
 
@@ -1238,21 +1241,21 @@ $$
 
 # Proof
 
-<div>
+`
 $$
-\lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
+\lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c\\
 $$
-</div>
+`
 
 ---
 
 # Higher degree polynomial
 
-<div>
+`
 $$
-c<d \to f(n)^c \in o(f(n)^d)
+c<d \to f(n)^c \in o(f(n)^d)\\
 $$
-</div>
+`
 
 ---
 
@@ -1265,7 +1268,7 @@ $$
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
  \text{Let $0<c<d$}\\
@@ -1275,32 +1278,32 @@ $$
  &=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
  &\vdots\\
  &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
- &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}
+ &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
- \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0 
+ \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0 \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Sum of functions
 
-<div>
+`
 $$
-f(n) \in \Omega(g(n)) \to f(n)+g(n)\in \Theta(f(n))
+f(n) \in \Omega(g(n)) \to f(n)+g(n)\in \Theta(f(n))\\
 $$
-</div>
+`
 
 ---
 
@@ -1313,61 +1316,69 @@ $$
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
+ \text{Since} f(n) &= \Omega(f(n)),\\
+\\
  \text{for any $n>n_0$}\\
 \\
  f(n)&\geq cf(n) \\
- f(n) +g(n)&\geq cf(n) 
+ f(n) +g(n)&\geq cf(n) \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-f(n)+g(n)=\Omega(f(n))
+\therefore f(n)+g(n)=\Omega(f(n))\\
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
+ \text{Since } g(n) &= O(f(n)),\\
+\\
  g(n)&\leq cf(n) \\
  f(n)+g(n)&\leq cf(n) + f(n)\\
  f(n)+g(n)&\leq (c+1)f(n)\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-f(n)+g(n) \in O(f(n))
+\therefore f(n)+g(n) \in O(f(n))\\
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-f(n)+g(n) \in \Theta(f(n))
+\begin{aligned}
+ & f(n)+g(n)=\Omega(f(n))\\
+ \land & \underline{f(n) + g(n) \in O(f(n)) \to}\\
+ & f(n)+g(n) \in \Theta(f(n)) \\
+\end{aligned}
 $$
-</div>
+`
 
 ---
 
@@ -1380,26 +1391,26 @@ $$
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
  &=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
  &=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
- \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}} 
+ \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}} \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Different bases on exponential functions
 
-<div>
+`
 $$
-0<a<b \to a^n \in o(b^n)
+0<a<b \to a^n \in o(b^n)\\
 $$
-</div>
+`
 
 ---
 
@@ -1412,26 +1423,26 @@ $$
 
 # Proof
 
-<div>
+`
 $$
 \begin{aligned}
  \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
  &=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
  &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
- 
+ \\
 \end{aligned}
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-\lim_{x \to \infty}{\frac{a^n}{b^n}}=0
+\lim_{x \to \infty}{\frac{a^n}{b^n}}=0\\
 $$
-</div>
+`
 
 ---
 
@@ -1444,31 +1455,31 @@ $$
 
 # Proof
 
-<div>
+`
 $$
-6n \log_2 {n} + 5n + 2 \in \Theta(6n \log_2{n})
+6n \log_2 {n} + 5n + 2 \in \Theta(6n \log_2{n})\\
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-6n \log_2 {n} + 5n + 2\in \Theta(n \log_2{n})
+6n \log_2 {n} + 5n + 2\in \Theta(n \log_2{n})\\
 $$
-</div>
+`
 
 ---
 
 # Proof
 
-<div>
+`
 $$
-6n \log_2 {n} + 5n + 2\in \Theta(n \log{n})
+6n \log_2 {n} + 5n + 2\in \Theta(n \log{n})\\
 $$
-</div>
+`
 
 ---
 
@@ -1493,7 +1504,7 @@ class: center, middle
 # Complexity Classes
 
 | Complexity Class | Name | Example |
-|-----|-----|-----|
+|:----|:----|:----|
 | $\Theta(1)$ | Constant | converting Celsius to Fahrenheit |
 | $\Theta(\log n)$ | Logarithmic | binary search |
 | $\Theta((\log n)^c)$ | Polylogarithmic | dynamic planarity testing of a graph |
@@ -1509,7 +1520,7 @@ class: center, middle
 # Complexity Classes
 
 | Complexity Class | Name | Example |
-|-----|-----|-----|
+|:----|:----|:----|
 | $\Theta(c^n)$ | Exponential | dynamic travelling salesman |
 | $\Theta(n!)$ | Factorial | brute force travelling salesman |
 
@@ -1546,6 +1557,9 @@ class: center, middle
                     processEnvironments: true,     // Required for \begin{align}, \begin{aligned}, etc.
                 },
                 loader: {load: ['[tex]/ams']},    // Explicitly load the 'ams' package
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea']
+                }
             };
         </script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
