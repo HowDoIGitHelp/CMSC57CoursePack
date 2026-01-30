@@ -321,7 +321,7 @@ The left hand sides (the limit) are read like the following
 
 > if the limit of the ratio $\frac{f(n)}{g(n)}$ as $n$ approaches infinity...
 
-We're looking at the ratio of the two functions $f(n)$​ and $g(n)$​ and **we're trying to see what happens to the value of that ratio as $n$​ becomes very very large (as $n$​ approaches infinity).**
+We're looking at the ratio of the two functions $f(n)$ and $g(n)$ and **we're trying to see what happens to the value of that ratio as $n$ becomes very very large (as $n$ approaches infinity).**
 
 ### Approaching Infinity
 
@@ -363,14 +363,13 @@ $$
 \end{aligned}
 $$
 
-We can expect this number to increase as we increase the value of $n$.
-When we reach **really** big values of $n$, (around infinity), **we can expect that that number will be really big** as well.
-
+We can expect this number to **increase** as we increase the value of $n$.
+When we reach really big values of $n$, (around infinity), we can expect that that number will be **really** big as well.
 And of course this behavior should happen.
 That's because we are looking at the ratio between two values, positively dependent $n$.
 It just so happens that the numerator of this fraction is of polynomial degree 3 while the denominator is of polynomial degree 2.
-What this means is that **the numerator of the ratio will increase much faster than the denominator**.
-When the value $n$ becomes really big, the value of the numerator will become extremely big compared to the denominator.
+What this means is that the numerator of the ratio will increase much faster than the denominator.
+When the value $n$ becomes really big, **the value of the numerator will become extremely big compared to the denominator**.
 And what do we get when we divide a very big number by a relatively small number? A very big number.
 
 Let's look at another pair of functions as an example:
@@ -400,8 +399,8 @@ $$
 \end{aligned}
 $$
 
-As you observe here, as the value of $n$ increases, the value of the ratio, becomes closer and closer to 0.
-We can expect that when we reach really big values, the value of the ratio will be very close to zero.
+As you observe here, as the value of $n$ increases, **the value of the ratio, becomes closer and closer to 0**.
+We can expect that when we reach really big values, **the value of the ratio will be very close to zero**.
 We expect this because the numerator is of degree 1 while the denominator is of degree 2.
 As the value of $n$ increases, both the numerator increases but the denominator increases faster.
 Therefore, when reaching very big values, we end up dividing a number over a relatively big number.
@@ -821,28 +820,26 @@ $$
 
 ##### Proof
 
-Since $f(n) = \Omega(f(n))$,
-
 $$
 \begin{aligned}
+\text{Since} f(n) &= \Omega(f(n)),\\\\
 \text{for any $n>n_0$}\\\\
 f(n)&\geq cf(n) \\
 f(n) +g(n)&\geq cf(n)
 \end{aligned}
 $$
 
-Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value)
-
-Therefore,
+Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value). Therefore,
 
 $$
-f(n)+g(n)=\Omega(f(n))
+\therefore f(n)+g(n)=\Omega(f(n))
 $$
 
-Also since $g(n)=O(f(n)),$
+We can also show that $f(n) + g(n) \in O(f(n))$,
 
 $$
 \begin{aligned}
+\text{Since } g(n) &= O(f(n)),\\\\
 g(n)&\leq cf(n) \\
 f(n)+g(n)&\leq cf(n) + f(n)\\
 f(n)+g(n)&\leq (c+1)f(n)\\
@@ -852,13 +849,17 @@ $$
 Therefore,
 
 $$
-f(n)+g(n) \in O(f(n))
+\therefore f(n)+g(n) \in O(f(n))
 $$
 
-And since $f(n)+g(n)=\Omega(f(n)) \land f(n) + g(n) \in O(f(n))$,
+Since the sum $f(n) + g(n)$ is both $\Omega(f(n))$ and $O(f(n))$
 
 $$
-f(n)+g(n) \in \Theta(f(n))
+\begin{aligned}
+& f(n)+g(n)=\Omega(f(n))\\
+\land & \underline{f(n) + g(n) \in O(f(n)) \to}\\
+& f(n)+g(n) \in \Theta(f(n))
+\end{aligned}
 $$
 
 #### Different bases on log
