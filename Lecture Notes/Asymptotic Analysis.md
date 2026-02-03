@@ -628,6 +628,46 @@ By recontextualizing asymptotic relationships like these, we can start to see so
 - $\overline{O(g(n))} = \omega(g(n))$.
 - $\overline{\Omega(g(n))} = o(g(n))$.
 
+### Transitive properties
+
+- If $f_1(n) \in \Theta(f_2(n))$ and $f_2(n) \in \Theta(f_3(n))$ then $f_1(n) \in \Theta(f_3(n))$
+- If $f_1(n) \in O(f_2(n))$ and $f_2(n) \in O(f_3(n))$ then $f_1(n) \in O(f_3(n))$
+- If $f_1(n) \in \Omega(f_2(n))$ and $f_2(n) \in \Omega(f_3(n))$ then $f_1(n) \in \Omega(f_3(n))$
+- If $f_1(n) \in o(f_2(n))$ and $f_2(n) \in o(f_3(n))$ then $f_1(n) \in o(f_3(n))$
+- If $f_1(n) \in \omega(f_2(n))$ and $f_2(n) \in \omega(f_3(n))$ then $f_1(n) \in \omega(f_3(n))$
+
+Here's a proof of the transitive property for Big $\Theta$. The transitive properties for the other asymptotic relationships have a similar proof:
+
+$$
+\begin{aligned}
+\text{Let:}
+f_1(n) $\in \Theta(f_2(n))\\
+f_2(n) $\in \Theta(f_3(n))\\
+\end{aligned}
+$$
+
+Given the following assumptions, we can apply the inequality definitions of Big-$\Theta$
+
+$$
+\begin{aligned}
+c_1 f_2(n) &\leq f_1(n) &\leq c_2 f_2(n)\\
+c_3 f_3(n) &\leq f_2(n) &\leq c_4 f_3(n)\\
+\end{aligned}
+$$
+
+From here we can substitute $c_4 f_3(n)$ to $f_2(n)$ in the rightmost side of the first inequality.
+We can also substitute $c_3 f_3(n)$ to $f_2(n)$ in the leftmost side of the first inequality.
+This combines the inequality into:
+
+$$
+\begin{aligned}
+c_1 c_3 f_3(n) &\leq f_1(n) &\leq c_2 c_4 f_3(n)\\
+\end{aligned}
+$$
+
+Since f_1(n) is tightly bounded by two versions of $f_3(n)$ we can conclude that $f_1(n) \in \Theta(f_3(n))$.
+This proves the theorem that a Big-$\Theta$ relationship is transitive.
+
 ## Application to Computer Science
 
 Now that we've been introduced to the mathematics of asymptotic notation, let's talk about the actual importance of this concept to computer science.
