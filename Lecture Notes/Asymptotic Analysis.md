@@ -640,9 +640,9 @@ Here's a proof of the transitive property for Big $\Theta$. The transitive prope
 
 $$
 \begin{aligned}
-\text{Let:}
-f_1(n) $\in \Theta(f_2(n))\\
-f_2(n) $\in \Theta(f_3(n))\\
+\text{Let:}\\
+f_1(n) &\in \Theta(f_2(n))\\
+f_2(n) &\in \Theta(f_3(n))\\
 \end{aligned}
 $$
 
@@ -665,7 +665,7 @@ c_1 c_3 f_3(n) &\leq f_1(n) &\leq c_2 c_4 f_3(n)\\
 \end{aligned}
 $$
 
-Since f_1(n) is tightly bounded by two versions of $f_3(n)$ we can conclude that $f_1(n) \in \Theta(f_3(n))$.
+Since $f_1(n)$ is tightly bounded by two versions of $f_3(n)$ we can conclude that $f_1(n) \in \Theta(f_3(n))$.
 This proves the theorem that a Big-$\Theta$ relationship is transitive.
 
 ## Application to Computer Science
