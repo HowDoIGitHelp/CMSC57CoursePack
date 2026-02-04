@@ -896,15 +896,30 @@ Since the sum $f(n) + g(n)$ is both $\Omega(f(n))$ and $O(f(n))$
 
 $$
 \begin{aligned}
-& f(n)+g(n)=\Omega(f(n))\\
-\land & \underline{f(n) + g(n) \in O(f(n)) \to}\\
-& f(n)+g(n) \in \Theta(f(n))
+& f(n)+g(n) \in \Omega(f(n))\\
+\land & \underline{f(n) + g(n) \in O(f(n))}\\
+\to & f(n)+g(n) \in \Theta(f(n))
+\end{aligned}
+$$
+
+##### Term Substitution
+
+In a sum of functions, you can replace on of the terms with an equivalent function of the same complexity.
+When you do this substitution you are guaranteed to end up with a new sum with the same complexity as the original sum.
+
+In other words:
+
+$$
+\begin{aligned}
+f(n) &\in \Theta(f'(n))\\
+\to f(n) + g(n) &\in \Theta(f'(n) + g(n))
 \end{aligned}
 $$
 
 #### Different bases on log
 
-**Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.** Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity.
+**Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.**
+Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity.
 
 ##### Proof
 
