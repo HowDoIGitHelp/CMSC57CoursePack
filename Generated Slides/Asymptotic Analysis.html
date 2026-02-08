@@ -1023,6 +1023,63 @@ class: center, middle
 ---
 
 class: center, middle
+# Transitive properties
+
+---
+# Transitive properties
+
+- If $f_1(n) \in \Theta(f_2(n))$ and $f_2(n) \in \Theta(f_3(n))$ then $f_1(n) \in \Theta(f_3(n))$
+- If $f_1(n) \in O(f_2(n))$ and $f_2(n) \in O(f_3(n))$ then $f_1(n) \in O(f_3(n))$
+- If $f_1(n) \in \Omega(f_2(n))$ and $f_2(n) \in \Omega(f_3(n))$ then $f_1(n) \in \Omega(f_3(n))$
+- If $f_1(n) \in o(f_2(n))$ and $f_2(n) \in o(f_3(n))$ then $f_1(n) \in o(f_3(n))$
+- If $f_1(n) \in \omega(f_2(n))$ and $f_2(n) \in \omega(f_3(n))$ then $f_1(n) \in \omega(f_3(n))$
+
+
+---
+
+# Transitive properties
+
+`
+$$
+\begin{aligned}
+ \text{Let:}\\
+ f_1(n) &\in \Theta(f_2(n))\\
+ f_2(n) &\in \Theta(f_3(n))\\
+ \\
+\end{aligned}
+$$
+`
+
+---
+
+# Transitive properties
+
+`
+$$
+\begin{aligned}
+ c_1 f_2(n) &\leq f_1(n) &\leq c_2 f_2(n)\\
+ c_3 f_3(n) &\leq f_2(n) &\leq c_4 f_3(n)\\
+ \\
+\end{aligned}
+$$
+`
+
+---
+
+# Transitive properties
+
+`
+$$
+\begin{aligned}
+ c_1 c_3 f_3(n) &\leq f_1(n) &\leq c_2 c_4 f_3(n)\\
+ \\
+\end{aligned}
+$$
+`
+
+---
+
+class: center, middle
 # Application to Computer Science
 
 ---
@@ -1373,9 +1430,22 @@ $$
 `
 $$
 \begin{aligned}
- & f(n)+g(n)=\Omega(f(n))\\
- \land & \underline{f(n) + g(n) \in O(f(n)) \to}\\
- & f(n)+g(n) \in \Theta(f(n)) \\
+ & f(n)+g(n) \in \Omega(f(n))\\
+ \land & \underline{f(n) + g(n) \in O(f(n))}\\
+ \to & f(n)+g(n) \in \Theta(f(n)) \\
+\end{aligned}
+$$
+`
+
+---
+
+# Term Substitution
+
+`
+$$
+\begin{aligned}
+ f(n) &\in \Theta(f'(n))\\
+ \to f(n) + g(n) &\in \Theta(f'(n) + g(n)) \\
 \end{aligned}
 $$
 `
