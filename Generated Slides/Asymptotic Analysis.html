@@ -24,8 +24,8 @@ class: center, middle
 `
 $$
 \begin{aligned}
- &O(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq f(n) \leq cg(n))) \} \\
+&O(g(n))=\{f(n)| \exists c>0,n_0>0\\
+&(\forall n>n_0 (0 \leq f(n) \leq cg(n))) \}\\
 \end{aligned}
 $$
 `
@@ -35,6 +35,7 @@ $$
 # Big-O
 
 > _"**Big -Oh**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq f(n) \leq cg(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> 
 
 
 ---
@@ -90,7 +91,7 @@ $$
 # Big-O
 
 - As shown in the plot, even though the function $13n+2$ starts bigger than $2n^2+n$, after some point, $2n^2+n$ **overtakes** the function $13n+2$ and leaves it behind so much that $13n+2$ is only barely visible on the last plot.
-- This shows that **there exists an $n_0$, a threshold for $n$, where, we are sure that for any $n$ greater than $n_0$, the inequality $13n+2 \leq 2n^2+n$ is always true** In this example, the function $2n^2+n$ starts to overtake between $n=6$ and $n=7$.
+- This shows that **there exists an $n_0$, a threshold for $n$, where, we are sure that for any $n$ greater than $n_0$, the inequality $13n+2 \leq 2n^2+n$ is always true**
 
 
 ---
@@ -163,6 +164,7 @@ $$
 # Big-O
 
 > _When we say $f(n)$ cannot be more complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,_
+> 
 
 
 ---
@@ -176,8 +178,8 @@ class: center, middle
 `
 $$
 \begin{aligned}
- &\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} \\
+&\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
+&(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \}\\
 \end{aligned}
 $$
 `
@@ -187,6 +189,7 @@ $$
 # Big-$\Omega$
 
 > _"**Big -Omega**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c$ such that $0 \leq cg(n) \leq f(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> 
 
 
 ---
@@ -235,6 +238,7 @@ $$
 # Big-$\Omega$
 
 > _When we say $f(n)$ cannot be less complex than $g(n)$, it means that it is still possible that $f(n)$ is equally as complex as $g(n)$,_
+> 
 
 
 ---
@@ -248,8 +252,8 @@ class: center, middle
 `
 $$
 \begin{aligned}
- &\Theta(g(n))=\{f(n)| \exists c_1>0,c_2>0,n_0>0\\
- &(\forall n>n_0 (0 \leq c_1g(n) \leq f(n) \leq c_2g(n))) \} \\
+&\Theta(g(n))=\{f(n)| \exists c_1>0,c_2>0,n_0>0\\
+&(\forall n>n_0 (0 \leq c_1g(n) \leq f(n) \leq c_2g(n))) \}\\
 \end{aligned}
 $$
 `
@@ -259,6 +263,7 @@ $$
 # Big-$\theta$
 
 > _"**Big -Theta**"_ of some function $g(n)$ is the set of all functions $f(n)$, where there exists a positive constant $c_1$ and $c_2$ such that $0 \leq c_1g(n) \leq f(n) \leq c_2g(n)$ for sufficiently large values of $n$ (for values of $n$ above some positive value $n_0$ ($n \geq n_0 \geq 0$)).
+> 
 
 
 ---
@@ -314,10 +319,12 @@ $$
 # Big-$\theta$
 
 > Before we move on the next section, here are some questions to ponder upon: (don't worry, these questions will be answered and proven in the next sections)
+> 
 > - **Is it true that $f(n) \in O(g(n)) \cup \Omega(g(n))$ for any pair of functions $f(n)$ and $g(n)$?** (_I.e.
-Is $f(n)$ guaranteed to be a member of either $O(g(n))$ or $\Omega(g(n))$?)_
-- **Is it true that if $f(n) \in O(g(n))$, then $g(n)\in \Omega(f(n))$?**
-- **What is $O(g(n)) \cap \Omega(g(n))$?** (_What is the intersection of $O(g(n))$ and $\Omega(g(n))$?_)
+> Is $f(n)$ guaranteed to be a member of either $O(g(n))$ or $\Omega(g(n))$?)_
+> - **Is it true that if $f(n) \in O(g(n))$, then $g(n)\in \Omega(f(n))$?**
+> - **What is $O(g(n)) \cap \Omega(g(n))$?** (_What is the intersection of $O(g(n))$ and $\Omega(g(n))$?_)
+> 
 
 
 ---
@@ -362,8 +369,8 @@ $$
 `
 $$
 \begin{aligned}
- &\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \} \\
+&\Omega(g(n))=\{f(n)| \exists c>0,n_0>0\\
+&(\forall n>n_0 (0 \leq cg(n) \leq f(n))) \}\\
 \end{aligned}
 $$
 `
@@ -375,8 +382,8 @@ $$
 `
 $$
 \begin{aligned}
- &\exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq c(4n^2 + 30) \leq 2n^3 + 10) \\
+&\exists c>0,n_0>0\\
+&(\forall n>n_0 (0 \leq c(4n^2 + 30) \leq 2n^3 + 10)\\
 \end{aligned}
 $$
 `
@@ -412,10 +419,10 @@ $$
 `
 $$
 \begin{aligned}
- 4n^2 + 30 &\leq 2n^3 + 10\\
- 4n^2 + 20 &\leq 2n^3\\
- 2 + \frac{10}{n^2} &\leq n\\
- \\
+4n^2 + 30 &\leq 2n^3 + 10\\
+4n^2 + 20 &\leq 2n^3\\
+2 + \frac{10}{n^2} &\leq n\\
+\\
 \end{aligned}
 $$
 `
@@ -424,7 +431,7 @@ $$
 
 # Proving Asymptotic Relationships using the Formal Definition
 
-- [^1]: In fact this is connected to how limit definitions work (which will be discussed in the next section) and why this whole concept is called **asymptotic** analysis
+- [^1]: In fact this is connected to how limit definitions work (which will be discussed in the next section) and why this whole concept is called **asymptotic** analysis.
 
 
 ---
@@ -451,11 +458,11 @@ $$
 `
 $$
 \begin{aligned}
- \neg &(\exists c>0,n_0>0\\
- &(\forall n>n_0 (0 \leq (2n^3+10) \leq c(4n^2+30))))\\
+\neg &(\exists c>0,n_0>0\\
+&(\forall n>n_0 (0 \leq (2n^3+10) \leq c(4n^2+30))))\\
 \\
- &(\forall c>0,n_0>0\\
- &(\exists n>n_0 (0 > (2n^3+10) \lor (2n^3+10) > c(4n^2+30))) \\
+&(\forall c>0,n_0>0\\
+&(\exists n>n_0 (0 > (2n^3+10) \lor (2n^3+10) > c(4n^2+30)))\\
 \end{aligned}
 $$
 `
@@ -465,6 +472,7 @@ $$
 # Proving non-membership
 
 > note: we do not actually care for cases where $n<0$ or $f(n)<0$ or in fact anything that is less than $0$. In the context that we are using this in computer science, values are cannot be negative.
+> 
 
 
 ---
@@ -482,11 +490,11 @@ $$
 `
 $$
 \begin{aligned}
- 2n^3+10 &> c(4n^2+30)\\
- 2n^3+10 &> 4n^2c+30c\\
- n+\frac{10}{2n^2} &> 2c+\frac{30c}{2n^2}\\
- n &> 2c+\frac{30c}{2n^2}-\frac{10}{2n^2}\\
- \\
+2n^3+10 &> c(4n^2+30)\\
+2n^3+10 &> 4n^2c+30c\\
+n+\frac{10}{2n^2} &> 2c+\frac{30c}{2n^2}\\
+n &> 2c+\frac{30c}{2n^2}-\frac{10}{2n^2}\\
+\\
 \end{aligned}
 $$
 `
@@ -509,10 +517,10 @@ class: center, middle
 `
 $$
 \begin{aligned}
- \lim_{n \to \infty} \frac{f(n)}{g(n)} &<\infty \to f(n) \in O(g(n))\\
- \lim_{n \to \infty} \frac{f(n)}{g(n)} &> 0 \to f(n) \in \Omega(g(n))\\
- 0<\lim_{n \to \infty} \frac{f(n)}{g(n)} &< \infty \to g(n) \in \Theta(f(n))\\
- \\
+\lim_{n \to \infty} \frac{f(n)}{g(n)} &<\infty \to f(n) \in O(g(n))\\
+\lim_{n \to \infty} \frac{f(n)}{g(n)} &> 0 \to f(n) \in \Omega(g(n))\\
+0<\lim_{n \to \infty} \frac{f(n)}{g(n)} &< \infty \to g(n) \in \Theta(f(n))\\
+\\
 \end{aligned}
 $$
 `
@@ -522,6 +530,7 @@ $$
 # Limit Definitions
 
 > if the limit of the ratio $\frac{f(n)}{g(n)}$ as $n$ approaches infinity...
+> 
 
 
 ---
@@ -542,8 +551,8 @@ class: center, middle
 `
 $$
 \begin{aligned}
- f(n)&=2n^3+10 \\
- g(n)&=4n^2+30 \\
+f(n)&=2n^3+10 \\
+g(n)&=4n^2+30\\
 \end{aligned}
 $$
 `
@@ -555,9 +564,9 @@ $$
 `
 $$
 \begin{aligned}
- &\text{Let }n=5\\
- \\
- &\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5 \\
+&\text{Let }n=5\\
+\\
+&\frac{2(5)^3 + 10}{4(5)^2 + 30} = 5\\
 \end{aligned}
 $$
 `
@@ -576,14 +585,14 @@ $$
 `
 $$
 \begin{aligned}
- &\text{Let }n=100\\
- \\
- &\frac{2(100)^3 + 10}{4(100)^2 + 30} \approx 50\\
- \\
+&\text{Let }n=100\\
 \\
- &\text{Let }n=1000\\
- \\
- &\frac{2(1000)^3 + 10}{4(1000)^2 + 30} \approx 500\\
+&\frac{2(100)^3 + 10}{4(100)^2 + 30} \approx 50\\
+\\
+\\
+&\text{Let }n=1000\\
+\\
+&\frac{2(1000)^3 + 10}{4(1000)^2 + 30} \approx 500\\
 \end{aligned}
 $$
 `
@@ -595,12 +604,12 @@ $$
 `
 $$
 \begin{aligned}
- \\
 \\
- &\text{Let }n=100000\\
- \\
- &\frac{2(100000)^3 + 10}{4(100000)^2 + 30} \approx 50000\\
- \\
+\\
+&\text{Let }n=100000\\
+\\
+&\frac{2(100000)^3 + 10}{4(100000)^2 + 30} \approx 50000\\
+\\
 \end{aligned}
 $$
 `
@@ -621,8 +630,8 @@ $$
 `
 $$
 \begin{aligned}
- f(n)&=13n + 2 \\
- g(n)&=2n^2+n \\
+f(n)&=13n + 2 \\
+g(n)&=2n^2+n\\
 \end{aligned}
 $$
 `
@@ -634,14 +643,14 @@ $$
 `
 $$
 \begin{aligned}
- &\text{Let }n=100\\
- \\
- &\frac{13(100) + 2}{2(100)^2 + 100} \approx 0.0647\\
- \\
+&\text{Let }n=100\\
 \\
- &\text{Let }n=10000\\
- \\
- &\frac{13(10000) + 2}{2(10000)^2 + 10000} \approx 0.000649\\
+&\frac{13(100) + 2}{2(100)^2 + 100} \approx 0.0647\\
+\\
+\\
+&\text{Let }n=10000\\
+\\
+&\frac{13(10000) + 2}{2(10000)^2 + 10000} \approx 0.000649\\
 \end{aligned}
 $$
 `
@@ -653,12 +662,12 @@ $$
 `
 $$
 \begin{aligned}
- \\
 \\
- &\text{Let }n=10000000\\
- \\
- &\frac{13(10000000) + 2}{2(10000000)^2 + 10000000} \approx 6.5 \times 10^{-7}\\
- \\
+\\
+&\text{Let }n=10000000\\
+\\
+&\frac{13(10000000) + 2}{2(10000000)^2 + 10000000} \approx 6.5 \times 10^{-7}\\
+\\
 \end{aligned}
 $$
 `
@@ -675,7 +684,7 @@ $$
 
 # Approaching Infinity
 
-- We directly look at the value of the ratio when the value of $n$ approaches to **infinity** (a very big value)
+- We directly look at the value of the ratio when the value of $n$ approaches to **infinity** (a very big value).
 
 
 ---
@@ -695,8 +704,8 @@ $$
 `
 $$
 \begin{aligned}
- =&\frac{2(\infty) ^3+10}{4(\infty)^2+30}\\
- =&\frac{\infty}{\infty} \\
+=&\frac{2(\infty) ^3+10}{4(\infty)^2+30}\\
+=&\frac{\infty}{\infty}\\
 \end{aligned}
 $$
 `
@@ -715,10 +724,10 @@ $$
 `
 $$
 \begin{aligned}
- \lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(2n^3+10)}{\frac{d}{dx}(4n^2+30)}\\
- &= \lim_{n \to \infty} \frac{6n^2}{8n}\\
- &= \lim_{n \to \infty} \frac{3n}{4}\\
- \\
+\lim_{n \to \infty} \frac{2n^3+10}{4n^2+30} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(2n^3+10)}{\frac{d}{dx}(4n^2+30)}\\
+&= \lim_{n \to \infty} \frac{6n^2}{8n}\\
+&= \lim_{n \to \infty} \frac{3n}{4}\\
+\\
 \end{aligned}
 $$
 `
@@ -757,11 +766,11 @@ $$
 `
 $$
 \begin{aligned}
- \lim_{n \to \infty} \frac{13n+2}{2n^2+n} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(13n+2)}{\frac{d}{dx}(2n^2+n)}\\
- &= \lim_{n \to \infty} \frac{13}{4n+1}\\
- &=0 \\
+\lim_{n \to \infty} \frac{13n+2}{2n^2+n} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(13n+2)}{\frac{d}{dx}(2n^2+n)}\\
+&= \lim_{n \to \infty} \frac{13}{4n+1}\\
+&=0\\
 \\
- \therefore 13n+2 &\in O(2n^2 +n) \\
+\therefore 13n+2 &\in O(2n^2 +n)\\
 \end{aligned}
 $$
 `
@@ -773,14 +782,14 @@ $$
 `
 $$
 \begin{aligned}
- \lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(4n^3+3n^2)}{\frac{d}{dx}(6n^3+1)}\\
- &= \lim_{n \to \infty} \frac{12n^2+6n}{18n^2}\\
- &= \lim_{n \to \infty} \frac{\frac{d}{dx}(12n^2+6n)}{\frac{d}{dx}(18n^2)}\\
- &= \lim_{n \to \infty} \frac{24n+6}{36n}\\
- &= \lim_{n \to \infty} \frac{\frac{d}{dx}(24n+6)}{\frac{d}{dx}(36n)}\\
- &= \lim_{n \to \infty} \frac{24}{36}\\
- \lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= 46\\
- \\
+\lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(4n^3+3n^2)}{\frac{d}{dx}(6n^3+1)}\\
+&= \lim_{n \to \infty} \frac{12n^2+6n}{18n^2}\\
+&= \lim_{n \to \infty} \frac{\frac{d}{dx}(12n^2+6n)}{\frac{d}{dx}(18n^2)}\\
+&= \lim_{n \to \infty} \frac{24n+6}{36n}\\
+&= \lim_{n \to \infty} \frac{\frac{d}{dx}(24n+6)}{\frac{d}{dx}(36n)}\\
+&= \lim_{n \to \infty} \frac{24}{36}\\
+\lim_{n \to \infty} \frac{4n^3+3n^2}{6n^3+1} &= 46\\
+\\
 \end{aligned}
 $$
 `
@@ -793,7 +802,7 @@ $$
 $$
 \begin{aligned}
 \\
- \therefore 4n^3+3n^2 &\in \Theta(6n^3+1) \\
+\therefore 4n^3+3n^2 &\in \Theta(6n^3+1)\\
 \end{aligned}
 $$
 `
@@ -805,14 +814,14 @@ $$
 `
 $$
 \begin{aligned}
- \lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(n \log_5 n +3n)}{\frac{d}{dx}(5n^2+4n+2)}\\
- &= \lim_{n \to \infty} \frac{n\frac{1}{n\ln 5} + \log_5 n + 3}{10n + 4}\\
- &= \lim_{n \to \infty} \frac{\frac{d}{dx}(\frac{1}{\ln 5} + \log_5 n + 3)}{\frac{d}{dx}(10n + 4)}\\
- &= \lim_{n \to \infty} \frac{\frac{1}{n\ln 5}}{10}\\
- &= \lim_{n \to \infty} \frac{1}{10n(\ln5)}\\
- \lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= 0 \\
+\lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= \lim_{n \to \infty} \frac{\frac{d}{dx}(n \log_5 n +3n)}{\frac{d}{dx}(5n^2+4n+2)}\\
+&= \lim_{n \to \infty} \frac{n\frac{1}{n\ln 5} + \log_5 n + 3}{10n + 4}\\
+&= \lim_{n \to \infty} \frac{\frac{d}{dx}(\frac{1}{\ln 5} + \log_5 n + 3)}{\frac{d}{dx}(10n + 4)}\\
+&= \lim_{n \to \infty} \frac{\frac{1}{n\ln 5}}{10}\\
+&= \lim_{n \to \infty} \frac{1}{10n(\ln5)}\\
+\lim_{n \to \infty} \frac{n \log_5 n +3n}{5n^2+4n+2} &= 0\\
 \\
- \therefore n \log_5 n +3n &\in O(5n^2+4n+2) \\
+\therefore n \log_5 n +3n &\in O(5n^2+4n+2)\\
 \end{aligned}
 $$
 `
@@ -847,6 +856,7 @@ $$
 # Little-o
 
 > For all positive constants $c$, there exists a positive constant $n_0$, such that $0 \leq f(n) \leq cg(n)$ for all $n>n_0$, (for sufficiently large values of $n$)
+> 
 
 
 ---
@@ -888,6 +898,7 @@ $$
 # Little-$\omega$
 
 > For all positive constants $c$, there exists a positive constant $n_0$, such that $0 \leq cg(n) \leq f(n)$ for all $n>n_0$, (for sufficiently large values of $n$)
+> 
 
 
 ---
@@ -914,7 +925,10 @@ $$
 
 # Little-$\omega$
 
-> **Is there no such thing as little-$\theta$?** Try to form the definition of little-$\theta$ based on the definitions we have created earlier. Similar to how O and $\Omega$ conjunctively combine into $\Theta$, the little relationships, $o$ and $\omega$ must combine into $\theta$. Once you manage to create this definition, you'll realize that for any function $g(n)$, $\theta(g(n)) = \emptyset$. No such function is a member of this set.
+> **Is there no such thing as little-$\theta$?**
+> 
+> Try to form the definition of little-$\theta$ based on the definitions we have created earlier. Similar to how O and $\Omega$ conjunctively combine into $\Theta$, the little relationships, $o$ and $\omega$ must combine into $\theta$. Once you manage to create this definition, you'll realize that for any function $g(n)$, $\theta(g(n)) = \emptyset$. No such function is a member of this set.
+> 
 
 
 ---
@@ -945,7 +959,7 @@ class: center, middle
 ---
 # Analogy to inequalities/equalities
 
-- But **if we look at asymptotic relationships as something similar to inequalities/equalities it becomes easier to understand their concepts**
+- But **if we look at asymptotic relationships as something similar to inequalities/equalities it becomes easier to understand their concepts**.
 
 
 ---
@@ -1042,10 +1056,10 @@ class: center, middle
 `
 $$
 \begin{aligned}
- \text{Let:}\\
- f_1(n) &\in \Theta(f_2(n))\\
- f_2(n) &\in \Theta(f_3(n))\\
- \\
+\text{Let:}\\
+f_1(n) &\in \Theta(f_2(n))\\
+f_2(n) &\in \Theta(f_3(n))\\
+\\
 \end{aligned}
 $$
 `
@@ -1057,9 +1071,9 @@ $$
 `
 $$
 \begin{aligned}
- c_1 f_2(n) &\leq f_1(n) &\leq c_2 f_2(n)\\
- c_3 f_3(n) &\leq f_2(n) &\leq c_4 f_3(n)\\
- \\
+c_1 f_2(n) &\leq f_1(n) &\leq c_2 f_2(n)\\
+c_3 f_3(n) &\leq f_2(n) &\leq c_4 f_3(n)\\
+\\
 \end{aligned}
 $$
 `
@@ -1071,8 +1085,8 @@ $$
 `
 $$
 \begin{aligned}
- c_1 c_3 f_3(n) &\leq f_1(n) &\leq c_2 c_4 f_3(n)\\
- \\
+c_1 c_3 f_3(n) &\leq f_1(n) &\leq c_2 c_4 f_3(n)\\
+\\
 \end{aligned}
 $$
 `
@@ -1086,7 +1100,7 @@ class: center, middle
 # Application to Computer Science
 
 - By mastering this your focus shifts from writing algorithms that work to writing algorithms that work **efficiently**.
-- It's not only important to write programs that work, it becomes important that these programs also work **quicker** and use **lesser resources**
+- It's not only important to write programs that work, it becomes important that these programs also work **quicker** and use **lesser resources**.
 
 
 ---
@@ -1105,7 +1119,7 @@ class: center, middle
 - For these algorithms, **the running time is dependent on the size of the given array**.
 - If the given array is **shorter** in length then both algorithms have **less elements** to sort.
 - Therefore, the algorithm will take less time time to run and the running time will be **faster**.
-- The inverse is also true, if the given array is **longer**, then the running time would be **high**
+- The inverse is also true, if the given array is **longer**, then the running time would be **high**.
 
 
 ---
@@ -1121,7 +1135,7 @@ class: center, middle
 # Application to Computer Science
 
 - A more complete way of representing running time would be through a **mathematical function** in terms of the input size.
-- This is why you'll usually see running times denoted as **$T(n)$**, where $n$ is the input size
+- This is why you'll usually see running times denoted as **$T(n)$**, where $n$ is the input size.
 
 
 ---
@@ -1195,7 +1209,7 @@ class: center, middle
 # Measuring running time through instruction approximation
 
 - The running time functions that we ended up with also shows that for **smaller input sizes** both algorithms end up executing pretty much the same amount of instructions.
-- For **larger input sizes**, it also shows that merge sort is clear winner, it ends up executing way fewer instructions compared to bubble sort
+- For **larger input sizes**, it also shows that merge sort is clear winner, it ends up executing way fewer instructions compared to bubble sort.
 
 
 ---
@@ -1291,18 +1305,22 @@ $$
 
 # Dropping the coefficient
 
-- **Given a function multiplied to some constant, $cf(n)$, its complexity is exactly the same as $f(n)$.** This property can easily be demonstrated using the limit definition of $\Theta$
+- **Given a function multiplied to some constant, $cf(n)$, its complexity is exactly the same as $f(n)$.** This property can easily be demonstrated using the limit definition of $\Theta$.
 
 
 ---
 
-# Proof
+# Dropping the coefficient
 
-`
-$$
-\lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c\\
-$$
-`
+> **Proof**
+> 
+> `
+> $$
+> \lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c\\
+> $$
+> `
+> 
+
 
 ---
 
@@ -1323,34 +1341,33 @@ $$
 
 ---
 
-# Proof
+# Higher degree polynomial
 
-`
-$$
-\begin{aligned}
- \text{Let $0<c<d$}\\
-\\
- \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
- &=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
- &=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
- &\vdots\\
- &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
- &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
-\end{aligned}
-$$
-`
+> **Proof**
+> 
+
 
 ---
 
-# Proof
+# Higher degree polynomial
 
-`
-$$
-\begin{aligned}
- \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0 \\
-\end{aligned}
-$$
-`
+> `
+> $$
+> \begin{aligned}
+> \text{Let $0<c<d$}\\
+> \\
+> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
+> &=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
+> &\vdots\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0\\
+> \end{aligned}
+> $$
+> `
+> 
+
 
 ---
 
@@ -1366,76 +1383,90 @@ $$
 
 # Sum of functions
 
-- **In a sum of functions, the most complex function dominates the sum therefore the overall complexity will be equal to the dominant function.** This can be shown using the set definitions
+- **In a sum of functions, the most complex function dominates the sum therefore the overall complexity will be equal to the dominant function.** This can be shown using the set definitions.
 
 
 ---
 
-# Proof
+# Sum of functions
 
-`
-$$
-\begin{aligned}
- \text{Since} f(n) &= \Omega(f(n)),\\
-\\
- \text{for any $n>n_0$}\\
-\\
- f(n)&\geq cf(n) \\
- f(n) +g(n)&\geq cf(n) \\
-\end{aligned}
-$$
-`
+> **Proof**
+> 
+> `
+> $$
+> \begin{aligned}
+> \text{Since} f(n) &= \Omega(f(n)),\\
+> \\
+> \text{for any $n>n_0$}\\
+> \\
+> f(n)&\geq cf(n) \\
+> f(n) +g(n)&\geq cf(n)\\
+> \end{aligned}
+> $$
+> `
+> 
 
----
-
-# Proof
-
-`
-$$
-\therefore f(n)+g(n)=\Omega(f(n))\\
-$$
-`
 
 ---
 
-# Proof
+# Sum of functions
 
-`
-$$
-\begin{aligned}
- \text{Since } g(n) &= O(f(n)),\\
-\\
- g(n)&\leq cf(n) \\
- f(n)+g(n)&\leq cf(n) + f(n)\\
- f(n)+g(n)&\leq (c+1)f(n)\\
- \\
-\end{aligned}
-$$
-`
+> Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value). Therefore,
+> 
+> `
+> $$
+> \therefore f(n)+g(n)=\Omega(f(n))\\
+> $$
+> `
+> 
+> We can also show that $f(n) + g(n) \in O(f(n))$,
+> 
 
----
-
-# Proof
-
-`
-$$
-\therefore f(n)+g(n) \in O(f(n))\\
-$$
-`
 
 ---
 
-# Proof
+# Sum of functions
 
-`
-$$
-\begin{aligned}
- & f(n)+g(n) \in \Omega(f(n))\\
- \land & \underline{f(n) + g(n) \in O(f(n))}\\
- \to & f(n)+g(n) \in \Theta(f(n)) \\
-\end{aligned}
-$$
-`
+> `
+> $$
+> \begin{aligned}
+> \text{Since } g(n) &= O(f(n)),\\
+> \\
+> g(n)&\leq cf(n) \\
+> f(n)+g(n)&\leq cf(n) + f(n)\\
+> f(n)+g(n)&\leq (c+1)f(n)\\
+> \\
+> \end{aligned}
+> $$
+> `
+> 
+> Therefore,
+> 
+> `
+> $$
+> \therefore f(n)+g(n) \in O(f(n))\\
+> $$
+> `
+> 
+
+
+---
+
+# Sum of functions
+
+> Since the sum $f(n) + g(n)$ is both $\Omega(f(n))$ and $O(f(n))$
+> 
+> `
+> $$
+> \begin{aligned}
+> & f(n)+g(n) \in \Omega(f(n))\\
+> \land & \underline{f(n) + g(n) \in O(f(n))}\\
+> \to & f(n)+g(n) \in \Theta(f(n))\\
+> \end{aligned}
+> $$
+> `
+> 
+
 
 ---
 
@@ -1444,8 +1475,8 @@ $$
 `
 $$
 \begin{aligned}
- f(n) &\in \Theta(f'(n))\\
- \to f(n) + g(n) &\in \Theta(f'(n) + g(n)) \\
+f(n) &\in \Theta(f'(n))\\
+\to f(n) + g(n) &\in \Theta(f'(n) + g(n))\\
 \end{aligned}
 $$
 `
@@ -1454,23 +1485,39 @@ $$
 
 # Different bases on log
 
-- **Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.** Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity
+`
+$$
+\begin{aligned}
+\log_a{n} \in \Theta(\log_b{n})\\
+\end{aligned}
+$$
+`
+
+---
+
+# Different bases on log
+
+- **Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.**
 
 
 ---
 
-# Proof
+# Different bases on log
 
-`
-$$
-\begin{aligned}
- \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
- &=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
- &=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
- \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}} \\
-\end{aligned}
-$$
-`
+> **Proof**
+> 
+> `
+> $$
+> \begin{aligned}
+> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
+> &=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
+> &=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
+> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}}\\
+> \end{aligned}
+> $$
+> `
+> 
+
 
 ---
 
@@ -1491,39 +1538,41 @@ $$
 
 ---
 
-# Proof
+# Different bases on exponential functions
 
-`
-$$
-\begin{aligned}
- \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
- &=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
- &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
- \\
-\end{aligned}
-$$
-`
+> **Proof**
+> 
+> `
+> $$
+> \begin{aligned}
+> \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
+> &=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
+> &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
+> \\
+> \end{aligned}
+> $$
+> `
+> 
+> Since $b>a$, then, $1-\log_a b<0$. Therefore,
+> 
+> `
+> $$
+> \lim_{x \to \infty}{\frac{a^n}{b^n}}=0\\
+> $$
+> `
+> 
+
 
 ---
 
-# Proof
-
-`
-$$
-\lim_{x \to \infty}{\frac{a^n}{b^n}}=0\\
-$$
-`
-
----
-
-# Proof
+# Different bases on exponential functions
 
 - Based on these rules a complicated looking function can be **reduced** to the **simplest function** that matches its complexity.
 
 
 ---
 
-# Proof
+# Different bases on exponential functions
 
 `
 $$
@@ -1533,7 +1582,7 @@ $$
 
 ---
 
-# Proof
+# Different bases on exponential functions
 
 `
 $$
@@ -1543,7 +1592,7 @@ $$
 
 ---
 
-# Proof
+# Different bases on exponential functions
 
 `
 $$
@@ -1553,9 +1602,9 @@ $$
 
 ---
 
-# Proof
+# Different bases on exponential functions
 
-- By finding this out, **we can use $n \log n$ as sort of the representative of $6n \log_2 {n} + 5n + 2$ on matters regarding its complexity**
+- By finding this out, **we can use $n \log n$ as sort of the representative of $6n \log_2 {n} + 5n + 2$ on matters regarding its complexity**.
 
 
 ---
@@ -1612,7 +1661,7 @@ class: center, middle
 # Using O versus using $\Theta$
 
 - You'll find that **computer scientists will end up expressing time complexities in terms of $O$ as well because we generally want our algorithms to run on some acceptable standard of complexity**.
-- Because of this **asymptotic notation in terms of $O$ will usually suffice**
+- Because of this **asymptotic notation in terms of $O$ will usually suffice**.
 
 
 ---
