@@ -821,11 +821,11 @@ $$
 
 **Given a function multiplied to some constant, $cf(n)$, its complexity is exactly the same as $f(n)$.** This property can easily be demonstrated using the limit definition of $\Theta$.
 
-##### Proof
-
-$$
-\lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
-$$
+> **Proof**
+> 
+> $$
+> \lim_{n \to \infty}{\frac{cf(n)}{f(n)}}=\lim_{n \to \infty}{c}=c
+> $$
 
 #### Higher degree polynomial
 
@@ -835,20 +835,20 @@ $$
 
 **Given $f(n)^c$ and $f(n)^d$ where $c$ and $d$ are constants and $c<d$, $f(n)^c$ is less complex than $f(n)^d$**
 
-##### Proof
-
-$$
-\begin{aligned}
-\text{Let $0<c<d$}\\\\
-\lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
-&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
-&=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
-&\vdots\\
-&=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
-&=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
-\lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0
-\end{aligned}
-$$
+> **Proof**
+> 
+> $$
+> \begin{aligned}
+> \text{Let $0<c<d$}\\\\
+> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=\lim_{n \to \infty}{\frac{cf(n)^{c-1}\frac{d}{d n}f(x)}{df(n)^{d-1}\frac{d}{d n}f(x)}}\\
+> &=\lim_{n \to \infty}{\frac{cf(n)^{c-1}}{df(n)^{d-1}}}\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)f(n)^{c-2}}{d(d-1)f(n)^{d-2}}}\\
+> &\vdots\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))f(n)^{c-c}}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+> &=\lim_{n \to \infty}{\frac{c(c-1)(c-2)(c-3)\cdots(c-(c-1))}{d(d-1)(d-2)(d-3)\cdots(d-(c-1))f(n)^{d-c}}}\\
+> \lim_{n \to \infty}{\frac{f(n)^c}{f(n)^d}}&=0
+> \end{aligned}
+> $$
 
 #### Sum of functions
 
@@ -858,56 +858,51 @@ $$
 
 **In a sum of functions, the most complex function dominates the sum therefore the overall complexity will be equal to the dominant function.** This can be shown using the set definitions.
 
-##### Proof
+> **Proof**
+> 
+> $$
+> \begin{aligned}
+> \text{Since} f(n) &= \Omega(f(n)),\\\\
+> \text{for any $n>n_0$}\\\\
+> f(n)&\geq cf(n) \\
+> f(n) +g(n)&\geq cf(n)
+> \end{aligned}
+> $$
+> 
+> Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value). Therefore,
+> 
+> $$
+> \therefore f(n)+g(n)=\Omega(f(n))
+> $$
+> 
+> We can also show that $f(n) + g(n) \in O(f(n))$,
+> 
+> $$
+> \begin{aligned}
+> \text{Since } g(n) &= O(f(n)),\\\\
+> g(n)&\leq cf(n) \\
+> f(n)+g(n)&\leq cf(n) + f(n)\\
+> f(n)+g(n)&\leq (c+1)f(n)\\
+> \end{aligned}
+> $$
+> 
+> Therefore,
+> 
+> $$
+> \therefore f(n)+g(n) \in O(f(n))
+> $$
+> 
+> Since the sum $f(n) + g(n)$ is both $\Omega(f(n))$ and $O(f(n))$
+> 
+> $$
+> \begin{aligned}
+> & f(n)+g(n) \in \Omega(f(n))\\
+> \land & \underline{f(n) + g(n) \in O(f(n))}\\
+> \to & f(n)+g(n) \in \Theta(f(n))
+> \end{aligned}
+> $$
 
-$$
-\begin{aligned}
-\text{Since} f(n) &= \Omega(f(n)),\\\\
-\text{for any $n>n_0$}\\\\
-f(n)&\geq cf(n) \\
-f(n) +g(n)&\geq cf(n)
-\end{aligned}
-$$
-
-Adding $g(n)$ to the left hand side of the inequality does not change the inequality relationship since $g(n)$ is positive (meaning, adding $g(n)$ can only result to increasing the value of the already bigger value). Therefore,
-
-$$
-\therefore f(n)+g(n)=\Omega(f(n))
-$$
-
-We can also show that $f(n) + g(n) \in O(f(n))$,
-
-$$
-\begin{aligned}
-\text{Since } g(n) &= O(f(n)),\\\\
-g(n)&\leq cf(n) \\
-f(n)+g(n)&\leq cf(n) + f(n)\\
-f(n)+g(n)&\leq (c+1)f(n)\\
-\end{aligned}
-$$
-
-Therefore,
-
-$$
-\therefore f(n)+g(n) \in O(f(n))
-$$
-
-Since the sum $f(n) + g(n)$ is both $\Omega(f(n))$ and $O(f(n))$
-
-$$
-\begin{aligned}
-& f(n)+g(n) \in \Omega(f(n))\\
-\land & \underline{f(n) + g(n) \in O(f(n))}\\
-\to & f(n)+g(n) \in \Theta(f(n))
-\end{aligned}
-$$
-
-##### Term Substitution
-
-In a sum of functions, you can replace on of the terms with an equivalent function of the same complexity.
-When you do this substitution you are guaranteed to end up with a new sum with the same complexity as the original sum.
-
-In other words:
+#### Term Substitution
 
 $$
 \begin{aligned}
@@ -916,21 +911,31 @@ f(n) &\in \Theta(f'(n))\\
 \end{aligned}
 $$
 
+In a sum of functions, you can replace on of the terms with an equivalent function of the same complexity.
+When you do this substitution you are guaranteed to end up with a new sum with the same complexity as the original sum.
+
+
 #### Different bases on log
+
+$$
+\begin{aligned}
+\log_a{n} \in \Theta(\log_b{n})
+\end{aligned}
+$$
 
 **Bases for logarithms doesn't matter in terms of asymptotic notation therefore $\log_b{n}$ for any base is of complexity $\Theta(\log n)$.**
 Because of this we can omit the base of the logarithm since its value is irrelevant from the complexity.
 
-##### Proof
-
-$$
-\begin{aligned}
-\lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
-&=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
-&=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
-\lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}}
-\end{aligned}
-$$
+> **Proof**
+> 
+> $$
+> \begin{aligned}
+> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\lim_{n \to \infty} {\frac{\frac{\log_b{n}}{\log_b{a}}}{\log_b{n}}}\\
+> &=\lim_{n \to \infty} {\frac{\log_b{n}}{\log_b{n}(\log_b{a})}}\\
+> &=\lim_{n \to \infty} {\frac{1}{\log_b{a}}}\\
+> \lim_{n \to \infty} {\frac{\log_a{n}}{\log_b{n}}}&=\frac{1}{\log_b{a}}
+> \end{aligned}
+> $$
 
 #### Different bases on exponential functions
 
@@ -940,22 +945,22 @@ $$
 
 **Bases for exponential functions on the other hand matter**, as shown in this proof:
 
-##### Proof
-
-$$
-\begin{aligned}
-\lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
-&=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
-&=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
-\end{aligned}
-$$
-
-Since $b>a$, then, $1-\log_a b<0$.
-Therefore,
-
-$$
-\lim_{x \to \infty}{\frac{a^n}{b^n}}=0
-$$
+> **Proof**
+> 
+> $$
+> \begin{aligned}
+> \lim_{x \to \infty}{\frac{a^n}{b^n}}&=\lim_{x \to \infty}{\frac{a^n}{(a^{\log_{a}b})^n}}\\
+> &=\lim_{x \to \infty}{\frac{a^n}{(a^n)^{\log_{a}b}}}\\
+> &=\lim_{x \to \infty}{(a^n)^{1-\log_{a}b}}\\
+> \end{aligned}
+> $$
+> 
+> Since $b>a$, then, $1-\log_a b<0$.
+> Therefore,
+> 
+> $$
+> \lim_{x \to \infty}{\frac{a^n}{b^n}}=0
+> $$
 
 Based on these rules a complicated looking function can be **reduced** to the **simplest function** that matches its complexity.
 For example, In the function below, the we can look for the most complex term in this sum and drop the rest.
