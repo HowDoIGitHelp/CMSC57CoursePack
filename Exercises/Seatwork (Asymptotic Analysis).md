@@ -4,8 +4,8 @@ Which complexity classes do these functions belong to? Write the complexity clas
 
 1. $3n^2+40n-5$
 2. $8n+6n + \log_3n$
-3. $ \log_5 n + 6 \log_3 n$
-4. $ \log_5n+\sqrt{n}$
+3. $\log_5 n + 6 \log_3 n$
+4. $\log_5 n+\sqrt{n}$
 5. $8 \log_3{(\log_3 n)} + \log_5 n$
 6. $2n + 2^n + 50 n^3$
 7. $2^7 + n^2 + 50n^3$
