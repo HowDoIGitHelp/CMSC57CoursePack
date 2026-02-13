@@ -166,7 +166,9 @@ I=\begin{bmatrix}
 0&0&\dots&1
 \end{bmatrix}\\
 $$
+
 This matrix is special because, for any $m\times n$ matrix $A$,
+
 $$
 AI_n=I_mA=A
 $$
@@ -539,21 +541,17 @@ It turns out all transformations that satisfy the above rules can be perfectly d
 
 ![rotate90](https://i.imgur.com/f2GmdKv.png)
 
-- new $\hat{\imath}$ (red vector) :$\hat{\imath}'=\begin{bmatrix}0\\1\end{bmatrix}$
+- new $\hat{\imath}$ (red vector) :$\hat{\imath}'=\begin{bmatrix}0\\ 1\end{bmatrix}$
 
--  new $\hat{\jmath}$ (blue vector): $\hat{\jmath}'=\begin{bmatrix}-1\\0\end{bmatrix}$
+-  new $\hat{\jmath}$ (blue vector): $\hat{\jmath}'=\begin{bmatrix}-1\\ 0\end{bmatrix}$
 
-- Green vector: $1\begin{bmatrix}0\\1\end{bmatrix}+1\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}-1\\1\end{bmatrix}$
+- Green vector: $1\begin{bmatrix}0\\ 1\end{bmatrix}+1\begin{bmatrix}-1\\ 0\end{bmatrix}=\begin{bmatrix}-1\\ 1\end{bmatrix}$
 
-  
-  
-- Brown vector: $2\begin{bmatrix}0\\1\end{bmatrix}+1\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}-1\\2\end{bmatrix}$
+- Brown vector: $2\begin{bmatrix}0\\ 1\end{bmatrix}+1\begin{bmatrix}-1\\ 0\end{bmatrix}=\begin{bmatrix}-1\\ 2\end{bmatrix}$
 
-- Yellow vector: $-2\begin{bmatrix}0\\1\end{bmatrix}+0.5\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}-0.5\\-2\end{bmatrix}$
+- Yellow vector: $-2\begin{bmatrix}0\\ 1\end{bmatrix}+0.5\begin{bmatrix}-1\\ 0\end{bmatrix}=\begin{bmatrix}-0.5\\ -2\end{bmatrix}$
 
-  
-  
-- Black vector: $1\begin{bmatrix}0\\1\end{bmatrix}+-2\begin{bmatrix}-1\\0\end{bmatrix}=\begin{bmatrix}2\\1\end{bmatrix}$
+- Black vector: $1\begin{bmatrix}0\\ 1\end{bmatrix}+-2\begin{bmatrix}-1\\ 0\end{bmatrix}=\begin{bmatrix}2\\ 1\end{bmatrix}$
 
 
 All of the other vector values after the transformation is basically **scaled versions** of the new basis vectors in the same way that the pretransformed vector values are combinations of the original basis vectors. This means that any 2-dimensional linear transformation can be represented by 4 numbers, which we can write as a **matrix**, where each column corresponds to a basis vector. For this 90 degree rotation:
