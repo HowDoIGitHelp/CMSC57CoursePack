@@ -521,11 +521,7 @@ $$
 
 A **transformation** is basically a function that converts one vector to another vector. For example the transformation **$f$** can be defined as $f(\vec{x})=3\vec{x}$. Where a vector is just scaled to $3$. The domain of a transformation is usually, the span of $\{\hat{\imath},\hat{\jmath},\cdots\}$ or the entire $n$ dimensional vector space. You can think of a transformation visually as the **distortion** of the entire vector space. Applying a transformation to a vector is basically distorting the space the vector resides in.
 
-![Imgur](https://i.imgur.com/69NIHZF.png)
-
-Applied with a shear distortion
-
-![Imgur](https://i.imgur.com/uZbFBE3.png)
+![Shear distortion](https://i.imgur.com/sMJ3UVz.png)
 
 ![spanTransform](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/linear%20algebra/spanTransform.gif)
 
