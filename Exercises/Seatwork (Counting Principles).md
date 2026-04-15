@@ -11,3 +11,13 @@
    b) contain all four bases A, T, C, and G?
 
    c) contain exactly three of the four bases A, T, C, and G?
+
+3. Given the 16 starting positions in a chessboard, how many ways can you arrange the following: (assuming the same pieces are identical)
+
+   a) 8 black pawns
+
+   b) 8 white pawns and 8 black pawns
+
+   c) **8 black pawns 2 white knights 2 black knights**
+
+   d) 4 white pawns 4 black pawns and a white king
