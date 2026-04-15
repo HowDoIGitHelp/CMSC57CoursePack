@@ -577,37 +577,39 @@ To answer the question earlier, what exactly is the probability of the selected 
 
 - The likelihood of picking blue balls in boxes that are not B (either R or M) can be calculated as,  **$p(b|\overline{B})=p(b|R \cup M) = \frac{p(b \cap (R \cup M))}{p(R \cup M)} = \frac{1}{4}$**.
 
-> **$\frac{1}{4}$** is calculated using the following lemma**: **$p(b \cap (R \cup M))= p(b|R)p(R)+p(b|M)p(M)$
->
-> The proof of this lemma, (recall conditional probability)
-> 
-> $$
-> \begin{aligned}
-> p(b|R)p(R)+p(b|M)p(M)&=\frac{p(b \cap R)}{p(R)}p(R)+\frac{p(b \cap M)}{p(M)}p(M)\\
-> &=p(b \cap R)+p(b \cap M) - 0\\
-> &=p(b \cap R)+p(b \cap M) - p((b \cap R) \cap (b \cap M))*\\
-> &=p((b \cap R) \cup p(b \cap M))\\
-> &=p(b \cap (R \cup  M))
-> \end{aligned}
-> $$
-> *$p((b \cap R) \cap (b \cap M))=0$** because a box cannot be both R and M at the same time, therefore there is zero probability that this intersection of events happens. I added this so that the use of union of events theorem is clearer.
->
-> Therefore we get **$\frac{1}{4}$** like this:
-> $$
-> \begin{aligned}
-> p(b|\overline{B})&=p(b|R \cup M)\\&=\frac{p(b \cap (R \cup M))}{p(R \cup M)}\\&=\frac{p(b|R)p(R)+p(b|M)p(M)}{p(R \cup M)}\\
-> &=\frac{0(\frac{1}{3})+\frac{1}{2}(\frac{1}{3})}{\frac{2}{3}}\\
-> p(b|\overline{B})&=\frac{3}{12}=\frac{1}{4}
-> \end{aligned}
-> $$
-> 
+$\frac{1}{4}$ is calculated using the following lemma: $p(b \cap (R \cup M))= p(b|R)p(R)+p(b|M)p(M)$
+
+The proof of this lemma, (*recall conditional probability*)
+
+$$
+\begin{aligned}
+p(b|R)p(R)+p(b|M)p(M)&=\frac{p(b \cap R)}{p(R)}p(R)+\frac{p(b \cap M)}{p(M)}p(M)\\
+&=p(b \cap R)+p(b \cap M) - 0\\
+&=p(b \cap R)+p(b \cap M) - p((b \cap R) \cap (b \cap M))\\
+&=p((b \cap R) \cup p(b \cap M))\\
+&=p(b \cap (R \cup  M))
+\end{aligned}
+$$
+
+$p((b \cap R) \cap (b \cap M))=0$ because a box cannot be both R and M at the same time, therefore there is zero probability that this intersection of events happens. I added this so that the use of union of events theorem is clearer.
+
+Therefore we get **$\frac{1}{4}$** like this:
+
+$$
+\begin{aligned}
+p(b|\overline{B})&=p(b|R \cup M)\\&=\frac{p(b \cap (R \cup M))}{p(R \cup M)}\\&=\frac{p(b|R)p(R)+p(b|M)p(M)}{p(R \cup M)}\\
+&=\frac{0(\frac{1}{3})+\frac{1}{2}(\frac{1}{3})}{\frac{2}{3}}\\
+p(b|\overline{B})&=\frac{3}{12}=\frac{1}{4}
+\end{aligned}
+$$
+
 
 Therefore the posterior probability **$p(B|b)$**:
 
 $$
 \begin{aligned}
 p(B|b)&=\frac{p(b|B)p(B)}{p(b|B)p(B)+p(b|\overline{B})p(\overline{B})}\\
-p(B|b)&=\frac{1(\frac{1}{3})}{1(\frac{1}{3})+(\frac{1}{4})(\frac{2}{3})}\\\\
+p(B|b)&=\frac{1(\frac{1}{3})}{1(\frac{1}{3})+(\frac{1}{4})(\frac{2}{3})}\\
 p(B|b)&=\frac{2}{3}
 \end{aligned}
 $$
@@ -617,10 +619,14 @@ Calculating the probabilites for other boxes supports our intuition earlier,
 $$
 \begin{aligned}
 p(M|b)&=\frac{p(b|M)p(M)}{p(b|M)p(M)+p(b|\overline{M})p(\overline{M})}\\
-p(M|b)&=\frac{(\frac{1}{2})(\frac{1}{3})}{(\frac{1}{2})(\frac{1}{3})+(\frac{1}{2})(\frac{2}{3})}\\\\
-p(M|b)&=\frac{1}{3}\\\\
+p(M|b)&=\frac{(\frac{1}{2})(\frac{1}{3})}{(\frac{1}{2})(\frac{1}{3})+(\frac{1}{2})(\frac{2}{3})}\\
+p(M|b)&=\frac{1}{3}
+\end{aligned}
+
+$$
+\begin{aligned}
 p(R|b)&=\frac{p(b|R)p(R)}{p(b|R)p(R)+p(b|\overline{R})p(\overline{R})}\\
-p(R|b)&=\frac{(0)(\frac{1}{3})}{(0)(\frac{1}{3})+(\frac{3}{4})(\frac{2}{3})}\\\\
+p(R|b)&=\frac{(0)(\frac{1}{3})}{(0)(\frac{1}{3})+(\frac{3}{4})(\frac{2}{3})}\\
 p(R|b)&=0
 \end{aligned}
 $$
