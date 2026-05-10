@@ -330,7 +330,7 @@ To answer this question, we first identify what is the sample space and what is 
 
 - Given the same scenario above, what is the probability that two fruits selected at random are both bananas?
 
-- What is the probability that a ticket wins the 6/49​ lottery? Selecting a combination of 6 numbers from 1 to 49.
+- What is the probability that a ticket wins the 6/49 lottery? Selecting a combination of 6 numbers from 1 to 49.
 - After uniformly shuffling the list **$[3,2,1,1,4,5]$**, what is the probability that the shuffling produces a sorted list?
 
 #### Probabilities of unions of events
@@ -412,7 +412,7 @@ The formula for compound probabilities remain to be true in the general definiti
 
 Given a six-sided dice, what is the probability that the sum of two rolls is **divisible by three**?
 
-To answer this, all we need to do is to figure out the event that described above. Supposing the ordered pair **$(u,v)$** corresponds to the outcome rolling **$u$**  and then rolling **$v$**, the event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3)\}$**. Since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{7}{36}$**.
+To answer this, all we need to do is to figure out the event that described above. The event described above corresponds to the following set: **$\{(1,2),(2,1),(1,5),(5,1),(2,4),(4,2),(3,3),(3,6),(4,5),(5,4),(6,3),(6,6)\}$**. Since each of the outcomes in this event have the probability **$\frac{1}{36}$**, the probability that the sum of two rolls is divisible by three is **$\frac{12}{36}$** or $\frac{1}{3}.
 
 How would the probability change, if we change the scenario, such that the first die roll is **$2$**? 
 
