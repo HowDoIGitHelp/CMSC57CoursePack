@@ -354,9 +354,6 @@ A tree is usually characterized with a special vertex designated as the origin f
 The **descendants** of a vertex includes, the children of said vertex, the children of the children of said vertex (also known as the grandchildren), the children of the children of the children of said vertex (also known as great grand children), and so on. The **ancestors** of a vertex are the opposite. It includes, the parent of a vertex, the parent of the parent of said vertex (also known as the grandparent), the parent of the parent of the parent of said vertex (also known as the great grand parent.), and so on. Vertices that share the same parent are known as **siblings**. A vertex without children is called a **leaf**.
 
 ![family tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/familytree.jpg)
-
-
-
 > Descendants and ancestors can be described recursively:
 >
 > $u$ is descendant of $v$ if either:
@@ -537,7 +534,7 @@ Using the previous tree as an example:
 
 Mathematical expressions can be neatly represented by rooted trees. Consider the expression below,
 $$
-(2/4)+((3*5)-(4+1))
+(2/4)+((3 \times 5)-(4+1))
 $$
 A mathematical expression such as this is also recursive compositions as well. An expression can be broken down into operands and operators. It is recursive because the operands can either be numbers or expression themselves. Because of this any complicated expression can be represented into a tree. To do this we imagine an operation as a tree. The operands of the operation can either be another expression (a subtree) or a number (a leaf).
 
@@ -545,19 +542,21 @@ Using the expression above we can construct a tree this way. Starting from the s
 
 ![exptree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree.jpg)
 
-We also have the expressions $(3*5)$ and $(4+1)$ which are combined via subtraction. Which means we combine $(3*5)$ and $(4+1)$ in a subtraction tree to obtain $((3*5)-(4+1))$
+We also have the expressions $(3 \times 5)$ and $(4+1)$ which are combined via subtraction. Which means we combine $(3 \times 5)$ and $(4+1)$ in a subtraction tree to obtain $((3 \times 5)-(4+1))$.
 
 ![exptree2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree2.jpg)
 
-Finally these $(2/4)$ and $((3*5)-(4+1))$ are added together to form $(2/4)+((3*5)-(4+1))$:
+Finally these $(2/4)$ and $((3 \times 5)-(4+1))$ are added together to form $(2/4)+((3 \times 5)-(4+1))$:
 
 ![exptree3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree3.jpg)
 
 Note that the way we write expressions is actually the inorder traversal of the expression tree. Traversing the tree above will give us:
+
 $$
-2/4+3*5-4+1
+2/4+3 \times 5-4+1
 $$
-But because inorder traversal ambiguous, we have to add parentheses to the expression to specify, the exact subtrees of each operator. Thus we end up with $(2/4)+((3*5)-(4+1))$.
+
+But because inorder traversal ambiguous, we have to add parentheses to the expression to specify, the exact subtrees of each operator. Thus we end up with $(2/4)+((3 \times 5)-(4+1))$.
 
 > **Ambiguity example**. The following tree is one of the may ways you can interpret the same expression without parentheses:
 >
