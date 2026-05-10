@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>/home/rub/Projects/cmsc57/Lecture Notes/Graphs and Trees.md</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="slides.css">
+    </head>
+        <body>
+            <textarea id="source">
+class: center, middle
+# Graphs and Trees
+
+---
+class: center, middle
+# Graphs
+
+---
+# Graphs
+
+- A **graph** commonly denoted as $G=(V,E)$, where $V$ is a nonempty set of **vertices** (sometimes called **nodes**) and $E$ is a set of **edges**.
+
+
+---
+
+# Graphs
+
+![belongstonords](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graph.jpg)
+
+---
+
+# Graphs
+
+> Note that the exact location of the dots are not part of the characteristics of the graph, The dots can be arbitrarily placed anywhere.
+> 
+
+
+---
+
+class: center, middle
+# Directed and Undirected Graphs
+
+---
+# Directed and Undirected Graphs
+
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
+
+---
+
+# Directed and Undirected Graphs
+
+> An undirected graph's edge is denoted using unordered pair, (note the curly braces"{ }") while a directed graph's edge is denoted using an ordered pair, (note the parenthesis).
+> 
+
+
+---
+
+class: center, middle
+# Simple graphs and multigraphs
+
+---
+# Simple graphs and multigraphs
+
+- The graphs we have looked at so far are examples of **simple graphs**.
+- If at least one pair of vertex has more than one edge then that graph is a **multigraph**.
+
+
+---
+
+# Simple graphs and multigraphs
+
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/multigraph.jpg)
+
+---
+
+# Simple graphs and multigraphs
+
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
+
+---
+
+class: center, middle
+# Some important graph terminologies
+
+---
+# Some important graph terminologies
+
+- **adjacency** - vertices $a$ and $b$ are said to be **adjacent** or **neighbors** in $G$ if $(a,b)\in E$. We also say $(a,b)$ **connects** $a$ to $b$ or $e$ is **incident with** $a$ and $b$.
+- **neighborhood** - the neighborhood of some vertex $a$ in graph $G(V,E)$, usually denoted as $N(a)$, is the set of all neighbors of $a$ in $G$. Given some set of vertices $A$, $N(A)$ is the set of vertices that are neighbors of at least one vertex in $A$.
+
+
+---
+
+# Some important graph terminologies
+
+- **degree** - the degree of a vertex in an undirected graph, denoted by $\deg(a)$ is the number of edges that connect to $a$. In an undirected graph $\{a,b\}$ and $\{b,a\}$ are counted as one degree. In the example below,  $\deg(\text{"Morthal"})=3$, $\deg(\text{"Whiterun"})=2$
+  <block.ImageBlock object at 0x7f926cf463f0>
+
+
+---
+
+# Some important graph terminologies
+
+> **Loops and degrees** - Some graphs contain special edges called loops. Loops are edges where the endpoints is one vertex. In the example below one of the edges is an edge that connects $a$ to itself, $(a,a)$.
+> 
+> <block.ImageBlock object at 0x7f926cf99eb0>
+> 
+
+
+---
+
+# Some important graph terminologies
+
+> It is important to note that when counting the degree of $a$, the loop, $\{a,a\}$ is counted twice. Therefore, $\deg(a)=3$. This might seem strange but there are a couple of reasons why graph theorists decided to define it as such. One of the reasons is the following:  if you look at a non-loop edge, like $\{a,b\}$, this edge is counted as the edge of $b$ and counted as an edge of $a$ again. Meaning, in the total degree of the graph, $\{a,b\}$ is counted exactly **twice**. Applying the same reasoning to a loop like $\{a,a\}$, means that this edge must be counted once for vertex $a$ and another for the other vertex $a$. Meaning it must be counted twice as well.
+> 
+
+
+---
+
+# Some important graph terminologies
+
+- **degree sum** - the sum of all degrees of all vertices in some graph $G=(V,E)$ is exactly twice the number of edges. This is known as the **handshaking theorem** which formally states that $\sum\_{v\in V}{\deg(v)}=2|E|$. This is again because each edge is counted twice  as a degree, one for each vertex it connects.
+
+
+---
+
+class: center, middle
+# Some special graphs
+
+---
+class: center, middle
+# Complete graphs
+
+---
+# Complete graphs
+
+![graphcycles](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graphcomplete.jpg)
+
+---
+
+# Cycles
+
+![graphcycles](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/graphcycles.jpg)
+
+---
+
+class: center, middle
+# Bipartite graphs
+
+---
+# Bipartite graphs
+
+![bipartitegraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/bipartitegraph.jpg)
+
+---
+
+class: center, middle
+# Graphs Representations
+
+---
+class: center, middle
+# Adjacency list
+
+---
+# Adjacency list
+
+- This method is called **adjacency list**.
+
+
+---
+
+# Adjacency list
+
+![graph example](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/subgraph.jpg)
+
+---
+
+# Adjacency list
+
+| vertex | neighbors |
+|:---:|:---:|
+| a | b,c |
+| b | a, c |
+| c | a, b, e |
+| d | e |
+| e | c, d |
+
+
+---
+
+# Adjacency list
+
+- When representing a directed graph, only the **terminal neighbors** are listed.
+
+
+---
+
+# Adjacency list
+
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
+
+---
+
+# Adjacency list
+
+| vertex | terminal neighbors |
+|:---:|:---:|
+| a | b, c, d |
+| b | d |
+| c | a, b |
+| d | *none* |
+
+
+---
+
+# Adjacency list
+
+![multigraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/dmultigraph.jpg)
+
+---
+
+# Adjacency list
+
+| vertex | neighbors |
+|:---:|:---:|
+| a | b, b, c |
+| b | *none* |
+| c | a, a, b |
+
+
+---
+
+class: center, middle
+# Adjacency matrix
+
+---
+# Adjacency matrix
+
+- Another way to represent the graph is to use an **adjacency matrix**.
+
+
+---
+
+# Adjacency matrix
+
+![graph example](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/subgraph.jpg)
+
+---
+
+# Adjacency matrix
+
+> Notice that the adjacency matrix of an undirected graph is symmetrical ($A^T=A$). That is because, $A\_{ij}=A\_{ji}$ (i.e. edge $\{v\_i,v\_j\}$ exist if and only if $\{v\_j,v\_i\}$ exists).
+> 
+
+
+---
+
+# Adjacency matrix
+
+![directed graph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/directedgraph.jpg)
+
+---
+
+class: center, middle
+# Paths and Circuits
+
+---
+# Paths and Circuits
+
+- A **path** along a graph, is a sequence of edges $(v\_0,v\_1),(v\_1,v\_2),\cdots ,(v\_{n-1},v\_n)$. A path describes a traversal from $v\_0$ to $v\_n$ along the edges of the graph. If the starting point and end point of a path with length greater than zero is the same edge, or $v\_0 = v\_n$, then that path is a **circuit**.
+
+
+---
+
+# Paths and Circuits
+
+- Given a  graph $G$, if there exists a path connecting every distinct pair of vertices, then $G$ is **connected**.
+
+
+---
+
+# Paths and Circuits
+
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/connectedgraph.jpg)
+
+---
+
+# Paths and Circuits
+
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/unconnectedgraph.jpg)
+
+---
+
+# Paths and Circuits
+
+> For directed graphs, connectivity can either be strong or weak. A directed graph is **strongly connected** if there exists a path connecting every distict pair of vertices. A directed graph is **weakly connected** if it is not strongly connected but its couterpart undirected graph (i.e. the same directed graph except all edges are replaced with undirected edges) is connected.
+> 
+
+
+---
+
+# Paths and Circuits
+
+> The leftmost graph is strongly connected. The middle graph is weakly connected (there is no path from $d$ to $a$, $b$, or $c$ but there will be if you the replace edges with undirected ones). The rightmost graph is unconnected.
+> 
+> <block.ImageBlock object at 0x7f926d1f9e50>
+> 
+
+
+---
+
+class: center, middle
+# Euler Circuits and Paths
+
+---
+# Euler Circuits and Paths
+
+- One of the most well known graph theory related problems is the **seven bridges of Königsberg** problem.
+
+
+---
+
+# Euler Circuits and Paths
+
+![konigsberg](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/konigsberg.jpg)
+
+---
+
+# Euler Circuits and Paths
+
+> Since bridges can be travelled on two directions, this is an undirected graph, one cannot travel from c to d and then d to c since you will travel on the same bridge twice.
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+- As a graph problem, the seven bridges problem can be stated as the search for **a circuit containing all edges of the graph exactly once**.
+- A circuit with these properties became known as an **Euler circuit**.
+- On the other hand an **Euler path** is a path containing all edges of the graph exactly once.
+
+
+---
+
+# Euler Circuits and Paths
+
+![euler circuits](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/eulercircuits.jpg)
+
+---
+
+# Euler Circuits and Paths
+
+> - **leftmost graph** - $\{a, b\}, \{b, c\}, \{c, d\}, \{d, e\}, \{e, c\}, \{c, a\}$
+> - **middle graph** -$ \{a, b\}, \{b, f\}, \{f, e\}, \{e, b\}, \{b, c\}, \{c, d\}, \{d, e\}, \{e, c\}, \{c, a\}$
+> - **rightmost graph** -$ \{a, b\}, \{b, c\}\_1, \{c, e\}\_1, \{e, f\}, \{f, b\}, \{b, c\}\_2, \{c, d\}, \{d, e\}, \{e, c\}\_2, \{c, a\}$
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+![non euler circuits](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/noneulercircuits.jpg)
+
+---
+
+# Euler Circuits and Paths
+
+> **Proof**
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+> Given a connected multigraph $G = (V,E)$, where $\forall v \in V \exists k\in \mathbb{Z}(\deg(v)=2k)$ (i.e. all the vertices have even degrees). Starting from an arbitrary vertex $v\_0$ we construct an Euler circuit, The first edge visited is $\{v\_0, v\_i\}$, by traversing this edge we exit $v\_0$, leaving an odd number of untraversed edges connected to $v\_0$ (thats because any even number minus one is odd). There are also an odd number of untraversed edges connected to $v\_i$ because we have already traversed one of the edges connected to $v\_i$, which is $\{v\_0, v\_i\}$.
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+> We are now currently at $v\_i$. Leaving $v\_i$ we traverse $\{v\_i,v\_j\}$, entering $v\_j$. After leaving $v\_i$, there is an even number of untraversed edges connecting $v\_i$ (because odd minus 1 is even). Notice that after entering and exiting a vertex, we traverse exactly two edges from it, meaning that every time we pass through a vertex, (enter then leave) we leave an even amount of untraversed edges. Therefore, no matter how many times we enter a vertex, there will always be an edge to exit from.
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+> This proves that there cannot be an euler circuit for a graph with at least one vertex of an odd degree because you will get stuck in that vertex at some point. There will be no more edges left to exit from.
+> 
+> After traversing an arbitrary amount of vertices, we will eventually return to $v\_0$ thus creating a circuit. There are two possibilities when this happens, either we have successfully visited all edges, creating an actual Euler circuit, or we have not. If we have not successfully visited all the edges, you would at least have created an Euler circuit for the subgraph of the $G$. Lets call this subgraph $H$ and the subgraph left behind, I.
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+> <block.ImageBlock object at 0x7f926cf3f570>
+> 
+> Let the sequence of edges $Q=\{v\_0,v\_1\}, \{v\_1,v\_2\},\{v\_2,v\_3\}, \cdots, \{v\_k,v\_0\}$, be an euler circuit for the subgraph H. One of the properties of any circuit, is that you can rearrange the sequence starting anywhere, say $\{v\_1,v\_2\}$. If you transfer all the edges before $\{v\_1,v\_2\}$ to the end of the sequence, you will still have a circuit ($\{v\_1,v\_2\},\{v\_2,v\_3\}, \cdots, \{v\_k,v\_0\}, \{v\_0,v\_1\}$).
+> 
+
+
+---
+
+# Euler Circuits and Paths
+
+> Because of this you can start the traversal all over again but starting  from a vertex that connects $H$ to $I$. Lets call this $v\_c$. After traversing the euler circuit for $H$, you are now back to $v\_c$. Continue the traversal from here and you'll either find the Euler circuit for entire graph $G$ or find the Euler circuit for a bigger subgraph. When that happens, you just redo the earlier steps until you find the complete Euler circuit.
+> 
+> <block.ImageBlock object at 0x7f926d21b530>
+> 
+
+
+---
+
+class: center, middle
+# Hamilton circuits and paths
+
+---
+# Hamilton circuits and paths
+
+![hamilton cycle](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/hamiltoncycle.jpg)
+
+---
+
+# Hamilton circuits and paths
+
+![connectedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/connectedgraph.jpg)
+
+---
+
+class: center, middle
+# Shortest path problems
+
+---
+# Shortest path problems
+
+![weightedgraph](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/weightedgraph.jpg)
+
+---
+
+# Shortest path problems
+
+- Finding the shortest path that visits every vertex is also called the **travelling salesman problem**.
+
+
+---
+
+# Shortest path between two vertices
+
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra.jpg)
+
+---
+
+# Shortest path between two vertices
+
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra2.jpg)
+
+---
+
+# Shortest path between two vertices
+
+> The total path length to the next vertex is calculated by adding the shortest path until the current vertex plus the edge length to reach the next vertex. For example the total path to $f$ is shortest path to b plus length of $\{b,f\}$ (i.e. 2+1)
+> 
+
+
+---
+
+# Shortest path between two vertices
+
+- From $b$ we can reach
+  - **$f$, with a total length of $3$,**
+  - $c$ with a total length of $3$,
+  - **$e$ with a total length of 6.**
+  We update the shortest paths for these vertices (except for $c$ since 1 is the current shortest path to reach it).
+
+
+---
+
+# Shortest path between two vertices
+
+- From $c$ we can reach
+  - **$d$ with a total length of 4,**
+  - **$e$ with a total length of 5,**
+  - $b$ with a total length of $2$.
+  We update the shortest paths for these vertices replacing $e$ with 5, but not $b$ since the shortest path is currently $2$.
+
+
+---
+
+# Shortest path between two vertices
+
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra3.jpg)
+
+---
+
+# Shortest path between two vertices
+
+- From $d$ we can reach
+  - $e$ with a total length of $5$.
+- From $f$ we can reach
+  - $e$ with a total length of $4$.
+  We update the shortest path to $e$ as $4$.
+
+
+---
+
+# Shortest path between two vertices
+
+![djkstra](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/djkstra4.jpg)
+
+---
+
+# Shortest path between two vertices
+
+> To figure out the actual shortest path not just the length, you can record the path along with the length. You can also figure out the shortest path by backtracking from the destination vertex and figure out the previous vertex based on the edge lengths
+> 
+
+
+---
+
+# Travelling Salesman Problem
+
+- *finding the minimum length circuit that visits all vertices in the graph*
+
+
+---
+
+# Travelling Salesman Problem
+
+- In fact these problems are belong to a class of problems known as **NP-Complete** which are the most difficult among difficult problems in computer science.
+
+
+---
+
+# Travelling Salesman Problem
+
+> Note that there are solutions to these problems. It's just that the known solutions to these problems are algorithms that run in $\Omega(n^c)$.
+> 
+
+
+---
+
+class: center, middle
+# Trees
+
+---
+# Trees
+
+- **simple** - all of the edges are distinct
+- **connected** - there exists a path between any two vertices
+- **acyclic** - it contains no circuits that repeat edges ($\{v\_i,v\_j\}, \{v\_j,v\_i\}$ is technically a circuit but these can exists in trees)
+
+
+---
+
+# Trees
+
+![trees and non trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/treesandnontrees.jpg)
+
+---
+
+class: center, middle
+# Root
+
+---
+# Root
+
+- This vertex is known as the **root**.
+- By designating a root, a tree can be structured in a way where the relationship between a any two vertices that share an edge is that of a **parent** and **child**.
+- The children of a vertex (also called a **subtree**) are the neighbors of said vertex found hierarchally below.
+- The parent of a vertex (also called a **supertree**) is the sole neighbor found hierarchally above the vertex.
+
+
+---
+
+# Root
+
+- The **descendants** of a vertex includes, the children of said vertex, the children of the children of said vertex (also known as the grandchildren), the children of the children of the children of said vertex (also known as great grand children), and so on.
+- The **ancestors** of a vertex are the opposite.
+- Vertices that share the same parent are known as **siblings**.
+- A vertex without children is called a **leaf**.
+
+
+---
+
+# Root
+
+![family tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/familytree.jpg)
+
+---
+
+# Root
+
+> Descendants and ancestors can be described recursively:
+> 
+> $u$ is descendant of $v$ if either:
+> 
+> - $u$ is a child of $v$ or,
+> - $u$ is the descendant of the child of $u$.
+> 
+> $u$ is an ancestor of $v$ if either:
+> 
+> - $u$ is the parent of $v$ or,
+> - $u$ is the ancestor of the parent of $v$.
+> 
+
+
+---
+
+# Root
+
+![rooted tree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/rootedtrees.jpg)
+
+---
+
+# Root
+
+> When working with rooted trees, a vertex becomes some sort of representative for the vertices below it. For example in the tree below, when you refer to the tree $a$, you refer to the rooted tree formed by $a$ and its descendants:
+> 
+> <block.ImageBlock object at 0x7f926d21b5c0>
+> 
+> This is what it means when we say that a tree is a recursive composite structure. A tree is either a leaf (which is also a tree) or composed of  subtrees, which are also trees. Since these subtrees are also trees they can also either be trees or composed of subtrees.
+> 
+
+
+---
+
+class: center, middle
+# Tree Traversals
+
+---
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide1.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide2.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide3.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide4.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide5.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide6.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide7.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide8.PNG)
+
+---
+
+# Breadth First Traversal
+
+![bfs1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/bfs/Slide9.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide1.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide2.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide3.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide4.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide5.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide6.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide7.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide8.PNG)
+
+---
+
+# Depth first traversal
+
+![dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/dfs/Slide9.PNG)
+
+---
+
+# Preorder traversal
+
+> where $T\_1,T\_2,\cdots ,T\_n$ are the subtrees of $T$ ordered from left to right.
+> 
+
+
+---
+
+# Preorder traversal
+
+![preorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder1.jpg)
+
+---
+
+# Preorder traversal
+
+![preorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder2.jpg)
+
+---
+
+# Preorder traversal
+
+> the order of resolving preorders does not matter, you can try resolving preorder($c$) first and the final result will be the same.
+> 
+
+
+---
+
+# Preorder traversal
+
+![preorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder3.jpg)
+
+---
+
+# Preorder traversal
+
+- preorder($e$)=$e$
+- preorder($f$)=$f$
+- preorder($g$)=$g$, preorder($h$)
+
+
+---
+
+# Preorder traversal
+
+![preorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder4.jpg)
+
+---
+
+# Preorder traversal
+
+![preorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/preorder5.jpg)
+
+---
+
+# Inorder traversal
+
+> where $T\_1,T\_2,\cdots ,T\_n$ are the subtrees of $T$ ordered from left to right.
+> 
+
+
+---
+
+# Inorder traversal
+
+![inorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder1.jpg)
+
+---
+
+# Inorder traversal
+
+![inorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder2.jpg)
+
+---
+
+# Inorder traversal
+
+![inorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder3.jpg)
+
+---
+
+# Inorder traversal
+
+![inorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder4.jpg)
+
+---
+
+# Inorder traversal
+
+![inorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/inorder5.jpg)
+
+---
+
+# Postorder traversal
+
+> where $T\_1,T\_2,\cdots ,T\_n$ are the subtrees of $T$ ordered from left to right.
+> 
+
+
+---
+
+# Postorder traversal
+
+![postorder1](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder1.jpg)
+
+---
+
+# Postorder traversal
+
+![postorder2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder2.jpg)
+
+---
+
+# Postorder traversal
+
+![postorder3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder3.jpg)
+
+---
+
+# Postorder traversal
+
+![postorder4](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder4.jpg)
+
+---
+
+# Postorder traversal
+
+![postorder5](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/postorder5.jpg)
+
+---
+
+# Traversals and expressions
+
+![exptree](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree.jpg)
+
+---
+
+# Traversals and expressions
+
+![exptree2](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree2.jpg)
+
+---
+
+# Traversals and expressions
+
+![exptree3](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/master/Lecture%20Notes/Media/exptree3.jpg)
+
+---
+
+# Traversals and expressions
+
+`
+$$
+2/4+3 \times 5-4+1\\
+$$
+`
+
+---
+
+# Traversals and expressions
+
+> **Ambiguity example**. The following tree is one of the may ways you can interpret the same expression without parentheses:
+> 
+> <block.ImageBlock object at 0x7f926d21b530>
+> 
+
+
+---
+
+# Traversals and expressions
+
+- **preorder-** $+,/,2,4, -, *, 3,5, +, 4,1$
+- **postorder**- $2,4,/,3,5*,4,1,+,-,+$
+
+
+---
+
+# Traversals and expressions
+
+> if you try rebuilding these traversals, and you will get the same trees.
+> 
+
+
+---
+
+class: center, middle
+# Spanning Trees
+
+---
+# Spanning Trees
+
+![spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtrees.png)
+
+---
+
+# Spanning Trees
+
+![spanning tree bfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesbfs.png)
+
+---
+
+# Spanning Trees
+
+| Queue | Edges added to spanning tree |
+|:----|----:|
+| $a$ | $\{\}$ |
+| $b,d$ | $\{\{a,b\},\{a,d\}\}$ |
+| $d,c,e$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\}\}$ |
+| $c,e,g$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\}\}$ |
+| $e,g,f$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\}\}$ |
+| $g,f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $f,h$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\}\}$ |
+| $h,i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+
+
+---
+
+# Spanning Trees
+
+| Queue | Edges added to spanning tree |
+|:----|----:|
+| $i$ | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+|  | $\{\{a,b\},\{a,d\},\{b,c\},\{b,e\},\{d,g\},\{c,f\},\{e,h\},\{f,i\}\}$ |
+
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesdfs.png)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide1.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide2.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide3.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide4.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide5.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide6.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide7.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide8.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide9.PNG)
+
+---
+
+# Spanning Trees
+
+![spanning tree dfs](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreedfs/Slide10.PNG)
+
+---
+
+# Spanning Trees
+
+![backtracking](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/backtracking.png)
+
+---
+
+class: center, middle
+# Minimum spanning tree
+
+---
+# Minimum spanning tree
+
+![minimum spanning trees](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/spanningtreesweighted.png)
+
+---
+
+class: center, middle
+# Kruskal's algorithm
+
+---
+# Kruskal's algorithm
+
+![kruskals](https://raw.githubusercontent.com/HowDoIGitHelp/CMSC57CoursePack/refs/heads/master/Lecture%20Notes/Media/kruskals.png)
+
+---
+
+        </textarea>
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],    // Inline math delimiters
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],    // Display math delimiters
+                    packages: {'[+]': ['ams']},    // Load the AMS extensions
+                    processEnvironments: true,     // Required for \begin{align}, \begin{aligned}, etc.
+                },
+                loader: {load: ['[tex]/ams']},    // Explicitly load the 'ams' package
+                options: {
+                    skipHtmlTags: ['script', 'noscript', 'style', 'textarea']
+                }
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+        </script>
+        <script>
+            var slideshow = remark.create({ ratio: "16:9" });
+        </script>
+    </body>
+</html>
